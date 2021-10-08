@@ -25,7 +25,7 @@ a, a:visited {
 }
 
 a:hover {
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -254,7 +254,7 @@ a:hover {
 
 /* CONTACT */
 .card.contact-card {
-  background-color: #38A3A5;
+  background-color: #22577A;
   font-size: large;
   color: #fff;
   border: none;
@@ -306,7 +306,7 @@ a:hover {
 }
 
 .contact_content {
-  background-color: #22577A;
+  background-color: #38A3A5;
   border-radius: .5rem;
   padding: .75rem 1rem .25rem;
 }
@@ -318,7 +318,7 @@ a:hover {
 
 .contact_input {
   width: 100%;
-  background-color: #22577A;
+  background-color: #38A3A5;
   color: #fff;
   border: none;
   outline: none;
@@ -328,7 +328,7 @@ a:hover {
 .button {
   display: inline-block;
   background-color: #FF9900;
-  color: var(--title-color);
+  color: #fff;
   padding: 1rem;
   border-radius: .5rem;
   font-weight: var(--font-medium);
@@ -336,6 +336,7 @@ a:hover {
 
 .button:hover {
   background-color: #ee8f00;
+  color: #000;
   transition: .3s;
 }
 
