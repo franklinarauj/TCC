@@ -18,6 +18,10 @@ ul {
   list-style: none;
 }
 
+.icon-footer {
+  padding-top: 12px;
+}
+
 .footer {
   background-color: #57CC99;
   padding: 70px 0;
@@ -92,10 +96,18 @@ ul {
     width: 50%;
     margin-bottom: 30px;
   }
+
+  .icon-footer {
+    padding-top: 12px;
+  }
 }
 
 @media(max-width: 574px) {
   .footer-col {
-    width: 100%;
+    width: 50%;
+  }
+
+  .icon-footer {
+    padding-top: 12px;
   }
 }
