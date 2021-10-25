@@ -12,4 +12,12 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  sendMail() {
+    var link = "mailto:franklinarauj@gmail.com"
+             + "?cc=franklinarauj@hotmail.com"
+            //  + "&subject=" + encodeURIComponent(document.getElementById('subject').value)
+            //  + "&body=" + encodeURIComponent(document.getElementById('myText').value)
+    ;
+    window.location.href = link;
+  }
 }
