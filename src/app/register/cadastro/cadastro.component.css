@@ -1,10 +1,10 @@
-.grid-login {
+.grid-register {
   width: 100%;
   margin-top: 58px;
   margin-bottom: 58px;
 }
 
-.login-content {
+.register-content {
   width: auto;
 }
 
@@ -17,10 +17,6 @@
   text-align: center;
 }
 
-.confirm {
-  text-align: center;
-}
-
 .input-cadastro {
   font-size: medium;
 }
@@ -29,11 +25,15 @@
   width: 350px;
 }
 
-.info {
+.check-infos {
+  text-align: center;
+}
+
+.check-box {
   margin-top: 5px;
   margin-left: 10px;
   margin-right: 20px;
-  font-size: 10px;
+  font-size: 12px;
   text-align: center;
 }
 

@@ -1,5 +1,5 @@
-<div class="grid-login">
-  <div class="login-content">
+<div class="grid-register">
+  <div class="register-content">
     <mat-grid-list cols="2" rowHeight="2:1.5">
       <mat-grid-tile>
         <img mat-card-image src="../../../assets/img/logo.png" alt="Logo" class="img-logo">
@@ -7,6 +7,15 @@
       <mat-grid-tile>
         <div class="input-cadastro">
           <p class="title">RECISAMOS DE ALGUMAS INFORMAÇÕES <br> PARA REALIZARMOS O SEU CADASTRO</p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Nome Completo</mat-label>
+              <!-- <mat-icon matPrefix>person</mat-icon> -->
+              <input matInput placeholder="Ex.: João Maria">
+              <mat-icon matSuffix>person</mat-icon>
+              <mat-hint>Digite seu nome.</mat-hint>
+            </mat-form-field>
+          </p>
           <p>
             <mat-form-field appearance="outline">
               <mat-label>Email</mat-label>
@@ -30,23 +39,34 @@
           <p>
             <mat-form-field appearance="outline">
               <mat-label>Confirme sua senha</mat-label>
-              <input matInput [type]="hide ? 'password' : 'text'" placeholder="**********">
-              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Esconder senha'"
-                [attr.aria-pressed]="hide">
-                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              <input matInput [type]="hide2 ? 'password' : 'text'" placeholder="**********">
+              <button mat-icon-button matSuffix (click)="hide2 = !hide2" [attr.aria-label]="'Esconder senha'"
+                [attr.aria-pressed]="hide2">
+                <mat-icon>{{hide2 ? 'visibility_off' : 'visibility'}}</mat-icon>
               </button>
               <mat-hint>Digite seu senha novamente.</mat-hint>
             </mat-form-field>
           </p>
-          <section class="confirm">
-            <span class="info">
-              <a (click)="navigateToCadastro()" style="text-decoration: underline; cursor: pointer;">
-                NÃO POSSUO CADASTRO
-              </a>
-            </span>
+          <div class="check-infos">
+            <section style="margin-top: 15px;">
+              <span class="check-box" id="familiar">
+                <mat-checkbox color="warn" style="margin-right: 5px;"></mat-checkbox>
+                SOU FAMILAR OU RESPONSÁVEL PELO PACIENTE
+              </span>
+            </section>
+            <section style="margin-bottom: 15px;">
+              <span class="check-box">
+                <mat-checkbox color="warn" style="margin-right: 5px;"></mat-checkbox>
+                ACEITO OS
+                <a href="/terms" style="color: inherit;">
+                  TERMOS E POLÍTICAS
+                </a>
+                DE USO
+              </span>
+            </section>
             <button mat-flat-button style="background-color: #38A3A5; color: white; border: 2px solid #22577A;"
-              (click)="navigateToProfile()">Cadastre-se</button>
-          </section>
+              (click)="pacienteCadastro()">Cadastre-se</button>
+          </div>
         </div>
       </mat-grid-tile>
     </mat-grid-list>
