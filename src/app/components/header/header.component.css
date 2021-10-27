@@ -28,12 +28,8 @@ mat-divider {
   margin: 0 18px 0 18px;
 }
 
-.spacer {
-  flex: 1;
-}
-
 .header {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   right: 0;
@@ -43,39 +39,56 @@ mat-divider {
   background-color: #57CC99;
   color: #2C2C2C;
   font-weight: 600;
+
+  justify-content: space-around;
+}
+
+.right-side {
+  display: flex;
 }
 
 .logotipo {
   font-family: 'Oxanium', cursive;
   font-size: 24px;
-  margin-left: 136px;
 }
 
 .icon-header {
-  font-size: 26px;
+  font-size: 24px;
 }
 
 .icon-header-last {
-  font-size: 26px;
-  margin-right: 136px;
+  font-size: 24px;
 }
 
 /*responsive*/
 @media(max-width: 767px) {
-  .spacer {
-    flex: 1;
-  }
-}
 
-@media(max-width: 574px) {
-  .spacer {
-    flex: 1;
-  }
-  .logotipo {
-    margin-left: 30px;
+  .icon-header {
+    font-size: 20px;
   }
 
   .icon-header-last {
-    margin-right: 32px;
+    font-size: 20px;
+  }
+
+  .logotipo {
+    font-family: 'Oxanium', cursive;
+    font-size: 22px;
+  }
+
+}
+
+@media(max-width: 574px) {
+  .icon-header {
+    font-size: 20px;
+  }
+
+  .icon-header-last {
+    font-size: 20px;
+  }
+
+  .logotipo {
+    font-family: 'Oxanium', cursive;
+    font-size: 20px;
   }
 }
