@@ -25,6 +25,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MapaComponent } from './components/mapa/mapa.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     HomeComponent,
     LoginComponent,
     TermsComponent,
-    CadastroComponent
+    CadastroComponent,
+    MapaComponent
   ],
   imports: [
     BrowserModule,
