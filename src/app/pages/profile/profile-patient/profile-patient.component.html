@@ -1,0 +1,74 @@
+<div class="grid-profile">
+  <div class="profile-content">
+
+    <div class="main-card-content">
+      <div class="main-card-content-wrapper">
+        <!-- LOGO -->
+        <div class="main-card-content-card">
+          <img src="assets/img/logo.png" alt="Logo" class="main-card-content-img">
+        </div>
+
+        <!-- INFO PROFILE -->
+        <div class="main-card-content-card">
+          <p class="title">DADOS CADASTRADOS</p>
+          <div class="input-info">
+            <p>
+              <mat-form-field appearance="outline">
+                <mat-label class="input-dado">Nome do Familiar</mat-label>
+                <input matInput value="João Maria da Silva" class="input-dado" disabled>
+                <mat-icon matSuffix>person</mat-icon>
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline">
+                <mat-label class="input-dado">Email do Familiar</mat-label>
+                <input matInput value="joaomariadasilva@email.com" class="input-dado" disabled>
+                <mat-icon matSuffix>email</mat-icon>
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline">
+                <mat-label class="input-dado">Nome da Paciente</mat-label>
+                <input matInput value="Francisca dos Santos Oliveira" class="input-dado" disabled>
+                <mat-icon matSuffix>person</mat-icon>
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline">
+                <mat-label class="input-dado">Data de Nascimento da Paciente</mat-label>
+                <input matInput value="31/08/1951" class="input-dado" disabled>
+                <mat-icon matSuffix>event</mat-icon>
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline">
+                <mat-label class="input-dado">Peso da Paciente</mat-label>
+                <input matInput value="68,4 kg" class="input-dado" disabled>
+                <mat-icon matSuffix>fitness_center</mat-icon>
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline">
+                <mat-label class="input-dado">Sexo</mat-label>
+                <input matInput value="Feminino" class="input-dado" disabled>
+                <mat-icon matSuffix>transgender</mat-icon>
+              </mat-form-field>
+            </p>
+            <button mat-flat-button style="background-color: #FF9900; color: white; border: 2px solid #B21E1E;"
+              (click)="deleteCadastro()">APAGAR CADASTRO
+            </button>
+            <button mat-flat-button style="background-color: #38A3A5; color: white; border: 2px solid #22577A;"
+              (click)="editCadastro()">ALTERAR DADOS
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- <div class="mapa">
+      <app-mapa></app-mapa>
+    </div> -->
+
+  </div>
+</div>

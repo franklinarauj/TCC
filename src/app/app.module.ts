@@ -7,11 +7,14 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { TermsComponent } from './pages/register/terms/terms.component';
 import { CadastroComponent } from './pages/register/cadastro/cadastro.component';
+import { ProfileHelperComponent } from './pages/profile/profile-helper/profile-helper.component';
+import { ProfilePatientComponent } from './pages/profile/profile-patient/profile-patient.component';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MapaComponent } from './components/mapa/mapa.component';
 
 //IMPORTS @ANGULAR
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,7 +28,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MapaComponent } from './components/mapa/mapa.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { MapaComponent } from './components/mapa/mapa.component';
     LoginComponent,
     TermsComponent,
     CadastroComponent,
-    MapaComponent
+    MapaComponent,
+    ProfileHelperComponent,
+    ProfilePatientComponent
   ],
   imports: [
     BrowserModule,

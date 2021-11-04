@@ -1,0 +1,128 @@
+/* MAIN CARD CONTENT */
+.main-card-content {
+  display: block;
+}
+
+.main-card-content img {
+  width: 80%;
+  max-width: 500px;
+
+  padding-bottom: 0.6rem;
+}
+
+.main-card-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-card-content-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem;
+}
+
+.main-card-content-card p {
+  text-align: center;
+}
+
+.img-logo {
+  width: 400px;
+}
+
+.title {
+  font-size: xx-large;
+  text-align: center;
+}
+
+.input-info {
+  font-size: medium;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.input-dado {
+  color: black;
+}
+
+.mat-form-field {
+  width: 350px;
+}
+
+.check-infos {
+  text-align: center;
+}
+
+.check-box {
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 20px;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* .mapa {
+  height: 25%;
+} */
+
+/*responsive*/
+@media(max-width: 1024px) {
+  .grid-register {
+    width: 100%;
+    margin-top: 58px;
+    margin-bottom: 58px;
+    margin-left: 30px;
+  }
+
+  .img-logo {
+    width: 250px;
+  }
+
+}
+
+@media(max-width: 768px) {
+  .grid-register {
+    width: 100%;
+    margin-top: 58px;
+    margin-bottom: 58px;
+    margin-left: 30px;
+  }
+
+  .img-logo {
+    width: 250px;
+  }
+
+}
+
+@media(max-width: 574px) {
+  .grid-register {
+    width: 100%;
+    margin-top: 58px;
+    margin-bottom: 58px;
+    margin-left: 30px;
+  }
+
+  .img-logo {
+    width: 150px;
+  }
+
+}
+
+@media(max-width: 350px) {
+  .grid-register {
+    width: 100%;
+    margin-top: 58px;
+    margin-bottom: 58px;
+    margin-left: 30px;
+  }
+
+  .img-logo {
+    width: 100px;
+  }
+
+}

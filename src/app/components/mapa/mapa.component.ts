@@ -11,11 +11,11 @@ export class MapaComponent implements AfterViewInit {
 
 
   private map : any;
-  
+
   private initMap(): void {
     this.map = L.map('map', {
       center: [  -15.7801, -47.9292 ],
-      zoom: 10
+      zoom: 10.5
     });
 
     const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
