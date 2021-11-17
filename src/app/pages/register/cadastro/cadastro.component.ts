@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -18,10 +18,35 @@ export class CadastroComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  pacienteCadastro(): void {
-      this.router.navigate(['/cadastro-paciente'])
-  };
+  @Input() nome: any;
+  @Input() email: any;
+  lat: any;
+  long: any;
 
+
+  preencherLatLong(evento:any) {
+    this.lat = evento[0];
+    this.long = evento[1];
+  }
+  
+  async pacienteCadastro(){
+    try {
+    const dados = this.beforeSave();
+    //SERVICE
+    console.log(dados);
+    } catch (e) {
+      console.log('ERROR =>', e);
+    }
+  };
+ 
+  private beforeSave() {
+    return {
+      nome: this.nome,
+      email: this.email,
+      latitude: this.lat,
+      longitude: this.long
+    };
+  }
   //   cuidadorCadastro(): void {
     //this.router.navigate(['/cadastro-cuidador'])
   //};

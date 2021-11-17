@@ -2,16 +2,17 @@
   <div class="register-content">
     <mat-grid-list cols="2" rowHeight="2:1.5">
       <mat-grid-tile>
-        <img mat-card-image src="../../../assets/img/logo.png" alt="Logo" class="img-logo">
+        <!-- <img mat-card-image src="../../../assets/img/logo.png" alt="Logo" class="img-logo"> -->
+        <app-mapa (latlong)="preencherLatLong($event)"></app-mapa>
       </mat-grid-tile>
       <mat-grid-tile>
         <div class="input-cadastro">
-          <p class="title">RECISAMOS DE ALGUMAS INFORMAÇÕES <br> PARA REALIZARMOS O SEU CADASTRO</p>
+          <p class="title">PRECISAMOS DE ALGUMAS INFORMAÇÕES <br> PARA REALIZARMOS O SEU CADASTRO</p>
           <p>
             <mat-form-field appearance="outline">
               <mat-label>Nome Completo</mat-label>
               <!-- <mat-icon matPrefix>person</mat-icon> -->
-              <input matInput placeholder="Ex.: João Maria">
+              <input matInput placeholder="Ex.: João Maria" [(ngModel)]='nome'>
               <mat-icon matSuffix>person</mat-icon>
               <mat-hint>Digite seu nome.</mat-hint>
             </mat-form-field>
@@ -20,7 +21,7 @@
             <mat-form-field appearance="outline">
               <mat-label>Email</mat-label>
               <!-- <mat-icon matPrefix>person</mat-icon> -->
-              <input matInput placeholder="Ex.: joaomaria@email.com">
+              <input matInput placeholder="Ex.: joaomaria@email.com" [(ngModel)]="email">
               <mat-icon matSuffix>email</mat-icon>
               <mat-hint>Digite seu email.</mat-hint>
             </mat-form-field>
