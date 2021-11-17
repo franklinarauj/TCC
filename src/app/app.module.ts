@@ -28,6 +28,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -55,7 +57,9 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatInputModule,
     MatCheckboxModule,
     MatDialogModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   entryComponents:[MatDialogModule],

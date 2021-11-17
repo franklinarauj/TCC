@@ -9,17 +9,18 @@
           <p class="title">INSIRA ABAIXO SEUS DADOS DE ACESSO</p>
           <p>
             <mat-form-field appearance="outline">
-              <mat-label>Email</mat-label>
+              <mat-label>CPF/CNPJ</mat-label>
               <!-- <mat-icon matPrefix>person</mat-icon> -->
-              <input matInput placeholder="Ex.: joaomaria@email.com">
-              <mat-icon matSuffix>email</mat-icon>
-              <mat-hint>Digite seu email.</mat-hint>
+              <input matInput placeholder="Ex.: 000.000.000-00" name="" [(ngModel)]="login.cpf_cnpj">
+              <!-- [(ngModel)]="login.username" -->
+              <!-- <mat-icon matSuffix>CPF/CNPJ</mat-icon> -->
+              <mat-hint>Digite seu CPF ou CNPJ</mat-hint>
             </mat-form-field>
           </p>
           <p>
             <mat-form-field appearance="outline">
               <mat-label>Senha</mat-label>
-              <input matInput [type]="hide ? 'password' : 'text'" placeholder="**********">
+              <input matInput [type]="hide ? 'password' : 'text'" placeholder="**********" [(ngModel)]="login.senha">
               <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Esconder senha'"
                 [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -34,7 +35,7 @@
               </a>
             </span>
             <button mat-flat-button style="background-color: #38A3A5; color: white; border: 2px solid #22577A;"
-              (click)="navigateToProfile()">ACESSAR</button>
+              (click)="logar()">ACESSAR</button>
           </section>
         </div>
       </mat-grid-tile>

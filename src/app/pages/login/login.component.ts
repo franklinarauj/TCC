@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
+import { Login } from 'src/app/interfaces/Login';
+import { LoginServiceService } from 'src/app/services/login-service.service';
 
 @Component({
   selector: 'app-login',
@@ -8,9 +10,14 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  hide = true;
+  login: Login = {
+    cpf_cnpj: "",
+    senha: ""
+  };
 
-  constructor(private router: Router) {
+  hide = true;
+ 
+  constructor(private router: Router, private loginService: LoginServiceService) {
 
   }
 
@@ -19,10 +26,19 @@ export class LoginComponent implements OnInit {
 
   navigateToCadastro(): void {
     this.router.navigate(['/cadastro'])
-}
+  }
 
   navigateToProfile(): void {
     this.router.navigate(['/profile-paciente'])
-}
+  }
+
+  logar(): void {
+    this.loginService.autenticar(this.login).subscribe(res => {
+      localStorage.setItem('token', res.token);
+      localStorage.setItem('refreshToken', res.refreshToken);
+      localStorage.setItem('username', res.username);
+      this.router.navigateByUrl(`profile-patient`);
+    });
+  }
 
 }
