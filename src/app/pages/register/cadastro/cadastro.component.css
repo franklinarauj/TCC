@@ -29,6 +29,11 @@
   text-align: center;
 }
 
+.mat-grid-tile-mapa {
+  margin-top: 0;
+  margin-left: 5%;
+}
+
 .check-box {
   margin-top: 5px;
   margin-left: 10px;
