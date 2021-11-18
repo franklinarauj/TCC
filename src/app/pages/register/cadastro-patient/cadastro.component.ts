@@ -7,7 +7,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./cadastro.component.css']
 })
 
-export class CadastroComponent implements OnInit {
+export class CadastroPatientComponent implements OnInit {
 
   hide = true;
   hide2 = true;
@@ -28,7 +28,7 @@ export class CadastroComponent implements OnInit {
     this.lat = evento[0];
     this.long = evento[1];
   }
-  
+
   async pacienteCadastro(){
     try {
     const dados = this.beforeSave();
@@ -38,7 +38,7 @@ export class CadastroComponent implements OnInit {
       console.log('ERROR =>', e);
     }
   };
- 
+
   private beforeSave() {
     return {
       nome: this.nome,

@@ -6,7 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { TermsComponent } from './pages/register/terms/terms.component';
-import { CadastroComponent } from './pages/register/cadastro/cadastro.component';
+import { CadastroHelperComponent } from './pages/register/cadastro-helper/cadastro-helper.component';
+import { CadastroPatientComponent } from './pages/register/cadastro-patient/cadastro.component';
 import { ProfileHelperComponent } from './pages/profile/profile-helper/profile-helper.component';
 import { ProfilePatientComponent } from './pages/profile/profile-patient/profile-patient.component';
 
@@ -30,6 +31,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { InputMaskModule } from '@ngneat/input-mask';
 
 @NgModule({
   declarations: [
@@ -39,10 +41,11 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     LoginComponent,
     TermsComponent,
-    CadastroComponent,
+    CadastroPatientComponent,
     MapaComponent,
     ProfileHelperComponent,
-    ProfilePatientComponent
+    ProfilePatientComponent,
+    CadastroHelperComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +62,8 @@ import { FormsModule } from '@angular/forms';
     MatDialogModule,
     MatSlideToggleModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    InputMaskModule
   ],
   providers: [],
   entryComponents:[MatDialogModule],

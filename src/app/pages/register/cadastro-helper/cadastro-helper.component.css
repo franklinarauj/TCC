@@ -1,0 +1,100 @@
+.grid-register {
+  width: 100%;
+  margin-top: 58px;
+  margin-bottom: 58px;
+}
+
+.register-content {
+  width: auto;
+}
+
+.img-logo {
+  width: 400px;
+}
+
+.title {
+  font-size: medium;
+  text-align: center;
+}
+
+.input-cadastro {
+  font-size: medium;
+}
+
+.mat-form-field {
+  width: 350px;
+}
+
+.check-infos {
+  text-align: center;
+}
+
+.mat-grid-tile-mapa {
+  margin-top: 0;
+  margin-left: 5%;
+}
+
+.check-box {
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 20px;
+  font-size: 12px;
+  text-align: center;
+}
+
+/*responsive*/
+@media(max-width: 1024px) {
+  .grid-register {
+    width: 100%;
+    margin-top: 58px;
+    margin-bottom: 58px;
+    margin-left: 30px;
+  }
+
+  .img-logo {
+    width: 250px;
+  }
+
+}
+
+@media(max-width: 768px) {
+  .grid-register {
+    width: 100%;
+    margin-top: 58px;
+    margin-bottom: 58px;
+    margin-left: 30px;
+  }
+
+  .img-logo {
+    width: 250px;
+  }
+
+}
+
+@media(max-width: 574px) {
+  .grid-register {
+    width: 100%;
+    margin-top: 58px;
+    margin-bottom: 58px;
+    margin-left: 30px;
+  }
+
+  .img-logo {
+    width: 150px;
+  }
+
+}
+
+@media(max-width: 350px) {
+  .grid-register {
+    width: 100%;
+    margin-top: 58px;
+    margin-bottom: 58px;
+    margin-left: 30px;
+  }
+
+  .img-logo {
+    width: 100px;
+  }
+
+}
