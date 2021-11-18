@@ -2,9 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-cuidador',
-  templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.css']
+  selector: 'app-cuidador-patient',
+  templateUrl: './cadastro-patient.component.html',
+  styleUrls: ['./cadastro-patient.component.css']
 })
 
 export class CadastroPatientComponent implements OnInit {
@@ -19,7 +19,7 @@ export class CadastroPatientComponent implements OnInit {
   ngOnInit(): void {}
 
   @Input() nome: any;
-  @Input() email: any;
+  @Input() cpf_cnpj: any;
   lat: any;
   long: any;
 
@@ -42,7 +42,7 @@ export class CadastroPatientComponent implements OnInit {
   private beforeSave() {
     return {
       nome: this.nome,
-      email: this.email,
+      cpf_cnpj: this.cpf_cnpj,
       latitude: this.lat,
       longitude: this.long
     };

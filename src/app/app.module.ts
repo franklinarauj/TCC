@@ -7,7 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { TermsComponent } from './pages/register/terms/terms.component';
 import { CadastroHelperComponent } from './pages/register/cadastro-helper/cadastro-helper.component';
-import { CadastroPatientComponent } from './pages/register/cadastro-patient/cadastro.component';
+import { CadastroPatientComponent } from './pages/register/cadastro-patient/cadastro-patient.component';
 import { ProfileHelperComponent } from './pages/profile/profile-helper/profile-helper.component';
 import { ProfilePatientComponent } from './pages/profile/profile-patient/profile-patient.component';
 
