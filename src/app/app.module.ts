@@ -31,8 +31,11 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { InputMaskModule } from '@ngneat/input-mask';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
 
+const maskConfig: Partial<IConfig> = {
+  validation: false,
+};
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,10 +66,11 @@ import { InputMaskModule } from '@ngneat/input-mask';
     MatSlideToggleModule,
     HttpClientModule,
     FormsModule,
-    InputMaskModule
+    NgxMaskModule.forRoot(maskConfig)
   ],
   providers: [],
   entryComponents:[MatDialogModule],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

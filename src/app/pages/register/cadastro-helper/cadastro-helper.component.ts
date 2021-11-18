@@ -4,7 +4,7 @@ import {Router} from '@angular/router';
 @Component({
   selector: 'app-cadastro-helper',
   templateUrl: './cadastro-helper.component.html',
-  styleUrls: ['./cadastro-helper.component.css']
+  styleUrls: ['./cadastro-helper.component.css'],
 })
 export class CadastroHelperComponent implements OnInit {
 
@@ -12,7 +12,6 @@ export class CadastroHelperComponent implements OnInit {
   hide2 = true;
 
   constructor(private router: Router) {
-
   }
 
   ngOnInit(): void {}
