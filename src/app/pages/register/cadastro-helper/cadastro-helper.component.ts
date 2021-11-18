@@ -46,8 +46,8 @@ export class CadastroHelperComponent implements OnInit {
     };
   }
 
-    cuidadorCadastro(): void {
-    this.router.navigate(['/cadastro-cuidador'])
-  };
+  // cuidadorCadastro(): void {
+  //   this.router.navigate(['/cadastro-cuidador'])
+  // };
 
 }

@@ -20,11 +20,12 @@
           </p>
           <p>
             <mat-form-field appearance="outline">
-              <mat-label>Email</mat-label>
+              <mat-label>CPF</mat-label>
               <!-- <mat-icon matPrefix>person</mat-icon> -->
-              <input matInput placeholder="Ex.: joaomaria@email.com" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" [(ngModel)]="email" required>
-              <mat-icon matSuffix>email</mat-icon>
-              <mat-hint>Digite seu email corretamente.</mat-hint>
+              <input matInput placeholder="Ex.: 012.234.567-89" pattern="([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})"
+              [(ngModel)]="cpf_cnpj" mask="000.000.000-99" required>
+              <mat-icon matSuffix>badge</mat-icon>
+              <mat-hint>Digite seu CPF corretamente.</mat-hint>
             </mat-form-field>
           </p>
           <p>
