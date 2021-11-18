@@ -15,21 +15,18 @@ export class LoginComponent implements OnInit {
     senha: ""
   };
 
+  loginError: boolean = false;
+  tipoUsuario: string = "";
   hide = true;
- 
+
   constructor(private router: Router, private loginService: LoginServiceService) {
 
   }
-
   ngOnInit(): void {
   }
 
   navigateToCadastro(): void {
-    this.router.navigate(['/cadastro'])
-  }
-
-  navigateToProfile(): void {
-    this.router.navigate(['/profile-paciente'])
+    this.tipoUsuario == "1" ? this.router.navigate(['/cadastro-patient']) : this.router.navigate(['/cadastro-helper'])
   }
 
   logar(): void {
@@ -37,8 +34,11 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('token', res.token);
       localStorage.setItem('refreshToken', res.refreshToken);
       localStorage.setItem('username', res.username);
-      this.router.navigateByUrl(`profile-patient`);
-    });
+      this.tipoUsuario == "1" ? this.router.navigateByUrl(`profile-patient`) : this.router.navigateByUrl(`profile-helper`)
+    },
+      err => {
+        this.loginError = true;
+      });
   }
 
 }

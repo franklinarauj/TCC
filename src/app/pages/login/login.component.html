@@ -6,14 +6,19 @@
       </mat-grid-tile>
       <mat-grid-tile>
         <div class="input-cadastro">
+          <mat-radio-group aria-label="Selecione o tipo de usuário">
+            <mat-radio-button value="2" [(ngModel)]="tipoUsuario" name="tipoUsuario" ngDefaultControl>Cuidador
+            </mat-radio-button>
+            <mat-radio-button value="1" [(ngModel)]="tipoUsuario" name="tipoUsuario" ngDefaultControl style="margin-left: 100px;">Paciente
+            </mat-radio-button>
+          </mat-radio-group>
           <p class="title">INSIRA ABAIXO SEUS DADOS DE ACESSO</p>
           <p>
             <mat-form-field appearance="outline">
               <mat-label>CPF/CNPJ</mat-label>
-              <!-- <mat-icon matPrefix>person</mat-icon> -->
-              <input matInput placeholder="Ex.: 000.000.000-00" name="" [(ngModel)]="login.cpf_cnpj">
-              <!-- [(ngModel)]="login.username" -->
-              <!-- <mat-icon matSuffix>CPF/CNPJ</mat-icon> -->
+              <input matInput placeholder="Ex.: 000.000.000-00"
+                pattern="([0-9]{2}[.]?[0-9]{3}[.]?[0-9]{3}[/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[.]?[0-9]{3}[.]?[0-9]{3}[-]?[0-9]{2})"
+                [(ngModel)]="login.cpf_cnpj" mask="000.000.000-99 || 00.000.000/0000-00" required>
               <mat-hint>Digite seu CPF ou CNPJ</mat-hint>
             </mat-form-field>
           </p>
@@ -27,6 +32,9 @@
               </button>
               <mat-hint>Digite sua senha.</mat-hint>
             </mat-form-field>
+          </p>
+          <p *ngIf="loginError">
+            Usuário ou senha incorretos
           </p>
           <section class="confirm">
             <span class="info">

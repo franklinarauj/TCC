@@ -39,6 +39,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgxMaskModule, IConfig } from 'ngx-mask'
+import { MatRadioModule } from '@angular/material/radio';
 
 // DIRECTIVES
 import { CenterDirective } from './directives/center.directive';
@@ -85,10 +86,11 @@ const maskConfig: Partial<IConfig> = {
     MatSlideToggleModule,
     HttpClientModule,
     FormsModule,
-    NgxMaskModule.forRoot(maskConfig)
+    NgxMaskModule.forRoot(maskConfig),
+    MatRadioModule
   ],
   providers: [],
-  entryComponents:[MatDialogModule],
+  entryComponents: [MatDialogModule],
   bootstrap: [AppComponent]
 })
 
