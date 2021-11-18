@@ -13,26 +13,17 @@ const BASE_URL = environment.BASE_URL;
 export class LoginServiceService {
 
   constructor(private http: HttpClient) {
-
    }
 
    autenticar(login: Login): Observable<any> {
      return this.http.post(`${BASE_URL}/auth`, login);           
    }
 
-   isLoggedIn(cnpj: string): boolean {
-    return localStorage.getItem('token') && localStorage.getItem('cnpj') === cnpj ? true : false
+   isLoggedIn(): boolean {
+    return localStorage.getItem('token') ? true : false
   }
 
-  async getRefreshToken() {
-    return await localStorage.getItem('refreshToken');
-  }
-
-  getToken(refreshToken: string): Observable<any> {
-    return this.http.post(`${BASE_URL}/token`, {refreshToken});
-  }
-
-  isAdmin(): boolean {
-    return localStorage.getItem('cnpj') === '0';
-  }
+  // getToken(refreshToken: string): Observable<any> {
+  //   return this.http.post(`${BASE_URL}/token`, {refreshToken});
+  // }
 }
