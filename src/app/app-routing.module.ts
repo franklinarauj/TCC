@@ -17,6 +17,7 @@ import { CadastroHelperComponent } from './pages/register/cadastro-helper/cadast
 import { CadastroPatientComponent } from './pages/register/cadastro-patient/cadastro-patient.component';
 import { ProfileHelperComponent } from './pages/profile/profile-helper/profile-helper.component';
 import { ProfilePatientComponent } from './pages/profile/profile-patient/profile-patient.component';
+import { AdditionalInfoComponent } from './pages/register/additional-info/additional-info.component';
 // COMPONENTS
 import { MapaComponent } from './components/mapa/mapa.component';
 
@@ -38,7 +39,7 @@ const routes: Routes = [
   { path: 'fisioterapia', component: FisioterapiaComponent},
   { path: 'terapiaOcupacional', component: TerapiaOcupacionalComponent},
   { path: 'outrosProfissionais', component: OutrosProfissionaisComponent},
-
+  { path: 'cadastro/additional-info', component: AdditionalInfoComponent},
 ];
 
 

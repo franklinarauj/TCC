@@ -1,0 +1,66 @@
+<div class="stepper-container">
+  <mat-stepper [linear]="true" class="stepper">
+    <mat-step color="accent" class="mat-step">
+      <form class="stepper-form">
+        <ng-template matStepLabel>DADOS PESSOAIS</ng-template>
+        <div class="inputs">
+          <mat-form-field>
+            <mat-label appColor>DATA DE NASCIMENTO:</mat-label>
+            <input matInput type="date" placeholder="00/00/0000" required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>SEXO:</mat-label>
+            <input matInput placeholder="Masculino/Feminino" required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>TELEFONE CELULAR:</mat-label>
+            <input matInput type="tel" required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>CPF:</mat-label>
+            <input matInput placeholder="000.000.000-00" required>
+          </mat-form-field>
+        </div>
+
+        <div class="nav-button">
+          <button mat-button matStepperNext>PRÓXIMO</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step color="accent">
+      <form class="stepper-form">
+        <ng-template matStepLabel>ENDEREÇO:</ng-template>
+
+        <div class="inputs">
+          <mat-form-field>
+            <mat-label>CEP:</mat-label>
+            <input matInput placeholder="00000-000" required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>LOGRADOURO E NÚMERO:</mat-label>
+            <input matInput placeholder="" required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>BAIRRO:</mat-label>
+            <input matInput placeholder="" required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>CIDADE:</mat-label>
+            <input matInput placeholder="" required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>UF:</mat-label>
+            <input matInput placeholder="" required>
+          </mat-form-field>
+        </div>
+
+        <div class="nav-button">
+          <button mat-button matStepperPrevious>ANTERIOR</button>
+          <button mat-button matStepperNext>PRÓXIMO</button>
+        </div>
+      </form>
+    </mat-step>
+
+  </mat-stepper>
+</div>

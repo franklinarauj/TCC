@@ -17,6 +17,7 @@ import { CadastroHelperComponent } from './pages/register/cadastro-helper/cadast
 import { CadastroPatientComponent } from './pages/register/cadastro-patient/cadastro-patient.component';
 import { ProfileHelperComponent } from './pages/profile/profile-helper/profile-helper.component';
 import { ProfilePatientComponent } from './pages/profile/profile-patient/profile-patient.component';
+import { AdditionalInfoComponent } from './pages/register/additional-info/additional-info.component';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
@@ -40,6 +41,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgxMaskModule, IConfig } from 'ngx-mask'
 import { MatRadioModule } from '@angular/material/radio';
+import { MatStepperModule } from '@angular/material/stepper';
 
 // DIRECTIVES
 import { CenterDirective } from './directives/center.directive';
@@ -68,7 +70,8 @@ const maskConfig: Partial<IConfig> = {
     EnfermagemComponent,
     FisioterapiaComponent,
     TerapiaOcupacionalComponent,
-    OutrosProfissionaisComponent
+    OutrosProfissionaisComponent,
+    AdditionalInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -78,6 +81,7 @@ const maskConfig: Partial<IConfig> = {
     MatDividerModule,
     MatGridListModule,
     MatTabsModule,
+    MatStepperModule,
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
