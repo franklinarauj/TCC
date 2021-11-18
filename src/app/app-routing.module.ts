@@ -32,6 +32,7 @@ const routes: Routes = [
   { path: 'cadastro-helper', component: CadastroHelperComponent },
   { path: 'cadastro-patient', component: CadastroPatientComponent },
   { path: 'profile-helper', component: ProfileHelperComponent},
+  { path: 'profile-patient', component: ProfilePatientComponent},
   { path: 'quemSomos', component: QuemSomosComponent},
   { path: 'nossaHistoria', component: NossaHistoriaComponent},
   { path: 'nossoObjetivo', component: NossoObjetivoComponent},
