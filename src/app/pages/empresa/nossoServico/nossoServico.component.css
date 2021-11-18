@@ -21,13 +21,13 @@
 
 .row-info {
   padding: 30px;
-  justify-content: center;
-  text-align: center;
+  justify-content: justify;
+  text-align: justify;
   font-size: large;
 }
 
 .list-info {
-  text-align: center;
+  text-align: justify;
   /* word-spacing: -0.5px; */
 }
 
