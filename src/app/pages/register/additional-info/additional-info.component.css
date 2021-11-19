@@ -24,6 +24,12 @@
   padding-bottom: 25px;
 }
 
+.nav-title {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+}
+
 .button-prev {
   color: white;
   margin-right: 0.7rem;
