@@ -46,6 +46,17 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
+.icon-input {
+  padding-right: 0.625rem;
+}
+
+.button-info {
+  font-size: medium;
+  display: flex;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .input-dado {
   color: black;
 }

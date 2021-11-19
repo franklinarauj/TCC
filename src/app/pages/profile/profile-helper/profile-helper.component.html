@@ -15,46 +15,49 @@
             <p>
               <mat-form-field appearance="outline">
                 <mat-label class="input-dado">Nome Completo</mat-label>
-                <input matInput value="Francisco Souza dos Santos" class="input-dado" placeholder="Francisco Souza dos Santos" disabled>
-                <mat-icon matSuffix>person</mat-icon>
+                <input matInput value="Francisco Souza dos Santos" class="input-dado"
+                  placeholder="Francisco Souza dos Santos" disabled>
+                <mat-icon matPrefix class="icon-input">person</mat-icon>
               </mat-form-field>
             </p>
             <p>
               <mat-form-field appearance="outline">
                 <mat-label class="input-dado">Email</mat-label>
-                <input matInput value="franciscosds@email.com" class="input-dado" placeholder="franciscosds@email.com" disabled>
-                <mat-icon matSuffix>email</mat-icon>
+                <input matInput value="franciscosds@email.com" class="input-dado" placeholder="franciscosds@email.com"
+                  disabled>
+                <mat-icon matPrefix class="icon-input">email</mat-icon>
               </mat-form-field>
             </p>
             <p>
               <mat-form-field appearance="outline">
                 <mat-label class="input-dado">Data de Nascimento</mat-label>
                 <input matInput value="01/10/1971" class="input-dado" placeholder="01/10/1971" disabled>
-                <mat-icon matSuffix>event</mat-icon>
+                <mat-icon matPrefix class="icon-input">event</mat-icon>
               </mat-form-field>
             </p>
             <p>
               <mat-form-field appearance="outline">
                 <mat-label class="input-dado">Sexo</mat-label>
                 <input matInput value="Masculino" class="input-dado" placeholder="Masculino" disabled>
-                <mat-icon matSuffix>transgender</mat-icon>
+                <mat-icon matPrefix class="icon-input">transgender</mat-icon>
               </mat-form-field>
             </p>
+          </div>
+          <div class="button-info">
             <button mat-flat-button style="background-color: #FF9900; color: white; border: 2px solid #B21E1E;"
               (click)="deleteCadastro()">APAGAR CADASTRO
             </button>
             <button mat-flat-button style="background-color: #38A3A5; color: white; border: 2px solid #22577A;"
               (click)="editCadastro()">ALTERAR DADOS
             </button>
+            <button mat-flat-button style="background-color: #FECD4D; color: black; border: 2px solid #22577A;"
+              (click)="editCurriculo()">ALTERAR CURRICULO
+            </button>
           </div>
         </div>
 
       </div>
     </div>
-
-    <!-- <div class="mapa">
-      <app-mapa></app-mapa>
-    </div> -->
 
   </div>
 </div>
