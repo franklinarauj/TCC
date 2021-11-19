@@ -21,6 +21,11 @@
   text-align: center;
 }
 
+.tipoUsuario {
+  text-align: center;
+  justify-content: space-around;
+}
+
 .input-cadastro {
   font-size: medium;
 }

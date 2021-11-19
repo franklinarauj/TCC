@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+
+interface Sexo {
+  name: string;
+}
 
 @Component({
   selector: 'app-additional-info',
@@ -7,12 +11,20 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./additional-info.component.css']
 })
 export class AdditionalInfoComponent implements OnInit {
+
   isLinear = false;
+
+  sexControl = new FormControl('', Validators.required);
+  selectFormControl = new FormControl('', Validators.required);
+  sexs: Sexo[] = [
+    {name: 'Masculino'},
+    {name: 'Feminino'},
+  ];
 
   constructor() { }
 
   ngOnInit() {
-    
+
   }
 
 }

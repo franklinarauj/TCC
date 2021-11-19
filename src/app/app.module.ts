@@ -15,9 +15,9 @@ import { TerapiaOcupacionalComponent } from './pages/profissionais/terapia-ocupa
 import { OutrosProfissionaisComponent } from './pages/profissionais/outros-profissionais/outros-profissionais.component';
 import { CadastroHelperComponent } from './pages/register/cadastro-helper/cadastro-helper.component';
 import { CadastroPatientComponent } from './pages/register/cadastro-patient/cadastro-patient.component';
+import { AdditionalInfoComponent } from './pages/register/additional-info/additional-info.component';
 import { ProfileHelperComponent } from './pages/profile/profile-helper/profile-helper.component';
 import { ProfilePatientComponent } from './pages/profile/profile-patient/profile-patient.component';
-import { AdditionalInfoComponent } from './pages/register/additional-info/additional-info.component';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
@@ -42,6 +42,7 @@ import { FormsModule } from '@angular/forms';
 import { NgxMaskModule, IConfig } from 'ngx-mask'
 import { MatRadioModule } from '@angular/material/radio';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatSelectModule } from '@angular/material/select';
 
 // DIRECTIVES
 import { CenterDirective } from './directives/center.directive';
@@ -58,11 +59,12 @@ const maskConfig: Partial<IConfig> = {
     HomeComponent,
     LoginComponent,
     TermsComponent,
+    CadastroHelperComponent,
     CadastroPatientComponent,
+    AdditionalInfoComponent,
     MapaComponent,
     ProfileHelperComponent,
     ProfilePatientComponent,
-    CadastroHelperComponent,
     CenterDirective,
     QuemSomosComponent,
     NossaHistoriaComponent,
@@ -70,8 +72,7 @@ const maskConfig: Partial<IConfig> = {
     EnfermagemComponent,
     FisioterapiaComponent,
     TerapiaOcupacionalComponent,
-    OutrosProfissionaisComponent,
-    AdditionalInfoComponent
+    OutrosProfissionaisComponent
   ],
   imports: [
     BrowserModule,
@@ -91,7 +92,8 @@ const maskConfig: Partial<IConfig> = {
     HttpClientModule,
     FormsModule,
     NgxMaskModule.forRoot(maskConfig),
-    MatRadioModule
+    MatRadioModule,
+    MatSelectModule
   ],
   providers: [],
   entryComponents: [MatDialogModule],

@@ -6,15 +6,18 @@
       </mat-grid-tile>
       <mat-grid-tile>
         <div class="input-cadastro">
-          <mat-radio-group aria-label="Selecione o tipo de usuário">
-            <mat-radio-button value="2" [(ngModel)]="tipoUsuario" name="tipoUsuario" ngDefaultControl>Cuidador
-            </mat-radio-button>
-            <mat-radio-button value="1" [(ngModel)]="tipoUsuario" name="tipoUsuario" ngDefaultControl style="margin-left: 100px;">Paciente
-            </mat-radio-button>
-          </mat-radio-group>
           <p class="title">INSIRA ABAIXO SEUS DADOS DE ACESSO</p>
+          <mat-radio-group color="warn">
+            <div class="tipoUsuario">
+              <mat-radio-button value="1" [(ngModel)]="tipoUsuario" name="tipoUsuario" ngDefaultControl style="padding-right: 0.7rem;">Paciente
+              </mat-radio-button>
+              <mat-radio-button value="2" [(ngModel)]="tipoUsuario" name="tipoUsuario" ngDefaultControl>Cuidador
+              </mat-radio-button>
+            </div>
+          </mat-radio-group>
           <p>
             <mat-form-field appearance="outline">
+              <mat-icon matSuffix class="icon-input">badge</mat-icon>
               <mat-label>CPF/CNPJ</mat-label>
               <input matInput placeholder="Ex.: 000.000.000-00"
                 pattern="([0-9]{2}[.]?[0-9]{3}[.]?[0-9]{3}[/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[.]?[0-9]{3}[.]?[0-9]{3}[-]?[0-9]{2})"

@@ -1,4 +1,5 @@
 .stepper-container {
+  padding: 7rem;
 }
 
 .stepper{
@@ -17,4 +18,8 @@
 .nav-button {
   display: flex;
   justify-content: center;
+}
+
+.icon-input {
+  padding-right: 0.625rem;
 }
