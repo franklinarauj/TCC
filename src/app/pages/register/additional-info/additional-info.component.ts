@@ -12,6 +12,7 @@ interface Sexo {
 })
 export class AdditionalInfoComponent implements OnInit {
 
+  tipoUsuario: string = "";
   isLinear = false;
 
   sexControl = new FormControl('', Validators.required);

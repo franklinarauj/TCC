@@ -17,6 +17,13 @@
   justify-content: center;
 }
 
+.nav-cadastro {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  padding-bottom: 25px;
+}
+
 .button-prev {
   color: white;
   margin-right: 0.7rem;

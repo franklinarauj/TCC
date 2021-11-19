@@ -1,4 +1,16 @@
 <div class="stepper-container">
+  <div class="nav-cadastro">
+    <mat-radio-group color="warn">
+      <div class="tipoUsuario">
+        <h2>Desejo realizar o cadastro como:</h2>
+        <mat-radio-button value="1" [(ngModel)]="tipoUsuario" name="tipoUsuario" ngDefaultControl
+          style="padding-right: 0.7rem;">Paciente
+        </mat-radio-button>
+        <mat-radio-button value="2" [(ngModel)]="tipoUsuario" name="tipoUsuario" ngDefaultControl>Cuidador
+        </mat-radio-button>
+      </div>
+    </mat-radio-group>
+  </div>
   <mat-stepper [linear]="true" class="stepper">
     <mat-step color="accent" class="mat-step">
       <form class="stepper-form">
@@ -27,7 +39,7 @@
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">transgender</mat-icon>
             <mat-label>SEXO</mat-label>
-            <mat-select  required>
+            <mat-select required>
               <mat-option>--</mat-option>
               <mat-option *ngFor="let sex of sexs" [value]="sex">
                 {{sex.name}}
@@ -75,10 +87,24 @@
           </mat-form-field>
         </div>
 
+        <!-- <div class="nav-cadastro">
+          <mat-radio-group color="warn">
+            <div class="tipoUsuario">
+              <h2>Deseja realizar o cadastro como:</h2>
+              <mat-radio-button value="1" [(ngModel)]="tipoUsuario" name="tipoUsuario" ngDefaultControl
+                style="padding-right: 0.7rem;">Paciente
+              </mat-radio-button>
+              <mat-radio-button value="2" [(ngModel)]="tipoUsuario" name="tipoUsuario" ngDefaultControl>Cuidador
+              </mat-radio-button>
+            </div>
+          </mat-radio-group>
+        </div> -->
+
         <div class="nav-button">
           <button mat-button matStepperPrevious class="button-prev">ANTERIOR</button>
           <button mat-button matStepperNext class="button-next">SALVAR</button>
         </div>
+
       </form>
     </mat-step>
 
