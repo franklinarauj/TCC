@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
   }
 
   navigateToCadastro(): void {
-    this.tipoUsuario == "1" ? this.router.navigate(['/cadastro-patient']) : this.router.navigate(['/cadastro-helper'])
+    this.tipoUsuario == "1" ? this.router.navigate(['/cadastro']) : this.router.navigate(['/cadastro'])
   }
 
   logar(): void {

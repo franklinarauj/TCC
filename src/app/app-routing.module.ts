@@ -13,8 +13,7 @@ import { EnfermagemComponent } from './pages/profissionais/enfermagem/enfermagem
 import { FisioterapiaComponent } from './pages/profissionais/fisioterapia/fisioterapia.component';
 import { TerapiaOcupacionalComponent } from './pages/profissionais/terapia-ocupacional/terapia-ocupacional.component';
 import { OutrosProfissionaisComponent } from './pages/profissionais/outros-profissionais/outros-profissionais.component';
-import { CadastroHelperComponent } from './pages/register/cadastro-helper/cadastro-helper.component';
-import { CadastroPatientComponent } from './pages/register/cadastro-patient/cadastro-patient.component';
+import { CadastroComponent } from './pages/register/cadastro/cadastro.component';
 import { ProfileHelperComponent } from './pages/profile/profile-helper/profile-helper.component';
 import { ProfilePatientComponent } from './pages/profile/profile-patient/profile-patient.component';
 import { AdditionalInfoComponent } from './pages/register/additional-info/additional-info.component';
@@ -31,8 +30,7 @@ const routes: Routes = [
   { path: 'terms', component: TermsComponent },
   { path: 'sobreNos', component: sobreNosComponent },
   { path: 'nossoServico', component: nossoServicoComponent },
-  { path: 'cadastro-helper', component: CadastroHelperComponent },
-  { path: 'cadastro-patient', component: CadastroPatientComponent },
+  { path: 'cadastro', component: CadastroComponent },
   { path: 'profile-helper', component: ProfileHelperComponent},
   { path: 'profile-patient', component: ProfilePatientComponent},
   { path: 'quemSomos', component: QuemSomosComponent},

@@ -14,15 +14,15 @@ export class ProfileHelperComponent implements OnInit {
   }
 
   deleteCadastro(): void {
-    this.router.navigate(['/cadastro-delete'])
+    this.router.navigate(['cadastro-delete'])
   };
 
   editCadastro(): void {
-    this.router.navigate(['/cadastro-edit'])
+    this.router.navigate(['cadastro-edit'])
   };
 
   editCurriculo(): void {
-    this.router.navigate(['/perfil/curriculum-info'])
+    this.router.navigate(['perfil/curriculum-info'])
   };
 
 }

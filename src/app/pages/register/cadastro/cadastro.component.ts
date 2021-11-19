@@ -2,16 +2,18 @@ import { Component, Input, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-cadastro-helper',
-  templateUrl: './cadastro-helper.component.html',
-  styleUrls: ['./cadastro-helper.component.css'],
+  selector: 'app-cuidador',
+  templateUrl: './cadastro.component.html',
+  styleUrls: ['./cadastro.component.css']
 })
-export class CadastroHelperComponent implements OnInit {
+
+export class CadastroComponent implements OnInit {
 
   hide = true;
   hide2 = true;
 
   constructor(private router: Router) {
+
   }
 
   ngOnInit(): void {}
@@ -46,8 +48,8 @@ export class CadastroHelperComponent implements OnInit {
     };
   }
 
-  // cuidadorCadastro(): void {
-  //   this.router.navigate(['/cadastro-cuidador'])
-  // };
+  //   cuidadorCadastro(): void {
+    //this.router.navigate(['/cadastro-cuidador'])
+  //};
 
 }

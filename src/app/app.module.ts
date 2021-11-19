@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { TermsComponent } from './pages/empresa/terms/terms.component';
+import { CadastroComponent } from './pages/register/cadastro/cadastro.component';
 import { QuemSomosComponent } from './pages/ajuda/quem-somos/quem-somos.component';
 import { NossaHistoriaComponent } from './pages/ajuda/nossa-historia/nossa-historia.component';
 import { NossoObjetivoComponent } from './pages/ajuda/nosso-objetivo/nosso-objetivo.component';
@@ -13,8 +14,6 @@ import { EnfermagemComponent } from './pages/profissionais/enfermagem/enfermagem
 import { FisioterapiaComponent } from './pages/profissionais/fisioterapia/fisioterapia.component';
 import { TerapiaOcupacionalComponent } from './pages/profissionais/terapia-ocupacional/terapia-ocupacional.component';
 import { OutrosProfissionaisComponent } from './pages/profissionais/outros-profissionais/outros-profissionais.component';
-import { CadastroHelperComponent } from './pages/register/cadastro-helper/cadastro-helper.component';
-import { CadastroPatientComponent } from './pages/register/cadastro-patient/cadastro-patient.component';
 import { AdditionalInfoComponent } from './pages/register/additional-info/additional-info.component';
 import { CurriculumInfoComponent } from './pages/profile/curriculum-info/curriculum-info.component';
 import { ProfileHelperComponent } from './pages/profile/profile-helper/profile-helper.component';
@@ -60,8 +59,7 @@ const maskConfig: Partial<IConfig> = {
     HomeComponent,
     LoginComponent,
     TermsComponent,
-    CadastroHelperComponent,
-    CadastroPatientComponent,
+    CadastroComponent,
     AdditionalInfoComponent,
     MapaComponent,
     ProfileHelperComponent,
