@@ -44,6 +44,10 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
+.icon-input {
+  padding-right: 0.625rem;
+}
+
 .input-dado {
   color: black;
 }

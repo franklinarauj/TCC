@@ -21,4 +21,8 @@ export class ProfileHelperComponent implements OnInit {
     this.router.navigate(['/cadastro-edit'])
   };
 
+  editCurriculo(): void {
+    this.router.navigate(['/perfil/curriculum-info'])
+  };
+
 }
