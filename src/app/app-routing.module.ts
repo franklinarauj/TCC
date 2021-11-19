@@ -18,6 +18,8 @@ import { CadastroPatientComponent } from './pages/register/cadastro-patient/cada
 import { ProfileHelperComponent } from './pages/profile/profile-helper/profile-helper.component';
 import { ProfilePatientComponent } from './pages/profile/profile-patient/profile-patient.component';
 import { AdditionalInfoComponent } from './pages/register/additional-info/additional-info.component';
+import { CurriculumInfoComponent } from './pages/profile/curriculum-info/curriculum-info.component';
+
 // COMPONENTS
 import { MapaComponent } from './components/mapa/mapa.component';
 
@@ -41,6 +43,7 @@ const routes: Routes = [
   { path: 'terapiaOcupacional', component: TerapiaOcupacionalComponent},
   { path: 'outrosProfissionais', component: OutrosProfissionaisComponent},
   { path: 'cadastro/additional-info', component: AdditionalInfoComponent},
+  { path: 'perfil/additional-info', component: CurriculumInfoComponent },
 ];
 
 

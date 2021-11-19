@@ -16,6 +16,7 @@ import { OutrosProfissionaisComponent } from './pages/profissionais/outros-profi
 import { CadastroHelperComponent } from './pages/register/cadastro-helper/cadastro-helper.component';
 import { CadastroPatientComponent } from './pages/register/cadastro-patient/cadastro-patient.component';
 import { AdditionalInfoComponent } from './pages/register/additional-info/additional-info.component';
+import { CurriculumInfoComponent } from './pages/profile/curriculum-info/curriculum-info.component';
 import { ProfileHelperComponent } from './pages/profile/profile-helper/profile-helper.component';
 import { ProfilePatientComponent } from './pages/profile/profile-patient/profile-patient.component';
 
@@ -72,7 +73,8 @@ const maskConfig: Partial<IConfig> = {
     EnfermagemComponent,
     FisioterapiaComponent,
     TerapiaOcupacionalComponent,
-    OutrosProfissionaisComponent
+    OutrosProfissionaisComponent,
+    CurriculumInfoComponent
   ],
   imports: [
     BrowserModule,

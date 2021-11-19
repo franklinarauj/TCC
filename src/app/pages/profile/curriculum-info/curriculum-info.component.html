@@ -1,0 +1,144 @@
+<div class="stepper-container">
+  <mat-stepper [linear]="true" class="stepper">
+
+    <mat-step color="accent" class="mat-step">
+      <form class="stepper-form">
+        <ng-template matStepLabel>DADOS CADASTRAIS</ng-template>
+        <div class="inputs">
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix type="text" class="icon-input">description</mat-icon>
+            <mat-label>OBJETIVO</mat-label>
+            <input matInput required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix type="text" class="icon-input">description</mat-icon>
+            <mat-label appColor>RESUMO</mat-label>
+            <input matInput required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">description</mat-icon>
+            <mat-label>SOBRE</mat-label>
+            <input matInput type="text" required>
+          </mat-form-field>
+        </div>
+
+        <div class="nav-button">
+          <button mat-button class="button-next" matStepperNext>PRÓXIMO</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step color="accent">
+      <form class="stepper-form">
+        <ng-template matStepLabel>EXPERIÊNCIA</ng-template>
+        <div class="inputs">
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">work</mat-icon>
+            <mat-label>EMPRESA</mat-label>
+            <input matInput required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">description</mat-icon>
+            <mat-label>CARGO</mat-label>
+            <input matInput required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">description</mat-icon>
+            <mat-label>DESCRIÇÃO</mat-label>
+            <input matInput required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">date_range</mat-icon>
+            <mat-label>DATA INÍCIO</mat-label>
+            <input matInput placeholder="Ex.: 00/00/0000" mask="00/00/0000" required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">date_range</mat-icon>
+            <mat-label>DATA FIM - PREVISÃO</mat-label>
+            <input matInput placeholder="Ex.: 00/00/0000" mask="00/00/0000" required>
+          </mat-form-field>
+          <div class="last-line">
+            <mat-checkbox color="warn" style="margin-right: 5px;">
+              EMPRESA ATUAL
+            </mat-checkbox>
+          </div>
+        </div>
+
+        <div class="nav-button">
+          <button mat-button class="button-prev" matStepperPrevious>ANTERIOR</button>
+          <button mat-button class="button-next" matStepperNext>PRÓXIMO</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step color="accent">
+      <form class="stepper-form">
+        <ng-template matStepLabel>CERTIFICAÇÃO</ng-template>
+        <div class="inputs">
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">work</mat-icon>
+            <mat-label>INSTITUIÇÃO</mat-label>
+            <input matInput required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">description</mat-icon>
+            <mat-label>TÍTULO</mat-label>
+            <input matInput required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">schedule</mat-icon>
+            <mat-label>CARGA HORÁRIA</mat-label>
+            <input matInput suffix="HORAS" required>
+          </mat-form-field>
+        </div>
+        <div class="nav-button">
+          <button mat-button class="button-prev" matStepperPrevious>ANTERIOR</button>
+          <button mat-button class="button-next" matStepperNext>PRÓXIMO</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step color="accent">
+      <form class="stepper-form">
+        <ng-template matStepLabel>FORMAÇÃO</ng-template>
+        <div class="inputs">
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">work</mat-icon>
+            <mat-label>INSTITUIÇÃO</mat-label>
+            <input matInput required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">description</mat-icon>
+            <mat-label>CURSO</mat-label>
+            <input matInput required>
+          </mat-form-field>
+          <mat-checkbox class="check-box-do-murilo" (change)="getCheckboxValue($event)" color="warn"
+            style="margin-right: 5px;">
+            ESTOU CURSANDO
+          </mat-checkbox>
+            <mat-form-field *ngIf="displayFormationForm" appearance="outline">
+              <mat-icon matPrefix class="icon-input">description</mat-icon>
+              <mat-label>PERÍODO</mat-label>
+              <input matInput required>
+            </mat-form-field>
+            <mat-form-field *ngIf="displayFormationForm" appearance="outline">
+              <mat-icon matPrefix class="icon-input">date_range</mat-icon>
+              <mat-label>DATA INÍCIO</mat-label>
+              <input matInput placeholder="Ex.: 00/00/0000" mask="00/00/0000" required>
+            </mat-form-field>
+            <mat-form-field *ngIf="displayFormationForm" appearance="outline">
+              <mat-icon matPrefix class="icon-input">date_range</mat-icon>
+              <mat-label>DATA FIM - PREVISÃO</mat-label>
+              <input matInput placeholder="Ex.: 00/00/0000" mask="00/00/0000" required>
+            </mat-form-field>
+        </div>
+
+        <div class="nav-button">
+          <button mat-button class="button-prev" matStepperPrevious>ANTERIOR</button>
+          <button mat-button class="button-next" matStepperNext>SALVAR</button>
+        </div>
+      </form>
+    </mat-step>
+
+  </mat-stepper>
+</div>
