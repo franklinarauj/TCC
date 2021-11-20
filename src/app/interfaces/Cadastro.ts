@@ -1,6 +1,5 @@
 export interface Cadastro {
     cpf: string;
-    // data_cadastro: string;
     nome: string;
     data_nascimento: Date;
     ativo: boolean;

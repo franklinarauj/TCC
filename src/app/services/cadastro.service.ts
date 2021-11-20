@@ -14,11 +14,8 @@ export class CadastroService {
   constructor(private http: HttpClient) { }
 
   cadastrar(cadastro: Cadastro, tipoUsuario: number): Observable<any> {
-    // let dataFormatada = new Date(cadastro.data_nascimento);
-    // cadastro.data_nascimento = dataFormatada;
     return tipoUsuario == 1 ?
       this.http.post(`${BASE_URL}/paciente`, cadastro) :
-      this.http.post(`${BASE_URL}/cuidador`, cadastro);
-    
+      this.http.post(`${BASE_URL}/cuidador`, cadastro);    
   }
 }

@@ -37,7 +37,6 @@ export class AdditionalInfoComponent implements OnInit {
 
   cadastro: Cadastro = {
     cpf: "",
-    // data_cadastro: "",
     nome: "",
     data_nascimento: new Date(),
     ativo: true,
@@ -56,7 +55,7 @@ export class AdditionalInfoComponent implements OnInit {
   };
 
   constructor(private cadastroService: CadastroService, private router: Router) { }
-
+ 
   ngOnInit() {
     this.cadastro.nome = this.usuario.nome;
     this.cadastro.cpf = this.usuario.cpf;
@@ -69,7 +68,7 @@ export class AdditionalInfoComponent implements OnInit {
     console.log(this.cadastro.data_nascimento);
     this.cadastroService.cadastrar(this.cadastro, tipoUsuario).subscribe(res => { 
       console.log(res);
-      this.router.navigateByUrl('/profile-patient');
+      tipoUsuario == 1 ? this.router.navigateByUrl('/profile-patient') : this.router.navigateByUrl('/profile-helper');
     })
   }
 }

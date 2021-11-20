@@ -1,7 +1,7 @@
 <div class="stepper-container">
   <div class="nav-title">
     <h1>PRECISAMOS DE ALGUMAS INFORMAÇÕES
-    PARA REALIZARMOS O SEU CADASTRO</h1>
+      PARA REALIZARMOS O SEU CADASTRO</h1>
   </div>
   <!-- <div class="nav-cadastro">
     <mat-radio-group color="warn">
@@ -23,17 +23,20 @@
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">phone</mat-icon>
             <mat-label>TELEFONE CELULAR</mat-label>
-            <input [(ngModel)]="cadastro.celular" name="celular" matInput placeholder="Ex.: (00) 0 0000-0000" mask="(00) 0 0000-0000" required>
+            <input [(ngModel)]="cadastro.celular" name="celular" matInput placeholder="Ex.: (00) 0 0000-0000"
+              mask="(00) 0 0000-0000" required>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">event</mat-icon>
             <mat-label appColor>DATA DE NASCIMENTO</mat-label>
-            <input [(ngModel)]="cadastro.data_nascimento" name="data_nascimento" matInput placeholder="Ex.: 00/00/0000" mask="00/00/0000" required>
+            <input [(ngModel)]="cadastro.data_nascimento" name="data_nascimento" matInput placeholder="Ex.: 00/00/0000"
+              mask="00/00/0000" required>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">email</mat-icon>
             <mat-label>E-MAIL</mat-label>
-            <input [(ngModel)]="cadastro.email" name="email" matInput type="email" placeholder="Ex.: email@email.com" required>
+            <input [(ngModel)]="cadastro.email" name="email" matInput type="email" placeholder="Ex.: email@email.com"
+              required>
           </mat-form-field>
           <!-- <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">transgender</mat-icon>
@@ -67,12 +70,14 @@
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">place</mat-icon>
             <mat-label>CEP</mat-label>
-            <input [(ngModel)]="cadastro.cep" name="cep" matInput placeholder="Ex.: 00.000-000" mask="00.000-000" required>
+            <input [(ngModel)]="cadastro.cep" name="cep" matInput placeholder="Ex.: 00.000-000" mask="00.000-000"
+              required>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">house</mat-icon>
             <mat-label>LOGRADOURO E NÚMERO</mat-label>
-            <input [(ngModel)]="cadastro.logradouro" name="logradouro" matInput placeholder="Ex.: Rua A Casa 01" required>
+            <input [(ngModel)]="cadastro.logradouro" name="logradouro" matInput placeholder="Ex.: Rua A Casa 01"
+              required>
           </mat-form-field>
           <!-- <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">holiday_village</mat-icon>
@@ -113,6 +118,5 @@
 
       </form>
     </mat-step>
-
   </mat-stepper>
 </div>
