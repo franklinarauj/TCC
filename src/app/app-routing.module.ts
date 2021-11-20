@@ -30,11 +30,7 @@ const routes: Routes = [
   { path: 'terms', component: TermsComponent },
   { path: 'sobreNos', component: sobreNosComponent },
   { path: 'nossoServico', component: nossoServicoComponent },
-  {
-    path: 'cadastro', component: CadastroComponent, children: [
-      { path: 'additional-info', component: AdditionalInfoComponent }
-    ]
-  },
+  { path: 'cadastro', component: CadastroComponent },
   { path: 'profile-helper', component: ProfileHelperComponent },
   { path: 'profile-patient', component: ProfilePatientComponent },
   { path: 'quemSomos', component: QuemSomosComponent },
