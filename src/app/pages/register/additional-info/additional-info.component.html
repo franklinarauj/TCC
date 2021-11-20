@@ -23,17 +23,17 @@
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">phone</mat-icon>
             <mat-label>TELEFONE CELULAR</mat-label>
-            <input matInput placeholder="Ex.: (00) 0 0000-0000" mask="(00) 0 0000-0000" required>
+            <input [(ngModel)]="cadastro.celular" name="celular" matInput placeholder="Ex.: (00) 0 0000-0000" mask="(00) 0 0000-0000" required>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">event</mat-icon>
             <mat-label appColor>DATA DE NASCIMENTO</mat-label>
-            <input matInput placeholder="Ex.: 00/00/0000" mask="00/00/0000" required>
+            <input [(ngModel)]="cadastro.data_nascimento" name="data_nascimento" matInput placeholder="Ex.: 00/00/0000" mask="00/00/0000" required>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">email</mat-icon>
             <mat-label>E-MAIL</mat-label>
-            <input matInput type="email" placeholder="Ex.: email@email.com" required>
+            <input [(ngModel)]="cadastro.email" name="email" matInput type="email" placeholder="Ex.: email@email.com" required>
           </mat-form-field>
           <!-- <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">transgender</mat-icon>
@@ -43,9 +43,9 @@
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">transgender</mat-icon>
             <mat-label>SEXO</mat-label>
-            <mat-select required>
+            <mat-select [(ngModel)]="cadastro.sexo" name="sexo" required>
               <mat-option>--</mat-option>
-              <mat-option *ngFor="let sex of sexs" [value]="sex">
+              <mat-option *ngFor="let sex of sexs" [value]="sex.value">
                 {{sex.name}}
               </mat-option>
             </mat-select>
@@ -67,27 +67,27 @@
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">place</mat-icon>
             <mat-label>CEP</mat-label>
-            <input matInput placeholder="Ex.: 00.000-000" mask="00.000-000" required>
+            <input [(ngModel)]="cadastro.cep" name="cep" matInput placeholder="Ex.: 00.000-000" mask="00.000-000" required>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">house</mat-icon>
             <mat-label>LOGRADOURO E NÚMERO</mat-label>
-            <input matInput placeholder="Ex.: Rua A Casa 01" required>
+            <input [(ngModel)]="cadastro.logradouro" name="logradouro" matInput placeholder="Ex.: Rua A Casa 01" required>
           </mat-form-field>
-          <mat-form-field appearance="outline">
+          <!-- <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">holiday_village</mat-icon>
-            <mat-label>BAIRRO</mat-label>
+            <mat-label>CIDADE</mat-label>
             <input matInput placeholder="Ex.: Laranjeiras" required>
-          </mat-form-field>
+          </mat-form-field> -->
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">apartment</mat-icon>
             <mat-label>CIDADE</mat-label>
-            <input matInput placeholder="Ex.: Brasília" required>
+            <input [(ngModel)]="cadastro.cidade" name="cidade" matInput placeholder="Ex.: Brasília" required>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">pin_drop</mat-icon>
             <mat-label>UF</mat-label>
-            <input matInput placeholder="Ex.: DF" mask="SS" required>
+            <input [(ngModel)]="cadastro.uf" name="uf" matInput placeholder="Ex.: DF" mask="SS" required>
           </mat-form-field>
         </div>
 
@@ -95,18 +95,20 @@
           <mat-radio-group color="warn">
             <div class="tipoUsuario">
               <h2>Deseja realizar o cadastro como:</h2>
-              <mat-radio-button value="1" [(ngModel)]="tipoUsuario" name="tipoUsuario" ngDefaultControl
+              <mat-radio-button value=1 [(ngModel)]="tipoUsuario" name="tipoUsuario" ngDefaultControl
                 style="padding-right: 0.7rem;">Paciente
               </mat-radio-button>
-              <mat-radio-button value="2" [(ngModel)]="tipoUsuario" name="tipoUsuario" ngDefaultControl>Cuidador
+              <mat-radio-button value=2 [(ngModel)]="tipoUsuario" name="tipoUsuario" ngDefaultControl>Cuidador
               </mat-radio-button>
             </div>
           </mat-radio-group>
         </div>
-
+        <p *ngIf="tipoUsuario === 0" style="color: red;">
+          Selecione uma das opções
+        </p>
         <div class="nav-button">
           <button mat-button matStepperPrevious class="button-prev">ANTERIOR</button>
-          <button mat-button matStepperNext class="button-next">SALVAR</button>
+          <button mat-button matStepperNext class="button-next" (click)="cadastrar(tipoUsuario)">SALVAR</button>
         </div>
 
       </form>

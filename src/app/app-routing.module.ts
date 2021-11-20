@@ -24,23 +24,26 @@ import { MapaComponent } from './components/mapa/mapa.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'mapa', component: MapaComponent},
+  { path: 'mapa', component: MapaComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'terms', component: TermsComponent },
   { path: 'sobreNos', component: sobreNosComponent },
   { path: 'nossoServico', component: nossoServicoComponent },
-  { path: 'cadastro', component: CadastroComponent },
-  { path: 'profile-helper', component: ProfileHelperComponent},
-  { path: 'profile-patient', component: ProfilePatientComponent},
-  { path: 'quemSomos', component: QuemSomosComponent},
-  { path: 'nossaHistoria', component: NossaHistoriaComponent},
-  { path: 'nossoObjetivo', component: NossoObjetivoComponent},
-  { path: 'enfermagem', component: EnfermagemComponent},
-  { path: 'fisioterapia', component: FisioterapiaComponent},
-  { path: 'terapiaOcupacional', component: TerapiaOcupacionalComponent},
-  { path: 'outrosProfissionais', component: OutrosProfissionaisComponent},
-  { path: 'cadastro/additional-info', component: AdditionalInfoComponent},
+  {
+    path: 'cadastro', component: CadastroComponent, children: [
+      { path: 'additional-info', component: AdditionalInfoComponent }
+    ]
+  },
+  { path: 'profile-helper', component: ProfileHelperComponent },
+  { path: 'profile-patient', component: ProfilePatientComponent },
+  { path: 'quemSomos', component: QuemSomosComponent },
+  { path: 'nossaHistoria', component: NossaHistoriaComponent },
+  { path: 'nossoObjetivo', component: NossoObjetivoComponent },
+  { path: 'enfermagem', component: EnfermagemComponent },
+  { path: 'fisioterapia', component: FisioterapiaComponent },
+  { path: 'terapiaOcupacional', component: TerapiaOcupacionalComponent },
+  { path: 'outrosProfissionais', component: OutrosProfissionaisComponent },
   { path: 'perfil/additional-info', component: CurriculumInfoComponent },
 ];
 
