@@ -1,0 +1,52 @@
+<div class="container">
+  <mat-grid-list cols="2" rowHeight="2:1.5">
+    <mat-grid-tile class="mat-grid-tile-mapa">
+      <app-mapa (latlong)="preencherLatLong($event)"></app-mapa>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div class="inputs">
+        <h4>ENCONTRE SEU CUIDADOR</h4>
+        <mat-form-field appearance="outline">
+          <mat-label>SEXO</mat-label>
+          <mat-select name="teste" required>
+            <mat-option>--</mat-option>
+            <!-- <mat-option *ngFor="let sex of sexs" [value]="sex.value">
+          {{sex.name}}
+        </mat-option> -->
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>ESPECIALIDADE</mat-label>
+          <mat-select name="teste" required>
+            <mat-option>--</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>AVALIAÇÃO</mat-label>
+          <mat-select name="teste" required>
+            <mat-option>--</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>VALOR</mat-label>
+          <mat-select name="teste" required>
+            <mat-option>--</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>DISPONIBILIDADE</mat-label>
+          <mat-select name="teste" required>
+          </mat-select>
+        </mat-form-field>
+        <div class="button-div">
+          <button mat-button (click)="openDialog()">FILTRAR</button>
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

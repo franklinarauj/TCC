@@ -18,12 +18,14 @@ import { AdditionalInfoComponent } from './pages/register/additional-info/additi
 import { CurriculumInfoComponent } from './pages/profile/curriculum-info/curriculum-info.component';
 import { ProfileHelperComponent } from './pages/profile/profile-helper/profile-helper.component';
 import { ProfilePatientComponent } from './pages/profile/profile-patient/profile-patient.component';
+import { MatchComponent } from './pages/match/match.component';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MapaComponent } from './components/mapa/mapa.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 // IMPORTS @ANGULAR
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -46,7 +48,6 @@ import { MatSelectModule } from '@angular/material/select';
 
 // DIRECTIVES
 import { CenterDirective } from './directives/center.directive';
-
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -72,7 +73,9 @@ const maskConfig: Partial<IConfig> = {
     FisioterapiaComponent,
     TerapiaOcupacionalComponent,
     OutrosProfissionaisComponent,
-    CurriculumInfoComponent
+    CurriculumInfoComponent,
+    MatchComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

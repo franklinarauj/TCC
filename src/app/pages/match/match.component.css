@@ -1,0 +1,17 @@
+.container{
+  padding: 2rem;
+}
+
+.mat-grid-tile-mapa {
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
