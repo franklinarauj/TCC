@@ -11,13 +11,9 @@ export class MatchComponent implements OnInit {
 
   lat: any;
   long: any;
+  latLongArray: any;
 
   constructor(public dialog: MatDialog) {}
-
-  preencherLatLong(evento: any) {
-    this.lat = evento[0];
-    this.long = evento[1];
-  }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(ModalComponent, {
@@ -31,7 +27,20 @@ export class MatchComponent implements OnInit {
   }
 
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    //@todo retornar dados do servico
+    this.latLongArray = [
+      {
+      lat: -15.827837114029137,
+      long: -47.87841796875001
+          },
+      {
+        lat: -15.815948233847756,
+        long: -47.92098999023438
+      }
+    ]
+    return this.latLongArray;
+  }
 
 
 }

@@ -1,7 +1,7 @@
 <div class="container">
   <mat-grid-list cols="2" rowHeight="2:1.5">
     <mat-grid-tile class="mat-grid-tile-mapa">
-      <app-mapa (latlong)="preencherLatLong($event)"></app-mapa>
+      <app-mapa  [marcar]="false" [latLongArray]=latLongArray></app-mapa>
     </mat-grid-tile>
 
     <mat-grid-tile>
