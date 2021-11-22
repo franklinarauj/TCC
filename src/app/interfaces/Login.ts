@@ -1,4 +1,4 @@
 export interface Login {
-    cpf_cnpj: string;
+    cpf: string;
     senha: string;    
 }

@@ -7,8 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'TCC';
-
-
 }
 
 // FUNCAO A FAZER PARA ENVIAR EMAIL
