@@ -11,7 +11,7 @@ import { LoginServiceService } from 'src/app/services/login-service.service';
 export class LoginComponent implements OnInit {
 
   login: Login = {
-    cpf_cnpj: "",
+    cpf: "",
     senha: ""
   };
 
