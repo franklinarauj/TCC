@@ -13,6 +13,8 @@ export class MapaComponent implements AfterViewInit {
   @Input() latLongArray: any;
   @Output() latlong = new EventEmitter();
   @Input() marcar = true;
+  @Input() dadosUser: any;
+
   private map : any;
   private popup: any;
   public myMarker: any 
@@ -41,12 +43,12 @@ export class MapaComponent implements AfterViewInit {
       if (this.myMarker) { // check
         this.map.removeLayer(this.myMarker); // remove
     } 
-    this.myMarker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(this.map).bindPopup("<b>Marcado!</b><br />Você selecionou aqui.").openPopup();;
     this.coord(e.latlng);
     this.latlong.emit([this.latitude, this.longitude]);
     });
   }
   }
+
   constructor() {}
 
   public coord(e: any){
@@ -57,9 +59,10 @@ export class MapaComponent implements AfterViewInit {
   }
   ngAfterViewInit(): void {
     this.initMap();
-    this.latLongArray.forEach((l: any) => {
-      console.log(l);
-      L.marker([l.lat, l.long]).addTo(this.map);
+    console.log(this.dadosUser);
+
+  this.dadosUser.forEach((l: any) => {
+    L.marker([l.latitude, l.longitude]).addTo(this.map).bindPopup('<b>Nome: </b>'+ l.nome + '<br /> <b>CPF: </b>'+ l.cpf ).openPopup();
     })
    }
 }

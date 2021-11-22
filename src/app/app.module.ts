@@ -48,6 +48,8 @@ import { MatSelectModule } from '@angular/material/select';
 
 // DIRECTIVES
 import { CenterDirective } from './directives/center.directive';
+import { CadastroService } from './services/cadastro.service';
+import { PacienteService } from './services/paciente.service';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -98,7 +100,7 @@ const maskConfig: Partial<IConfig> = {
     MatRadioModule,
     MatSelectModule
   ],
-  providers: [],
+  providers: [PacienteService],
   entryComponents: [MatDialogModule],
   bootstrap: [AppComponent]
 })

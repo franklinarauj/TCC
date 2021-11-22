@@ -16,4 +16,45 @@ export class PacienteService {
   execute(paciente: Paciente): Observable<any> {
     return this.http.get(`${BASE_URL}/paciente/ativos`);
   }
+
+  recuperarDados(){
+    const dadosMock =[{
+      "cpf": "123123123123",
+      "nome": "TESTE 123456789999",
+      "data_nascimento": "2021-11-22T22:24:11.872Z",
+      "ativo": true,
+      "senha": "",
+      "sexo": "M",
+      "email": "junior@gmail.com",
+      "celular": "61999999999",
+      "telefone": "",
+      "cep": "72231417",
+      "uf": "DF",
+      "cidade": "Taguatinga",
+      "logradouro": "12345",
+      "latitude": -15.827837114029137,
+      "longitude": -47.87841796875001
+  },
+  {
+    "cpf": "32132131231",
+    "nome": "TESTE 1111",
+    "data_nascimento": "2021-11-22T22:24:11.872Z",
+    "ativo": true,
+    "senha": "",
+    "sexo": "M",
+    "email": "junior@gmail.com",
+    "celular": "61999999999",
+    "telefone": "",
+    "cep": "72231417",
+    "uf": "DF",
+    "cidade": "Taguatinga",
+    "logradouro": "12345",
+    "latitude": -15.815948233847756,
+    "longitude": -47.92098999023438
+},
+];
+  console.log('MOCK =>', dadosMock);
+  return dadosMock;
+  //return this.http.get(dadosMock).toPromise();
+  }
 }
