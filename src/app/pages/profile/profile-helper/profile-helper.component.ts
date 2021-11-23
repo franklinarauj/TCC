@@ -25,4 +25,8 @@ export class ProfileHelperComponent implements OnInit {
     this.router.navigate(['perfil/curriculum-info'])
   };
 
+  readInteresse(): void {
+    this.router.navigate(['interesse'])
+  };
+
 }

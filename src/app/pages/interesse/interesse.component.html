@@ -1,0 +1,40 @@
+<div class="content">
+  <div class="title">
+    <section>
+      <div>
+        <h1>Pacientes que possuem interesse no seu perfil</h1>
+      </div>
+    </section>
+  </div>
+<div class="grid-interesse">
+  <div>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <!-- Name Column -->
+      <ng-container matColumnDef="alergia">
+        <th mat-header-cell *matHeaderCellDef> ALERGIA </th>
+        <td mat-cell *matCellDef="let element"> {{element.alergia}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="comorbidade">
+        <th mat-header-cell *matHeaderCellDef> COMORBIDADE </th>
+        <td mat-cell *matCellDef="let element"> {{element.comorbidade}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="dispotivo">
+        <th mat-header-cell *matHeaderCellDef> DISPOSITIVO </th>
+        <td mat-cell *matCellDef="let element"> {{element.dispotivo}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="prescicao">
+        <th mat-header-cell *matHeaderCellDef> PRESCRIÇÃO </th>
+        <td mat-cell *matCellDef="let element"> {{element.prescicao}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>

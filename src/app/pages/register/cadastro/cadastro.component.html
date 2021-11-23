@@ -2,6 +2,10 @@
   <div class="register-content">
     <mat-grid-list cols="2" rowHeight="2:1.5">
       <p style="text-align: right; width: 40%; margin-bottom: 0; font-size: medium;" >SELECIONE NO MAPA SUA RESIDÊNCIA</p>
+      <!-- VALIDACAO MAPA -->
+      <!-- <p *ngIf="lat && long" style="color: red;">
+        É necessário marcar sua localização no mapa!
+      </p> -->
       <mat-grid-tile class="mat-grid-tile-mapa">
         <!-- <img mat-card-image src="../../../assets/img/logo.png" alt="Logo" class="img-logo"> -->
         <app-mapa (latlong)="preencherLatLong($event)"></app-mapa>
