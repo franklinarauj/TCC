@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -13,7 +13,7 @@ export class PacienteService {
 
   constructor(private http: HttpClient) { }
 
-  execute(paciente: Paciente): Observable<any> {
-    return this.http.get(`${BASE_URL}/paciente/ativos`);
+  get(cpf: string, token: string): Observable<Paciente> {
+    return this.http.get<Paciente>(`${BASE_URL}/paciente/${cpf}`, { headers: new HttpHeaders().append("Authorization", `Bearer ${token}`) });
   }
 }

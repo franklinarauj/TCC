@@ -23,7 +23,11 @@ export class LoginServiceService {
     return localStorage.getItem('token') ? true : false
   }
 
-  // getToken(refreshToken: string): Observable<any> {
-  //   return this.http.post(`${BASE_URL}/token`, {refreshToken});
-  // }
+  async getToken(): Promise<string | null> {
+    return await localStorage.getItem('token');
+  }
+
+  async getCpfLogado(): Promise<string | null> {
+    return await localStorage.getItem('cpf');
+  }
 }

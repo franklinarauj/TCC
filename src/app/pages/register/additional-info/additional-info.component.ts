@@ -2,13 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Cadastro } from 'src/app/interfaces/Cadastro';
+import { Sexo } from 'src/app/interfaces/Sexo';
 import { Usuario } from 'src/app/interfaces/Usuario';
 import { CadastroService } from 'src/app/services/cadastro.service';
-
-interface Sexo {
-  name: string;
-  value: string;
-}
 
 @Component({
   selector: 'app-additional-info',
@@ -55,7 +51,7 @@ export class AdditionalInfoComponent implements OnInit {
   };
 
   constructor(private cadastroService: CadastroService, private router: Router) { }
- 
+
   ngOnInit() {
     this.cadastro.nome = this.usuario.nome;
     this.cadastro.cpf = this.usuario.cpf;
@@ -66,7 +62,7 @@ export class AdditionalInfoComponent implements OnInit {
 
   cadastrar(tipoUsuario: number) {
     console.log(this.cadastro.data_nascimento);
-    this.cadastroService.cadastrar(this.cadastro, tipoUsuario).subscribe(res => { 
+    this.cadastroService.cadastrar(this.cadastro, tipoUsuario).subscribe(res => {
       console.log(res);
       tipoUsuario == 1 ? this.router.navigateByUrl('/profile-patient') : this.router.navigateByUrl('/profile-helper');
     })

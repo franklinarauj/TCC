@@ -15,30 +15,33 @@
             <p>
               <mat-form-field appearance="outline">
                 <mat-label class="input-dado">Nome Completo</mat-label>
-                <input matInput value="Francisca dos Santos Oliveira" class="input-dado"
-                  placeholder="Francisca dos Santos Oliveira" disabled>
+                <input [(ngModel)]="paciente.nome" matInput [value]="paciente.nome" class="input-dado" placeholder="Nome" [disabled]="!podeEditar">
                 <mat-icon matPrefix class="icon-input">person</mat-icon>
               </mat-form-field>
             </p>
             <p>
               <mat-form-field appearance="outline">
                 <mat-label class="input-dado">Email</mat-label>
-                <input matInput value="franciscadso@email.com" class="input-dado"
-                  placeholder="franciscadso@email.com" disabled>
+                <input [(ngModel)]="paciente.email" matInput [value]="paciente.email" class="input-dado" placeholder="email@email.com" [disabled]="!podeEditar">
                 <mat-icon matPrefix class="icon-input">email</mat-icon>
               </mat-form-field>
             </p>
             <p>
               <mat-form-field appearance="outline">
                 <mat-label class="input-dado">Data de Nascimento da Paciente</mat-label>
-                <input matInput value="31/08/1951" class="input-dado" placeholder="31/08/1951" disabled>
+                <input [(ngModel)]="paciente.data_nascimento" matInput [value]="paciente.data_nascimento" class="input-dado" placeholder="31/08/1951" [disabled]="!podeEditar">
                 <mat-icon matPrefix class="icon-input">event</mat-icon>
               </mat-form-field>
             </p>
             <p>
               <mat-form-field appearance="outline">
                 <mat-label class="input-dado">Sexo</mat-label>
-                <input matInput value="Feminino" class="input-dado" placeholder="Feminino" disabled>
+                <mat-select [(ngModel)]="paciente.sexo" name="sexo" required>
+                  <mat-option>--</mat-option>
+                  <mat-option *ngFor="let sex of sexs" [value]="sex.value">
+                    {{sex.name}}
+                  </mat-option>
+                </mat-select>
                 <mat-icon matPrefix class="icon-input">transgender</mat-icon>
               </mat-form-field>
             </p>
@@ -52,9 +55,7 @@
             </button>
           </div>
         </div>
-
       </div>
     </div>
-
   </div>
 </div>

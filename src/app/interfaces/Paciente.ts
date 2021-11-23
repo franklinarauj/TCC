@@ -1,26 +1,26 @@
 export interface Paciente {
-  cpf: String,
+  cpf: string,
   data_cadastro: Date,
-  nome: String,
+  nome: string,
   data_nascimento: Date,
-  ativo: Boolean,
-  senha: String,
-  sexo: String,
-  email: String,
-  celular: String,
-  telefone: String,
-  observacoes: String,
-  cep: String,
-  uf: String,
-  cidade: String,
-  logradouro:	String,
-  latitude:	String,
-  longitude:	String,
-  enabled: Boolean,
+  ativo: boolean,
+  senha: string,
+  sexo: string,
+  email: string,
+  celular: string,
+  telefone: string,
+  observacoes: string,
+  cep: string,
+  uf: string,
+  cidade: string,
+  logradouro:	string,
+  latitude:	string,
+  longitude:	string,
+  enabled: boolean,
   authorities: []
-  username: String
-  accountNonExpired: Boolean
-  accountNonLocked: Boolean
-  credentialsNonExpired: Boolean
-  password: String
+  username: string
+  accountNonExpired: boolean
+  accountNonLocked: boolean
+  credentialsNonExpired: boolean
+  password: string
 }

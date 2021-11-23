@@ -32,9 +32,8 @@ export class LoginComponent implements OnInit {
   logar(): void {
     this.loginService.autenticar(this.login).subscribe(res => {
       localStorage.setItem('token', res.token);
-      localStorage.setItem('refreshToken', res.refreshToken);
-      localStorage.setItem('username', res.username);
-      this.tipoUsuario == "1" ? this.router.navigateByUrl(`profile-patient`) : this.router.navigateByUrl(`profile-helper`)
+      localStorage.setItem('cpf', this.login.cpf);
+      this.tipoUsuario == "1" ? this.router.navigateByUrl(`profile-patient/${this.login.cpf}`) : this.router.navigateByUrl(`profile-helper/${this.login.cpf}`)
     },
       err => {
         this.loginError = true;
