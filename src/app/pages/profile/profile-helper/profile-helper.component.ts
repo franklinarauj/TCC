@@ -53,7 +53,7 @@ export class ProfileHelperComponent implements OnInit {
     });
   }
 
-  deleteCadastro(): void {
+  editarCadastro(): void {
     this.cadastro = {
       cpf: this.cuidador.cpf,
       nome: this.cuidador.nome,
@@ -79,9 +79,10 @@ export class ProfileHelperComponent implements OnInit {
         this.token
       )
       .subscribe((cuidador) => (this.cuidador = cuidador));
-
-    this.router.navigate(['cadastro-delete']);
+    // this.router.navigate(['cadastro-delete']);
   }
+
+  deleteCadastro() {}
 
   editCadastro(): void {
     this.router.navigate(['cadastro-edit']);
