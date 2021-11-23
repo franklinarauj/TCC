@@ -14,7 +14,14 @@ import { TipoUsuarioConstants } from 'src/app/shared/constants/TipoUsuarioConsta
 })
 export class AdditionalInfoComponent implements OnInit {
 
-  @Input() usuario!: Usuario
+  @Input() usuario: Usuario = {
+    nome: "",
+    cpf: "",
+    senha: "",
+    latitude: "",
+    longitude: ""
+  };
+
   tipoUsuario: number = 0;
   isLinear = false;
 
@@ -25,11 +32,28 @@ export class AdditionalInfoComponent implements OnInit {
     { name: 'Feminino', value: 'F' },
   ];
 
-  cadastro!: Cadastro;
+  cadastro: Cadastro = {
+    cpf: "",
+    nome: "",
+    data_nascimento: new Date(),
+    ativo: true,
+    senha: "",
+    sexo: "",
+    email: "",
+    celular: "",
+    telefone: "",
+    cep: "",
+    uf: "",
+    cidade: "",
+    logradouro: "",
+    latitude: "",
+    longitude: ""
+  };
 
   constructor(private cadastroService: CadastroService, private router: Router) { }
 
   ngOnInit() {
+    console.log(this.usuario);
     this.cadastro.nome = this.usuario.nome;
     this.cadastro.cpf = this.usuario.cpf;
     this.cadastro.senha = this.usuario.senha;

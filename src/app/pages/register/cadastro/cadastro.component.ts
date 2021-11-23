@@ -40,27 +40,7 @@ export class CadastroComponent implements OnInit {
   cadastrarUsuario() {
     this.usuario.latitude = this.lat;
     this.usuario.longitude = this.long;
+    console.log(this.usuario);
     this.usuarioCadastrado = true;
-    // this.router.navigate(['/']
-    // console.log(this.cadastro);
   }
-
-  /* async pacienteCadastro() {
-    try {
-      const dados = this.beforeSave();
-      //SERVICE
-      console.log(dados);
-    } catch (e) {
-      console.log('ERROR =>', e);
-    }
-  }; */
-
-  /*  private beforeSave() {
-     return {
-       nome: this.nome,
-       cpf_cnpj: this.cpf_cnpj,
-       latitude: this.lat,
-       longitude: this.long
-     };
-   } */
 }
