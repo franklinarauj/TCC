@@ -39,6 +39,9 @@
           <p *ngIf="loginError" style="color: #f44336;">
             Usuário ou senha incorretos
           </p>
+          <p *ngIf="tipoUsuario == 4" style="color: #f44336;">
+            Selecione o tipo de usuário
+          </p>
           <section class="confirm">
             <span class="info">
               <a (click)="navigateToCadastro()" style="text-decoration: underline; cursor: pointer;">

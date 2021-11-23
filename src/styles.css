@@ -11,14 +11,14 @@ body {
   font-family: 'Oxanium', cursive;
   background: #80ED99;
 }
-
-/* app-header {
+/* 
+app-header {
   top: 0;
   width: 100%;
   position: fixed;
-} */
+} 
 
-/* app-footer {
+ app-footer {
   background-color: #57cc99;
   bottom: 0;
   position: static;

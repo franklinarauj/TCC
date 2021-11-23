@@ -14,14 +14,7 @@ import { TipoUsuarioConstants } from 'src/app/shared/constants/TipoUsuarioConsta
 })
 export class AdditionalInfoComponent implements OnInit {
 
-  @Input() usuario: Usuario = {
-    nome: "",
-    cpf: "",
-    senha: "",
-    latitude: "",
-    longitude: ""
-  };
-
+  @Input() usuario!: Usuario
   tipoUsuario: number = 0;
   isLinear = false;
 
@@ -32,24 +25,7 @@ export class AdditionalInfoComponent implements OnInit {
     { name: 'Feminino', value: 'F' },
   ];
 
-  cadastro: Cadastro = {
-    cpf: "",
-    nome: "",
-    data_nascimento: new Date(),
-    ativo: true,
-    senha: "",
-    sexo: "",
-    email: "",
-    celular: "",
-    telefone: "",
-    // resumo: "",
-    cep: "",
-    uf: "",
-    cidade: "",
-    logradouro: "",
-    latitude: "",
-    longitude: ""
-  };
+  cadastro!: Cadastro;
 
   constructor(private cadastroService: CadastroService, private router: Router) { }
 
@@ -62,9 +38,7 @@ export class AdditionalInfoComponent implements OnInit {
   }
 
   cadastrar(tipoUsuario: number) {
-    console.log(this.cadastro.data_nascimento);
     this.cadastroService.cadastrar(this.cadastro, tipoUsuario).subscribe(res => {
-      console.log(res);
       tipoUsuario == TipoUsuarioConstants.PACIENTE ? this.router.navigateByUrl(`/profile-patient/${this.cadastro.cpf}`) : this.router.navigateByUrl(`/profile-helper/${this.cadastro.cpf}`);
     })
   }
