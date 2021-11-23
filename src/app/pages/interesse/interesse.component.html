@@ -7,34 +7,14 @@
     </section>
   </div>
 <div class="grid-interesse">
-  <div>
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
       <!-- Name Column -->
-      <ng-container matColumnDef="alergia">
-        <th mat-header-cell *matHeaderCellDef> ALERGIA </th>
-        <td mat-cell *ngFor="let alergia of alergias"> {{alergia.alergia}} </td>
-      </ng-container>
-
-      <!-- Weight Column -->
-      <ng-container matColumnDef="comorbidade">
-        <th mat-header-cell *matHeaderCellDef> COMORBIDADE </th>
-        <td mat-cell *ngFor="let comorbidade of comorbidades"> {{comorbidade.comorbidade}} </td>
-      </ng-container>
-
-      <!-- Symbol Column -->
-      <ng-container matColumnDef="dispositivo">
-        <th mat-header-cell *matHeaderCellDef> DISPOSITIVO </th>
-        <td mat-cell *ngFor="let dispositivo of dispositivos"> {{dispositivo.dispositivo}} </td>
-      </ng-container>
-
-      <!-- Symbol Column -->
-      <ng-container matColumnDef="prescicao">
-        <th mat-header-cell *matHeaderCellDef> PRESCRIÇÃO </th>
-        <td mat-cell *ngFor="let prescicao of prescricoes"> {{prescicao.remedio}} </td>
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef> NOME </th>
+        <td mat-cell *matCellDef="let paciente"> {{paciente.nome}} </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
-  </div>
 </div>

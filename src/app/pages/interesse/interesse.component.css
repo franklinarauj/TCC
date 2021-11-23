@@ -17,6 +17,12 @@ table {
   width: 100%;
 }
 
+.table-info {
+  background: #fff;
+  border: 1px solid #000;
+  padding: 15px;
+}
+
 /*responsive*/
 @media(max-width: 1024px) {
   .grid-interesse {
