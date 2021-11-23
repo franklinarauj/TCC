@@ -5,6 +5,7 @@ import { Cadastro } from 'src/app/interfaces/Cadastro';
 import { Sexo } from 'src/app/interfaces/Sexo';
 import { Usuario } from 'src/app/interfaces/Usuario';
 import { CadastroService } from 'src/app/services/cadastro.service';
+import { TipoUsuarioConstants } from 'src/app/shared/constants/TipoUsuarioConstants';
 
 @Component({
   selector: 'app-additional-info',
@@ -64,7 +65,7 @@ export class AdditionalInfoComponent implements OnInit {
     console.log(this.cadastro.data_nascimento);
     this.cadastroService.cadastrar(this.cadastro, tipoUsuario).subscribe(res => {
       console.log(res);
-      tipoUsuario == 1 ? this.router.navigateByUrl('/profile-patient') : this.router.navigateByUrl('/profile-helper');
+      tipoUsuario == TipoUsuarioConstants.PACIENTE ? this.router.navigateByUrl(`/profile-patient/${this.cadastro.cpf}`) : this.router.navigateByUrl(`/profile-helper/${this.cadastro.cpf}`);
     })
   }
 }
