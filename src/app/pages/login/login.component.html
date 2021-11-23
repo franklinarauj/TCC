@@ -28,7 +28,7 @@
           <p>
             <mat-form-field appearance="outline">
               <mat-label>Senha</mat-label>
-              <input matInput [type]="hide ? 'password' : 'text'" placeholder="**********" [(ngModel)]="login.senha">
+              <input matInput [type]="hide ? 'password' : 'text'" placeholder="**********" [(ngModel)]="login.senha" required>
               <button mat-icon-button matPrefix class="icon-input" (click)="hide = !hide" [attr.aria-label]="'Esconder senha'"
                 [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>

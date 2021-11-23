@@ -54,7 +54,7 @@
   font-size: medium;
   display: flex;
   gap: 1.5rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .input-dado {
@@ -83,7 +83,7 @@
 
 /*responsive*/
 @media(max-width: 1024px) {
-  .grid-register {
+  .grid-profile {
     width: 100%;
     margin-top: 58px;
     margin-bottom: 58px;
@@ -97,7 +97,7 @@
 }
 
 @media(max-width: 768px) {
-  .grid-register {
+  .grid-profile {
     width: 100%;
     margin-top: 58px;
     margin-bottom: 58px;
@@ -111,7 +111,7 @@
 }
 
 @media(max-width: 574px) {
-  .grid-register {
+  .grid-profile {
     width: 100%;
     margin-top: 58px;
     margin-bottom: 58px;
@@ -125,7 +125,7 @@
 }
 
 @media(max-width: 350px) {
-  .grid-register {
+  .grid-profile {
     width: 100%;
     margin-top: 58px;
     margin-bottom: 58px;

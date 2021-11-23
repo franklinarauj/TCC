@@ -20,6 +20,7 @@ import { AdditionalInfoComponent } from './pages/register/additional-info/additi
 import { CurriculumInfoComponent } from './pages/profile/curriculum-info/curriculum-info.component';
 import { MatchComponent } from './pages/match/match.component';
 import { HelperDetailsComponent } from './pages/helper-details/helper-details.component';
+import { InteresseComponent } from './pages/interesse/interesse.component';
 
 // COMPONENTS
 import { MapaComponent } from './components/mapa/mapa.component';
@@ -33,8 +34,8 @@ const routes: Routes = [
   { path: 'sobreNos', component: sobreNosComponent },
   { path: 'nossoServico', component: nossoServicoComponent },
   { path: 'cadastro', component: CadastroComponent },
-  { path: 'profile-helper', component: ProfileHelperComponent },
-  { path: 'profile-patient', component: ProfilePatientComponent },
+  { path: 'profile-helper/:cpf', component: ProfileHelperComponent },
+  { path: 'profile-patient/:cpf', component: ProfilePatientComponent },
   { path: 'quemSomos', component: QuemSomosComponent },
   { path: 'nossaHistoria', component: NossaHistoriaComponent },
   { path: 'nossoObjetivo', component: NossoObjetivoComponent },
@@ -44,7 +45,8 @@ const routes: Routes = [
   { path: 'outrosProfissionais', component: OutrosProfissionaisComponent },
   { path: 'perfil/additional-info', component: CurriculumInfoComponent },
   { path: 'match', component: MatchComponent },
-  { path: 'helper-details', component: HelperDetailsComponent }
+  { path: 'helper-details', component: HelperDetailsComponent },
+  { path: 'interesse', component: InteresseComponent }
 ];
 
 

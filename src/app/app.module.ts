@@ -19,6 +19,7 @@ import { CurriculumInfoComponent } from './pages/profile/curriculum-info/curricu
 import { ProfileHelperComponent } from './pages/profile/profile-helper/profile-helper.component';
 import { ProfilePatientComponent } from './pages/profile/profile-patient/profile-patient.component';
 import { MatchComponent } from './pages/match/match.component';
+import { InteresseComponent } from './pages/interesse/interesse.component';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
@@ -45,6 +46,7 @@ import { NgxMaskModule, IConfig } from 'ngx-mask'
 import { MatRadioModule } from '@angular/material/radio';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatSelectModule } from '@angular/material/select';
+import { MatTableModule } from '@angular/material/table';
 
 // DIRECTIVES
 import { CenterDirective } from './directives/center.directive';
@@ -79,7 +81,8 @@ const maskConfig: Partial<IConfig> = {
     CurriculumInfoComponent,
     MatchComponent,
     ModalComponent,
-    HelperDetailsComponent
+    HelperDetailsComponent,
+    InteresseComponent
   ],
   imports: [
     BrowserModule,
@@ -100,7 +103,8 @@ const maskConfig: Partial<IConfig> = {
     FormsModule,
     NgxMaskModule.forRoot(maskConfig),
     MatRadioModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTableModule
   ],
   providers: [PacienteService],
   entryComponents: [MatDialogModule],
