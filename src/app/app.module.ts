@@ -50,6 +50,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { CenterDirective } from './directives/center.directive';
 import { CadastroService } from './services/cadastro.service';
 import { PacienteService } from './services/paciente.service';
+import { HelperDetailsComponent } from './pages/helper-details/helper-details.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -77,7 +78,8 @@ const maskConfig: Partial<IConfig> = {
     OutrosProfissionaisComponent,
     CurriculumInfoComponent,
     MatchComponent,
-    ModalComponent
+    ModalComponent,
+    HelperDetailsComponent
   ],
   imports: [
     BrowserModule,

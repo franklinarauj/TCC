@@ -1,0 +1,111 @@
+<div class="stepper-container">
+  <div class="nav-title">
+    <h1>INFORMAÇÕES DO CUIDADOR</h1>
+  </div>
+  <mat-stepper [linear]="true" class="stepper">
+
+    <mat-step color="accent" class="mat-step">
+      <form class="stepper-form">
+        <ng-template matStepLabel>INFORMAÇÕES BÁSICAS</ng-template>
+        <div class="inputs">
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">person</mat-icon>
+            <mat-label>NOME</mat-label>
+            <input name="nome" matInput required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">date_range</mat-icon>
+            <mat-label appColor>IDADE</mat-label>
+            <input name="idade" matInput required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">transgender</mat-icon>
+            <mat-label>SEXO</mat-label>
+            <mat-select name="sexo" required>
+              <mat-option>--</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="nav-button">
+          <button mat-button matStepperNext class="button-next">PRÓXIMO</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step color="accent" class="mat-step">
+      <form class="stepper-form">
+        <ng-template matStepLabel>CURRÍCULO</ng-template>
+        <div class="inputs">
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">description</mat-icon>
+            <mat-label>EXPERIÊNCIAS</mat-label>
+            <input name="exp" matInput required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">description</mat-icon>
+            <mat-label appColor>CERTIFICAÇÕES</mat-label>
+            <input name="certification" matInput required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">description</mat-icon>
+            <mat-label>FORMAÇÕES</mat-label>
+            <input name="formation" matInput required>
+          </mat-form-field>
+        </div>
+        <div class="nav-button">
+          <button mat-button matStepperPrevious class="button-prev">VOLTAR</button>
+          <button mat-button matStepperNext class="button-next">PRÓXIMO</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step color="accent" class="mat-step">
+      <form class="stepper-form">
+        <ng-template matStepLabel>RESUMO</ng-template>
+        <div class="inputs">
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">description</mat-icon>
+            <mat-label>OBJETIVO</mat-label>
+            <input name="exp" matInput required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">description</mat-icon>
+            <mat-label appColor>RESUMO</mat-label>
+            <input name="certification" matInput required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">description</mat-icon>
+            <mat-label>SOBRE</mat-label>
+            <input name="formation" matInput required>
+          </mat-form-field>
+        </div>
+        <div class="nav-button">
+          <button mat-button matStepperPrevious class="button-prev">VOLTAR</button>
+          <button mat-button matStepperNext class="button-next">PRÓXIMO</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step color="accent" class="mat-step">
+      <ng-template matStepLabel>CONTATO</ng-template>
+      <form class="contacts-form">
+        <div class="contacts-inputs">
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-icon matPrefix class="icon-input">phone</mat-icon>
+            <mat-label>TELEFONE</mat-label>
+            <input name="tel" matInput required placeholder="Ex.: (00) 0 0000-0000" mask="(00) 0 0000-0000">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input" type="email" placeholder="Ex.: email@email.com">email</mat-icon>
+            <mat-label>EMAIL</mat-label>
+            <input name="email" matInput required>
+          </mat-form-field>
+        </div>
+        <div class="nav-button">
+          <button mat-button matStepperPrevious class="button-prev">VOLTAR</button>
+        </div>
+      </form>
+    </mat-step>
+
+  </mat-stepper>
+</div>
