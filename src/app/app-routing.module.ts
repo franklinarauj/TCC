@@ -19,6 +19,7 @@ import { ProfilePatientComponent } from './pages/profile/profile-patient/profile
 import { AdditionalInfoComponent } from './pages/register/additional-info/additional-info.component';
 import { CurriculumInfoComponent } from './pages/profile/curriculum-info/curriculum-info.component';
 import { MatchComponent } from './pages/match/match.component';
+import { InteresseComponent } from './pages/interesse/interesse.component';
 
 // COMPONENTS
 import { MapaComponent } from './components/mapa/mapa.component';
@@ -43,6 +44,7 @@ const routes: Routes = [
   { path: 'outrosProfissionais', component: OutrosProfissionaisComponent },
   { path: 'perfil/additional-info', component: CurriculumInfoComponent },
   { path: 'match', component: MatchComponent },
+  { path: 'interesse', component: InteresseComponent },
 ];
 
 

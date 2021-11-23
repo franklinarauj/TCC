@@ -21,4 +21,12 @@ export class ProfilePatientComponent implements OnInit {
     this.router.navigate(['/cadastro-edit'])
   };
 
+  editCurriculo(): void {
+    this.router.navigate(['perfil/prontuario-info'])
+  };
+
+  findHelper(): void {
+    this.router.navigate(['match'])
+  };
+
 }
