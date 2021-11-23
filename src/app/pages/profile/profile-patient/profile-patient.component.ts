@@ -75,4 +75,12 @@ export class ProfilePatientComponent implements OnInit {
     this.cadastroService.editar(this.cadastro, TipoUsuarioConstants.PACIENTE, this.cpf, this.token)
       .subscribe(paciente => this.paciente = paciente);
   };
+
+  editCurriculo(): void {
+    this.router.navigate(['perfil/curriculum-info'])
+  };
+
+  findHelper(): void {
+    this.router.navigate(['match'])
+  };
 }
