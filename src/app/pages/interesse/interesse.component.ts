@@ -1,8 +1,14 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Alergia } from 'src/app/interfaces/Alergia';
+import { Cadastro } from 'src/app/interfaces/Cadastro';
+import { Paciente } from 'src/app/interfaces/Paciente';
+import { Prescricao } from 'src/app/interfaces/Prescricao';
 import { Comorbidade } from 'src/app/interfaces/Comorbidade';
 import { Dispositivo } from 'src/app/interfaces/Dispositivo';
-import { Prescricao } from 'src/app/interfaces/Prescricao';
+import { PacienteService } from 'src/app/services/paciente.service';
+import { CadastroService } from 'src/app/services/cadastro.service';
+import { LoginServiceService } from 'src/app/services/login-service.service';
 
 export interface Prontuario {
   alergia: string;
@@ -11,10 +17,6 @@ export interface Prontuario {
   prescicao: string;
 }
 
-const data_prontuario: Prontuario[] = [
-  {alergia: 'Abelha', comorbidade: 'Obeso', dispositivo: 'Marca-Passo', prescicao: 'Remedios'},
-];
-
 @Component({
   selector: 'app-interesse',
   templateUrl: './interesse.component.html',
@@ -22,6 +24,15 @@ const data_prontuario: Prontuario[] = [
 })
 
 export class InteresseComponent implements OnInit {
+
+  paciente!: Paciente;
+  nomes!: string[];
+  cpf: string = "";
+  isLogado!: boolean;
+  token!: string | null;
+
+  pacientes: Paciente[] = [];
+  dataSource: Paciente[] = [];
 
   alergias: Alergia[] = [{
     id: 0,
@@ -52,12 +63,28 @@ export class InteresseComponent implements OnInit {
     paciente: ""
   }];
 
-  displayedColumns: string[] = ['alergia', 'comorbidade', 'dispositivo', 'prescicao'];
-  dataSource = data_prontuario;
+  displayedColumns: string[] = ['nome'];
+  // displayedColumns: string[] = ['nome', 'alergia', 'comorbidade', 'dispositivo', 'prescicao'];
 
-  constructor() { }
+  constructor(private router: Router, private pacienteService: PacienteService,
+    private route: ActivatedRoute, private loginService: LoginServiceService) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.cpf = params['cpf'];
+      this.loginService.getToken().then(token => {
+        this.token = token;
+        if (token) {
+          this.pacienteService.get(this.cpf, token).subscribe(paciente => {
+            if (paciente) {
+              this.pacientes.push(paciente)
+              this.dataSource = this.pacientes
+              this.isLogado = true
+            }
+          })
+        }
+      });
+    });
   }
 
 }

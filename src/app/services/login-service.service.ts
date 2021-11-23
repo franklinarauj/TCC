@@ -16,7 +16,7 @@ export class LoginServiceService {
    }
 
    autenticar(login: Login): Observable<any> {
-     return this.http.post(`${BASE_URL}/auth`, login);           
+     return this.http.post(`${BASE_URL}/auth`, login);
    }
 
    isLoggedIn(): boolean {
