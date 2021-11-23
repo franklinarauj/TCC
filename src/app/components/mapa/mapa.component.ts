@@ -42,7 +42,8 @@ export class MapaComponent implements AfterViewInit {
     this.map.on("click", (e: { latlng: { lat: number; lng: number; }; }) => {// get the coordinates
       if (this.myMarker) { // check
         this.map.removeLayer(this.myMarker); // remove
-    } 
+    }
+    this.myMarker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(this.map).bindPopup("<b>Marcado!</b><br />Você selecionou aqui.").openPopup();
     this.coord(e.latlng);
     this.latlong.emit([this.latitude, this.longitude]);
     });
