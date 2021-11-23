@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -7,13 +7,14 @@ import { Cuidador } from '../interfaces/Cuidador';
 const BASE_URL = environment.BASE_URL;
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CuidadorService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-
-  execute(cuidador: Cuidador): Observable<any> {
-    return this.http.get(`${BASE_URL}/cuidador/ativos`)
+  get(cpf: string, token: string): Observable<Cuidador> {
+    return this.http.get<Cuidador>(`${BASE_URL}/cuidador/${cpf}`, {
+      headers: new HttpHeaders().append('Authorization', `Bearer ${token}`),
+    });
   }
 }

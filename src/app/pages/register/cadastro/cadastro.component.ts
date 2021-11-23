@@ -11,16 +11,16 @@ import { Usuario } from 'src/app/interfaces/Usuario';
 
 export class CadastroComponent implements OnInit {
 
-  hide = true;
-  hide2 = true;
+  hide = false;
+  hide2 = false;
   nome: any;
   // cpf_cnpj: any;
   lat: any;
   long: any;
   usuario: Usuario = {
     nome: "",
-    cpf: "",    
-    senha: "",    
+    cpf: "",
+    senha: "",
     latitude: "",
     longitude: ""
   };
