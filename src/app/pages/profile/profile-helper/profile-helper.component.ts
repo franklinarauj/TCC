@@ -63,7 +63,6 @@ export class ProfileHelperComponent implements OnInit {
       sexo: this.cuidador.sexo,
       email: this.cuidador.email,
       celular: this.cuidador.celular,
-      telefone: this.cuidador.telefone,
       cep: this.cuidador.cep,
       uf: this.cuidador.uf,
       cidade: this.cuidador.cidade,

@@ -8,7 +8,6 @@ export interface Cuidador {
   sexo: string;
   email: string;
   celular: string;
-  telefone: string;
   cep: string;
   uf: string;
   cidade: string;

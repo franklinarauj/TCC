@@ -67,7 +67,6 @@ export class ProfilePatientComponent implements OnInit {
       sexo: this.paciente.sexo,
       email: this.paciente.email,
       celular: this.paciente.celular,
-      telefone: this.paciente.telefone,
       cep: this.paciente.cep,
       uf: this.paciente.uf,
       cidade: this.paciente.cidade,
