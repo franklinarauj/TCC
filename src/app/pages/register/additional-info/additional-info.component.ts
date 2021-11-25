@@ -41,7 +41,6 @@ export class AdditionalInfoComponent implements OnInit {
     sexo: "",
     email: "",
     celular: "",
-    telefone: "",
     cep: "",
     uf: "",
     cidade: "",
@@ -53,7 +52,6 @@ export class AdditionalInfoComponent implements OnInit {
   constructor(private cadastroService: CadastroService, private router: Router) { }
 
   ngOnInit() {
-    console.log(this.usuario);
     this.cadastro.nome = this.usuario.nome;
     this.cadastro.cpf = this.usuario.cpf;
     this.cadastro.senha = this.usuario.senha;

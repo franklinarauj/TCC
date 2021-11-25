@@ -7,8 +7,6 @@ export interface Cadastro {
     sexo: string;
     email: string;
     celular: string;
-    telefone: string;
-    // resumo: string;
     cep: string;
     uf: string;
     cidade: string;
