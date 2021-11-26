@@ -1,6 +1,6 @@
 :host {
   font-family: 'Oxanium', cursive;
-  font-size: 14px;
+  font-size: 16px;
   color: #2C2C2C;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -33,7 +33,7 @@ mat-divider {
   top: 0;
   left: 0;
   right: 0;
-  height: 42px;
+  height: 3.25rem;
   display: flex;
   align-items: center;
   background-color: #57CC99;
@@ -49,36 +49,36 @@ mat-divider {
 
 .logotipo {
   font-family: 'Oxanium', cursive;
-  font-size: 24px;
+  font-size: 30px !important;
 }
 
 .icon-header {
-  font-size: 24px;
+  font-size: 28px;
 }
 
 .icon-header-last {
-  font-size: 24px;
+  font-size: 28px;
 }
 
 /*responsive*/
-@media(max-width: 767px) {
+@media(max-width: 47.9375rem) {
 
   .icon-header {
-    font-size: 20px;
+    font-size: 1.5rem;
   }
 
   .icon-header-last {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .logotipo {
     font-family: 'Oxanium', cursive;
-    font-size: 22px;
+    font-size: 24px;
   }
 
 }
 
-@media(max-width: 574px) {
+@media(max-width: 35.875rem) {
   .icon-header {
     font-size: 20px;
   }

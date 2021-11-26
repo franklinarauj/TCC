@@ -1,15 +1,16 @@
 <div class="grid-login">
   <div class="login-content">
-    <mat-grid-list cols="2" rowHeight="2:1.5">
-      <mat-grid-tile>
-        <img mat-card-image src="../../../assets/img/logo.png" alt="Logo" class="img-logo">
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <div class="input-cadastro">
+    <div class="main-card-content">
+      <div class="main-card-content-wrapper">
+        <div class="main-card-content-card">
+          <img mat-card-image src="../../../assets/img/logo.png" alt="Logo" class="img-logo">
+        </div>
+        <div class="main-card-content-card input-cadastro">
           <p class="title">INSIRA ABAIXO SEUS DADOS DE ACESSO</p>
-          <mat-radio-group color="warn">
+          <mat-radio-group color="warn" class="button-radio">
             <div class="tipoUsuario">
-              <mat-radio-button value="1" [(ngModel)]="tipoUsuario" name="tipoUsuario" ngDefaultControl style="padding-right: 0.7rem;">Paciente
+              <mat-radio-button value="1" [(ngModel)]="tipoUsuario" name="tipoUsuario" ngDefaultControl
+                style="padding-right: 0.7rem;">Paciente
               </mat-radio-button>
               <mat-radio-button value="2" [(ngModel)]="tipoUsuario" name="tipoUsuario" ngDefaultControl>Cuidador
               </mat-radio-button>
@@ -28,9 +29,10 @@
           <p>
             <mat-form-field appearance="outline">
               <mat-label>Senha</mat-label>
-              <input matInput [type]="hide ? 'password' : 'text'" placeholder="**********" [(ngModel)]="login.senha" required>
-              <button mat-icon-button matPrefix class="icon-input" (click)="hide = !hide" [attr.aria-label]="'Esconder senha'"
-                [attr.aria-pressed]="hide">
+              <input matInput [type]="hide ? 'password' : 'text'" placeholder="**********" [(ngModel)]="login.senha"
+                required>
+              <button mat-icon-button matPrefix class="icon-input" (click)="hide = !hide"
+                [attr.aria-label]="'Esconder senha'" [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
               </button>
               <mat-hint>Digite sua senha.</mat-hint>
@@ -52,7 +54,7 @@
               (click)="logar()">ACESSAR</button>
           </section>
         </div>
-      </mat-grid-tile>
-    </mat-grid-list>
+      </div>
+    </div>
   </div>
 </div>
