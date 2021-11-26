@@ -80,11 +80,10 @@ export class AdditionalInfoComponent implements OnInit {
           .subscribe((res) => {
             localStorage.setItem('token', res.token);
             localStorage.setItem('cpf', this.cadastro.cpf);
-          });
-
-        tipoUsuario == TipoUsuarioConstants.PACIENTE
-          ? this.router.navigateByUrl(`/profile-patient/${this.cadastro.cpf}`)
-          : this.router.navigateByUrl(`/profile-helper/${this.cadastro.cpf}`);
+            tipoUsuario == TipoUsuarioConstants.PACIENTE
+            ? this.router.navigateByUrl(`/profile-patient/${this.cadastro.cpf}`)
+            : this.router.navigateByUrl(`/profile-helper/${this.cadastro.cpf}`);
+          });       
       });
   }
 }
