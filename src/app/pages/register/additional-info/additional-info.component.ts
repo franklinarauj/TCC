@@ -1,25 +1,30 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  FormControl,
+  Validators,
+} from '@angular/forms';
 import { Router } from '@angular/router';
 import { Cadastro } from 'src/app/interfaces/Cadastro';
 import { Sexo } from 'src/app/interfaces/Sexo';
 import { Usuario } from 'src/app/interfaces/Usuario';
 import { CadastroService } from 'src/app/services/cadastro.service';
 import { TipoUsuarioConstants } from 'src/app/shared/constants/TipoUsuarioConstants';
+import { LoginServiceService } from 'src/app/services/login-service.service';
 
 @Component({
   selector: 'app-additional-info',
   templateUrl: './additional-info.component.html',
-  styleUrls: ['./additional-info.component.css']
+  styleUrls: ['./additional-info.component.css'],
 })
 export class AdditionalInfoComponent implements OnInit {
-
   @Input() usuario: Usuario = {
-    nome: "",
-    cpf: "",
-    senha: "",
-    latitude: "",
-    longitude: ""
+    nome: '',
+    cpf: '',
+    senha: '',
+    latitude: '',
+    longitude: '',
   };
 
   tipoUsuario: number = 0;
@@ -33,23 +38,27 @@ export class AdditionalInfoComponent implements OnInit {
   ];
 
   cadastro: Cadastro = {
-    cpf: "",
-    nome: "",
+    cpf: '',
+    nome: '',
     data_nascimento: new Date(),
     ativo: true,
-    senha: "",
-    sexo: "",
-    email: "",
-    celular: "",
-    cep: "",
-    uf: "",
-    cidade: "",
-    logradouro: "",
-    latitude: "",
-    longitude: ""
+    senha: '',
+    sexo: '',
+    email: '',
+    celular: '',
+    cep: '',
+    uf: '',
+    cidade: '',
+    logradouro: '',
+    latitude: '',
+    longitude: '',
   };
 
-  constructor(private cadastroService: CadastroService, private router: Router) { }
+  constructor(
+    private cadastroService: CadastroService,
+    private loginService: LoginServiceService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.cadastro.nome = this.usuario.nome;
@@ -60,8 +69,22 @@ export class AdditionalInfoComponent implements OnInit {
   }
 
   cadastrar(tipoUsuario: number) {
-    this.cadastroService.cadastrar(this.cadastro, tipoUsuario).subscribe(res => {
-      tipoUsuario == TipoUsuarioConstants.PACIENTE ? this.router.navigateByUrl(`/profile-patient/${this.cadastro.cpf}`) : this.router.navigateByUrl(`/profile-helper/${this.cadastro.cpf}`);
-    })
+    this.cadastroService
+      .cadastrar(this.cadastro, tipoUsuario)
+      .subscribe((res) => {
+        this.loginService
+          .autenticar({
+            cpf: this.cadastro.cpf,
+            senha: this.cadastro.senha,
+          })
+          .subscribe((res) => {
+            localStorage.setItem('token', res.token);
+            localStorage.setItem('cpf', this.cadastro.cpf);
+          });
+
+        tipoUsuario == TipoUsuarioConstants.PACIENTE
+          ? this.router.navigateByUrl(`/profile-patient/${this.cadastro.cpf}`)
+          : this.router.navigateByUrl(`/profile-helper/${this.cadastro.cpf}`);
+      });
   }
 }

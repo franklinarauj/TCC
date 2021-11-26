@@ -4,7 +4,7 @@ import * as L from 'leaflet';
 
 @Component({
   selector: 'app-mapa',
-  templateUrl: './mapa.component.html', 
+  templateUrl: './mapa.component.html',
   styleUrls: ['./mapa.component.css']
 })
 export class MapaComponent implements AfterViewInit {
@@ -17,12 +17,12 @@ export class MapaComponent implements AfterViewInit {
 
   private map : any;
   private popup: any;
-  public myMarker: any 
+  public myMarker: any
   public myMarkerLatLng: any
   public latitude: any;
   public longitude: any;
 
-  
+
 
   private initMap(): void {
    // console.log('lat, long => ', this.latLongArray);
