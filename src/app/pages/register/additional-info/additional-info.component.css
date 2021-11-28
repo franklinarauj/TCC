@@ -12,6 +12,16 @@
   padding: 1rem;
 }
 
+.input-mapa {
+  display: grid;
+  padding: 1rem;
+  margin-bottom: 15px;
+}
+
+.mapa {
+  width: 100%;
+}
+
 .nav-button {
   display: flex;
   justify-content: center;
@@ -45,4 +55,12 @@
 
 .icon-input {
   padding-right: 0.625rem;
+}
+
+.tipoUsuario {
+  padding-bottom: 10px;
+}
+
+.tipoUsuario > h2 {
+  padding-bottom: 20px;
 }

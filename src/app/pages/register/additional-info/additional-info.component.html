@@ -3,18 +3,6 @@
     <h1>PRECISAMOS DE ALGUMAS INFORMAÇÕES
       PARA REALIZARMOS O SEU CADASTRO</h1>
   </div>
-  <!-- <div class="nav-cadastro">
-    <mat-radio-group color="warn">
-      <div class="tipoUsuario">
-        <h2>Desejo realizar o cadastro como:</h2>
-        <mat-radio-button value="1" [(ngModel)]="tipoUsuario" name="tipoUsuario" ngDefaultControl
-          style="padding-right: 0.7rem;">Paciente
-        </mat-radio-button>
-        <mat-radio-button value="2" [(ngModel)]="tipoUsuario" name="tipoUsuario" ngDefaultControl>Cuidador
-        </mat-radio-button>
-      </div>
-    </mat-radio-group>
-  </div> -->
   <mat-stepper [linear]="true" class="stepper">
     <mat-step color="accent" class="mat-step">
       <form class="stepper-form">
@@ -22,7 +10,7 @@
         <div class="inputs">
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">phone</mat-icon>
-            <mat-label>TELEFONE CELULAR</mat-label>
+            <mat-label>CELULAR</mat-label>
             <input [(ngModel)]="cadastro.celular" name="celular" matInput placeholder="Ex.: (00) 0 0000-0000"
               mask="(00) 0 0000-0000" required>
           </mat-form-field>
@@ -38,11 +26,6 @@
             <input [(ngModel)]="cadastro.email" name="email" matInput type="email" placeholder="Ex.: email@email.com"
               required>
           </mat-form-field>
-          <!-- <mat-form-field appearance="outline">
-            <mat-icon matPrefix class="icon-input">transgender</mat-icon>
-            <mat-label>SEXO</mat-label>
-            <input matInput placeholder="Masculino ou Feminino" required>
-          </mat-form-field> -->
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">transgender</mat-icon>
             <mat-label>SEXO</mat-label>
@@ -59,6 +42,22 @@
         <div class="nav-button">
           <button mat-button matStepperNext class="button-next">PRÓXIMO</button>
         </div>
+      </form>
+    </mat-step>
+
+    <mat-step color="accent">
+      <form class="stepper-form">
+        <ng-template matStepLabel>LOCALIZAÇÃO</ng-template>
+
+        <div class="input-mapa">
+          <app-mapa class="mapa" (latlong)="preencherLatLong($event)"></app-mapa>
+        </div>
+
+        <div class="nav-button">
+          <button mat-button matStepperPrevious class="button-prev">ANTERIOR</button>
+          <button mat-button matStepperNext class="button-next">PRÓXIMO</button>
+        </div>
+
       </form>
     </mat-step>
 

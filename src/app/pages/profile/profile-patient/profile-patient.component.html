@@ -15,21 +15,24 @@
             <p>
               <mat-form-field appearance="outline">
                 <mat-label class="input-dado">Nome Completo</mat-label>
-                <input [(ngModel)]="paciente.nome" matInput [value]="paciente.nome" class="input-dado" placeholder="Nome" [disabled]="!podeEditar">
+                <input [(ngModel)]="paciente.nome" matInput [value]="paciente.nome" class="input-dado"
+                  placeholder="Nome" [disabled]="!podeEditar">
                 <mat-icon matPrefix class="icon-input">person</mat-icon>
               </mat-form-field>
             </p>
             <p>
               <mat-form-field appearance="outline">
                 <mat-label class="input-dado">Email</mat-label>
-                <input [(ngModel)]="paciente.email" matInput [value]="paciente.email" class="input-dado" placeholder="email@email.com" [disabled]="!podeEditar">
+                <input [(ngModel)]="paciente.email" matInput [value]="paciente.email" class="input-dado"
+                  placeholder="email@email.com" [disabled]="!podeEditar">
                 <mat-icon matPrefix class="icon-input">email</mat-icon>
               </mat-form-field>
             </p>
             <p>
               <mat-form-field appearance="outline">
                 <mat-label class="input-dado">Data de Nascimento da Paciente</mat-label>
-                <input [(ngModel)]="paciente.data_nascimento" matInput [value]="paciente.data_nascimento" class="input-dado" placeholder="31/08/1951" [disabled]="!podeEditar">
+                <input [(ngModel)]="paciente.data_nascimento" matInput [value]="paciente.data_nascimento"
+                  class="input-dado" placeholder="31/08/1951" [disabled]="!podeEditar">
                 <mat-icon matPrefix class="icon-input">event</mat-icon>
               </mat-form-field>
             </p>
@@ -61,6 +64,7 @@
             </button>
           </div>
         </div>
+
       </div>
     </div>
   </div>

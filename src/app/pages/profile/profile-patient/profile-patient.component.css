@@ -1,3 +1,13 @@
+.grid-profile {
+  width: 100%;
+  margin-top: 58px;
+  margin-bottom: 58px;
+}
+
+.profile-content {
+  width: auto;
+}
+
 /* MAIN CARD CONTENT */
 .main-card-content {
   display: block;
@@ -35,6 +45,7 @@
 .title {
   font-size: xx-large;
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .input-info {
@@ -67,17 +78,12 @@
   text-align: center;
 }
 
-/* .mapa {
-  height: 25%;
-} */
-
 /*responsive*/
 @media(max-width: 1024px) {
-  .grid-register {
+  .grid-profile {
     width: 100%;
     margin-top: 58px;
     margin-bottom: 58px;
-    margin-left: 30px;
   }
 
   .img-logo {
@@ -87,11 +93,10 @@
 }
 
 @media(max-width: 768px) {
-  .grid-register {
+  .grid-profile {
     width: 100%;
     margin-top: 58px;
     margin-bottom: 58px;
-    margin-left: 30px;
   }
 
   .img-logo {
@@ -101,11 +106,10 @@
 }
 
 @media(max-width: 574px) {
-  .grid-register {
+  .grid-profile {
     width: 100%;
     margin-top: 58px;
     margin-bottom: 58px;
-    margin-left: 30px;
   }
 
   .img-logo {
@@ -115,11 +119,10 @@
 }
 
 @media(max-width: 350px) {
-  .grid-register {
+  .grid-profile {
     width: 100%;
     margin-top: 58px;
     margin-bottom: 58px;
-    margin-left: 30px;
   }
 
   .img-logo {

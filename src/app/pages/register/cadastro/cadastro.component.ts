@@ -11,8 +11,8 @@ import { Usuario } from 'src/app/interfaces/Usuario';
 
 export class CadastroComponent implements OnInit {
 
-  hide = false;
-  hide2 = false;
+  hide = true;
+  hide2 = true;
   nome: any;
   // cpf_cnpj: any;
   lat: any;

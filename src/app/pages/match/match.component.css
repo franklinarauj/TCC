@@ -1,17 +1,152 @@
-.container{
-  padding: 2rem;
+.grid-match {
+  width: 100%;
+  margin-top: 58px;
+  margin-bottom: 58px;
 }
 
-.mat-grid-tile-mapa {
+.title {
+  text-align: center;
+  font-size: 28px;
+  padding-bottom: 10px;
 }
 
-.inputs {
+.match-content {
+  width: auto;
+}
+
+.input-match {
+  font-size: medium;
+}
+
+.input-mapa {
   display: flex;
-  flex-direction: column;
+  padding: 1rem;
+  margin-bottom: 15px;
 }
 
-.button-div {
+.input-mapa {
+  top: 10px !important;
+}
+
+.mapa {
+  width: 100%;
+}
+
+.btn-filter {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.mat-form-field {
+  width: 250px;
+}
+
+.form-filter {
+  padding-right: 5px;
+}
+
+/* MAIN CARD CONTENT */
+.main-card-content {
+  display: block;
+}
+
+.main-card-content img {
+  width: 80%;
+  max-width: 30rem;
+  min-width: 10rem;
+  padding-bottom: 0.6rem;
+}
+
+.main-card-content-wrapper {
+  display: grid;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-card-content-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem;
+}
+
+.main-card-content-card p {
+  text-align: center;
+}
+
+.main-card-content-card-filter {
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.625rem;
+}
+
+.main-card-content-card-filter p {
+  text-align: center;
+}
+
+/*responsive*/
+@media(max-width: 1024px) {
+  .grid-match {
+    width: 100%;
+    margin-top: 58px;
+    margin-bottom: 58px;
+  }
+
+  .img-logo {
+    width: 250px;
+  }
+
+}
+
+@media(max-width: 768px) {
+  .grid-match {
+    width: 100%;
+    margin-top: 58px;
+    margin-bottom: 58px;
+  }
+
+  .img-logo {
+    width: 250px;
+  }
+
+}
+
+@media(max-width: 574px) {
+  .grid-match {
+    width: 100%;
+    margin-top: 58px;
+    margin-bottom: 58px;
+  }
+
+  .img-logo {
+    width: 150px;
+  }
+
+  .main-card-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+@media(max-width: 350px) {
+  .grid-match {
+    width: 100%;
+    margin-top: 58px;
+    margin-bottom: 58px;
+  }
+
+  .img-logo {
+    width: 100px;
+  }
+
 }

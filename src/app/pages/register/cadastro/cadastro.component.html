@@ -3,10 +3,12 @@
     <div class="main-card-content">
       <div class="main-card-content-wrapper">
         <div class="main-card-content-card">
-          <p style="text-align: right; width: 40%; margin-bottom: 0; font-size: medium;">SELECIONE NO MAPA SUA
+          <img mat-card-image src="../../../assets/img/logo.png" alt="Logo" class="img-logo">
+          <!-- <p style="text-align: right; width: 40%; margin-bottom: 0; font-size: medium;">SELECIONE NO MAPA SUA
             RESIDÊNCIA</p>
-
-          <app-mapa (latlong)="preencherLatLong($event)"></app-mapa>
+            <mat-grid-tile class="mat-grid-tile-mapa">
+              <app-mapa (latlong)="preencherLatLong($event)"></app-mapa>
+            </mat-grid-tile> -->
         </div>
         <div class="main-card-content-card">
           <div class="input-cadastro">
@@ -14,21 +16,21 @@
             <p>
               <mat-form-field appearance="outline">
                 <mat-label>Nome Completo</mat-label>
-                <!-- <mat-icon matPrefix>person</mat-icon> -->
+                <!-- <mat-icon matSuffix>person</mat-icon> -->
                 <input matInput placeholder="Ex.: João Maria" [(ngModel)]="usuario.nome" required>
-                <mat-icon matPrefix class="icon-input">person</mat-icon>
+                <mat-icon matSuffix class="icon-input">person</mat-icon>
                 <mat-hint>Digite seu nome.</mat-hint>
               </mat-form-field>
             </p>
             <p>
               <mat-form-field appearance="outline">
                 <mat-label>CPF</mat-label>
-                <!-- <mat-icon matPrefix>person</mat-icon> -->
+                <!-- <mat-icon matSuffix>person</mat-icon> -->
                 <input matInput placeholder="Ex.: 012.234.567-89"
                   pattern="([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})"
                   [(ngModel)]="usuario.cpf" mask="000.000.000-99" required>
-                <mat-icon matPrefix class="icon-input">badge</mat-icon>
-                <mat-hint>Digite seu CPF corretamente.</mat-hint>
+                <mat-icon matSuffix class="icon-input">badge</mat-icon>
+                <mat-hint>Digite seu CPF (apenas números).</mat-hint>
               </mat-form-field>
             </p>
             <p>
@@ -36,18 +38,19 @@
                 <mat-label>Senha</mat-label>
                 <input [(ngModel)]="usuario.senha" matInput [type]="hide ? 'password' : 'text'" placeholder="**********"
                   required>
-                <button mat-icon-button matPrefix class="icon-input" (click)="hide = !hide"
+                <button mat-icon-button matSuffix class="icon-input" (click)="hide = !hide"
                   [attr.aria-label]="'Esconder senha'" [attr.aria-pressed]="hide">
                   <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                 </button>
-                <mat-hint>Digite sua senha. <br>* maiúscula, minúsculas, número e caractere especial.</mat-hint>
+                <mat-hint>Digite sua senha.</mat-hint>
+                <!-- <mat-hint>Digite sua senha. <br>* maiúscula, minúsculas, número e caractere especial.</mat-hint> -->
               </mat-form-field>
             </p>
             <p>
               <mat-form-field appearance="outline">
                 <mat-label>Confirme sua senha</mat-label>
                 <input matInput [type]="hide2 ? 'password' : 'text'" placeholder="**********" required>
-                <button mat-icon-button matPrefix class="icon-input" (click)="hide2 = !hide2"
+                <button mat-icon-button matSuffix class="icon-input" (click)="hide2 = !hide2"
                   [attr.aria-label]="'Esconder senha'" [attr.aria-pressed]="hide2">
                   <mat-icon>{{hide2 ? 'visibility_off' : 'visibility'}}</mat-icon>
                 </button>

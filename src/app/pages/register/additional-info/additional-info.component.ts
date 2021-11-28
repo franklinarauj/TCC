@@ -19,6 +19,10 @@ import { LoginServiceService } from 'src/app/services/login-service.service';
   styleUrls: ['./additional-info.component.css'],
 })
 export class AdditionalInfoComponent implements OnInit {
+
+  lat: any;
+  long: any;
+
   @Input() usuario: Usuario = {
     nome: '',
     cpf: '',
@@ -68,6 +72,11 @@ export class AdditionalInfoComponent implements OnInit {
     this.cadastro.longitude = this.usuario.longitude;
   }
 
+  preencherLatLong(evento: any) {
+    this.lat = evento[0];
+    this.long = evento[1];
+  }
+
   cadastrar(tipoUsuario: number) {
     this.cadastroService
       .cadastrar(this.cadastro, tipoUsuario)
@@ -83,7 +92,7 @@ export class AdditionalInfoComponent implements OnInit {
             tipoUsuario == TipoUsuarioConstants.PACIENTE
             ? this.router.navigateByUrl(`/profile-patient/${this.cadastro.cpf}`)
             : this.router.navigateByUrl(`/profile-helper/${this.cadastro.cpf}`);
-          });       
+          });
       });
   }
 }
