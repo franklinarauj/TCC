@@ -56,13 +56,19 @@ export class MapaComponent implements AfterViewInit {
     this.myMarkerLatLng = e;
     this.latitude = this.myMarkerLatLng.lat
     this.longitude = this.myMarkerLatLng.lng
-    console.log('Latitude: ', this.latitude, '\n', 'Longitude: ', this.longitude)
+    //console.log('Latitude: ', this.latitude, '\n', 'Longitude: ', this.longitude)
   }
-  ngAfterViewInit(): void {
+  async ngAfterViewInit() {
     this.initMap();
-    console.log(this.dadosUser);
-
-  this.dadosUser.forEach((l: any) => {
+    this.latLongArray.Observable((values : any) => {
+        //console.log('O VALOR MUDOU');
+    });
+    //console.log('MAPA =>', this);
+    //console.log('MAPA =>', this.latLongArray.length);
+    //console.log('MAPA =>', this.latLongArray.get);
+    
+    this.latLongArray.forEach((l: any) => {
+      //console.log('MARCACOES => ', l );
     L.marker([l.latitude, l.longitude]).addTo(this.map).bindPopup('<b>Nome: </b>'+ l.nome + '<br /> <b>CPF: </b>'+ l.cpf ).openPopup();
     })
    }
