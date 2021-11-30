@@ -20,6 +20,7 @@ import { ProfileHelperComponent } from './pages/profile/profile-helper/profile-h
 import { ProfilePatientComponent } from './pages/profile/profile-patient/profile-patient.component';
 import { MatchComponent } from './pages/match/match.component';
 import { InteresseComponent } from './pages/interesse/interesse.component';
+import { ProntuarioInfoComponent } from './pages/profile/prontuario-info/prontuario-info.component';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
@@ -82,7 +83,8 @@ const maskConfig: Partial<IConfig> = {
     MatchComponent,
     ModalComponent,
     HelperDetailsComponent,
-    InteresseComponent
+    InteresseComponent,
+    ProntuarioInfoComponent
   ],
   imports: [
     BrowserModule,

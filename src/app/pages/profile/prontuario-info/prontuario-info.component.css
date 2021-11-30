@@ -1,0 +1,59 @@
+.stepper-container {
+  padding: 7rem;
+}
+
+.stepper{
+  background: #80ED99;
+  color: #000;
+}
+
+.stepper-form {
+}
+
+.inputs {
+  display: grid;
+  padding: 1rem;
+}
+
+.nav-button {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-input {
+  padding-right: 0.625rem;
+}
+
+.check-box {
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 20px;
+  font-size: 12px;
+  text-align: center;
+}
+ .last-line {
+   display: flex;
+   justify-content: space-between;
+ }
+ .last-line-solo {
+   display: flex;
+   justify-content: flex-end;
+ }
+
+
+ .button-prev {
+  color: white;
+  margin-right: 0.7rem;
+  background-color: #FF9900;
+  border: 2px solid #B21E1E;;
+}
+
+.button-next {
+  color: white;
+  background-color: #38A3A5;
+  border: 2px solid #22577A;
+}
+
+.check-box-do-murilo {
+  padding: 0 1rem 1rem 1rem;
+}

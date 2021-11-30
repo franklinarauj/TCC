@@ -21,6 +21,7 @@ import { CurriculumInfoComponent } from './pages/profile/curriculum-info/curricu
 import { MatchComponent } from './pages/match/match.component';
 import { HelperDetailsComponent } from './pages/helper-details/helper-details.component';
 import { InteresseComponent } from './pages/interesse/interesse.component';
+import { ProntuarioInfoComponent } from './pages/profile/prontuario-info/prontuario-info.component';
 
 // COMPONENTS
 import { MapaComponent } from './components/mapa/mapa.component';
@@ -44,9 +45,10 @@ const routes: Routes = [
   { path: 'terapiaOcupacional', component: TerapiaOcupacionalComponent },
   { path: 'outrosProfissionais', component: OutrosProfissionaisComponent },
   { path: 'perfil/additional-info', component: CurriculumInfoComponent },
+  { path: 'perfil/prontuario-info', component: ProntuarioInfoComponent },
   { path: 'match', component: MatchComponent },
   { path: 'helper-details', component: HelperDetailsComponent },
-  { path: 'interesse', component: InteresseComponent }
+  { path: 'interesse', component: InteresseComponent },
 ];
 
 

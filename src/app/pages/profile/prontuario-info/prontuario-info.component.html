@@ -1,0 +1,101 @@
+<div class="stepper-container">
+  <mat-stepper [linear]="true" class="stepper">
+
+    <mat-step color="accent" class="mat-step">
+      <form class="stepper-form">
+        <ng-template matStepLabel>ALERGIA</ng-template>
+        <div class="inputs">
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix type="text" class="icon-input">soap</mat-icon>
+            <mat-label>ALERGIA</mat-label>
+            <input matInput required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix type="text" class="icon-input">trending_up</mat-icon>
+            <mat-label appColor>GRAU</mat-label>
+            <input matInput required>
+          </mat-form-field>
+        </div>
+
+        <div class="nav-button">
+          <button mat-button class="button-next" matStepperNext>PRÓXIMO</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step color="accent">
+      <form class="stepper-form">
+        <ng-template matStepLabel>COMORBIDADE</ng-template>
+        <div class="inputs">
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">pregnant_woman</mat-icon>
+            <mat-label>COMORBIDADE</mat-label>
+            <input matInput required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">description</mat-icon>
+            <mat-label>CUIDADOS</mat-label>
+            <input matInput required>
+          </mat-form-field>
+        </div>
+
+        <div class="nav-button">
+          <button mat-button class="button-prev" matStepperPrevious>ANTERIOR</button>
+          <button mat-button class="button-next" matStepperNext>PRÓXIMO</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step color="accent">
+      <form class="stepper-form">
+        <ng-template matStepLabel>DISPOSITIVO</ng-template>
+        <div class="inputs">
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">monitor_heart</mat-icon>
+            <mat-label>DISPOSITIVO</mat-label>
+            <input matInput required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">description</mat-icon>
+            <mat-label>CUIDADOS</mat-label>
+            <input matInput required>
+          </mat-form-field>
+
+        </div>
+        <div class="nav-button">
+          <button mat-button class="button-prev" matStepperPrevious>ANTERIOR</button>
+          <button mat-button class="button-next" matStepperNext>PRÓXIMO</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step color="accent">
+      <form class="stepper-form">
+        <ng-template matStepLabel>PRESCRIÇÃO</ng-template>
+        <div class="inputs">
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">medical_services</mat-icon>
+            <mat-label>REMÉDIO</mat-label>
+            <input matInput required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">schedule</mat-icon>
+            <mat-label>HORÁRIOS</mat-label>
+            <input matInput required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-icon matPrefix class="icon-input">colorize</mat-icon>
+            <mat-label>VIA</mat-label>
+            <input matInput required>
+          </mat-form-field>
+        </div>
+
+        <div class="nav-button">
+          <button mat-button class="button-prev" matStepperPrevious>ANTERIOR</button>
+          <button mat-button class="button-next" matStepperNext>SALVAR</button>
+        </div>
+      </form>
+    </mat-step>
+
+  </mat-stepper>
+</div>
