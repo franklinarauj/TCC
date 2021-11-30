@@ -40,8 +40,8 @@ export class CadastroComponent implements OnInit {
   }
 
   cadastrarUsuario() {
-    //this.usuario.latitude = this.lat;
-    //this.usuario.longitude = this.long;
+    this.usuario.latitude = this.lat;
+    this.usuario.longitude = this.long;
     //console.log('estou aqui', this.lat);
     this.usuarioCadastrado = true;
   }

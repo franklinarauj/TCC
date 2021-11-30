@@ -79,7 +79,7 @@ export class AdditionalInfoComponent implements OnInit {
   }
 
   cadastrar(tipoUsuario: number) {
-    console.log('CADASTRO =>', this.cadastro);
+    //console.log('CADASTRO =>', this.cadastro);
     this.cadastroService
       .cadastrar(this.cadastro, tipoUsuario)
       .subscribe((res) => {
