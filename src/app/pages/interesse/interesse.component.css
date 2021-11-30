@@ -10,8 +10,9 @@
 }
 
 .wrapper {
-  background-color: #57cc99;
+  background-color: #22577A;
   margin: 2rem 1rem 2rem 1rem;
+  border-radius: 12px;
 }
 
 .user-info {
@@ -25,8 +26,8 @@
 }
 
 .card {
-  border-radius: 12px;
   background-color: #ffffffe5;
+  border-radius: 12px;
   margin: 1rem;
 }
 
@@ -47,6 +48,17 @@
 
 .card-content span {
   font-weight: 100;
+}
+
+.icon-input {
+  padding-right: 0.5rem;
+}
+
+.title-info {
+  display: flex;
+  justify-content: start;
+  text-align: center;
+  vertical-align: middle;
 }
 
 /*responsive*/
