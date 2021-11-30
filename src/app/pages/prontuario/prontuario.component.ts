@@ -19,11 +19,11 @@ export interface Prontuario {
 
 @Component({
   selector: 'app-interesse',
-  templateUrl: './interesse.component.html',
-  styleUrls: ['./interesse.component.css']
+  templateUrl: './prontuario.component.html',
+  styleUrls: ['./prontuario.component.css']
 })
 
-export class InteresseComponent implements OnInit {
+export class ProntuarioComponent implements OnInit {
 
   paciente!: Paciente;
   nomes!: string[];

@@ -18,10 +18,10 @@ import { ProfileHelperComponent } from './pages/profile/profile-helper/profile-h
 import { ProfilePatientComponent } from './pages/profile/profile-patient/profile-patient.component';
 import { AdditionalInfoComponent } from './pages/register/additional-info/additional-info.component';
 import { CurriculumInfoComponent } from './pages/profile/curriculum-info/curriculum-info.component';
-import { MatchComponent } from './pages/match/match.component';
-import { HelperDetailsComponent } from './pages/helper-details/helper-details.component';
-import { InteresseComponent } from './pages/interesse/interesse.component';
 import { ProntuarioInfoComponent } from './pages/profile/prontuario-info/prontuario-info.component';
+import { MatchComponent } from './pages/match/match.component';
+import { ProntuarioComponent } from './pages/prontuario/prontuario.component';
+import { CurriculumComponent } from './pages/curriculum/curriculum.component';
 
 // COMPONENTS
 import { MapaComponent } from './components/mapa/mapa.component';
@@ -47,8 +47,8 @@ const routes: Routes = [
   { path: 'perfil/additional-info', component: CurriculumInfoComponent },
   { path: 'perfil/prontuario-info', component: ProntuarioInfoComponent },
   { path: 'match', component: MatchComponent },
-  { path: 'helper-details', component: HelperDetailsComponent },
-  { path: 'interesse', component: InteresseComponent },
+  { path: 'prontuario', component: ProntuarioComponent },
+  { path: 'curriculum', component: CurriculumComponent },
 ];
 
 

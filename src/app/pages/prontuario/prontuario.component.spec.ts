@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HelperDetailsComponent } from './helper-details.component';
+import { ProntuarioComponent } from './prontuario.component';
 
-describe('HelperDetailsComponent', () => {
-  let component: HelperDetailsComponent;
-  let fixture: ComponentFixture<HelperDetailsComponent>;
+describe('ProntuarioComponent', () => {
+  let component: ProntuarioComponent;
+  let fixture: ComponentFixture<ProntuarioComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HelperDetailsComponent ]
+      declarations: [ ProntuarioComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HelperDetailsComponent);
+    fixture = TestBed.createComponent(ProntuarioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

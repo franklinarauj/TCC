@@ -19,8 +19,9 @@ import { CurriculumInfoComponent } from './pages/profile/curriculum-info/curricu
 import { ProfileHelperComponent } from './pages/profile/profile-helper/profile-helper.component';
 import { ProfilePatientComponent } from './pages/profile/profile-patient/profile-patient.component';
 import { MatchComponent } from './pages/match/match.component';
-import { InteresseComponent } from './pages/interesse/interesse.component';
 import { ProntuarioInfoComponent } from './pages/profile/prontuario-info/prontuario-info.component';
+import { ProntuarioComponent } from './pages/prontuario/prontuario.component';
+import { CurriculumComponent } from './pages/curriculum/curriculum.component';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
@@ -53,7 +54,6 @@ import { MatTableModule } from '@angular/material/table';
 import { CenterDirective } from './directives/center.directive';
 import { CadastroService } from './services/cadastro.service';
 import { PacienteService } from './services/paciente.service';
-import { HelperDetailsComponent } from './pages/helper-details/helper-details.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -82,9 +82,9 @@ const maskConfig: Partial<IConfig> = {
     CurriculumInfoComponent,
     MatchComponent,
     ModalComponent,
-    HelperDetailsComponent,
-    InteresseComponent,
-    ProntuarioInfoComponent
+    ProntuarioInfoComponent,
+    ProntuarioComponent,
+    CurriculumComponent
   ],
   imports: [
     BrowserModule,
