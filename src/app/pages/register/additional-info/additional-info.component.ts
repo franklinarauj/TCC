@@ -65,6 +65,7 @@ export class AdditionalInfoComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    console.log('USUER =>', this.usuario);
     this.cadastro.nome = this.usuario.nome;
     this.cadastro.cpf = this.usuario.cpf;
     this.cadastro.senha = this.usuario.senha;
@@ -73,11 +74,12 @@ export class AdditionalInfoComponent implements OnInit {
   }
 
   preencherLatLong(evento: any) {
-    this.lat = evento[0];
-    this.long = evento[1];
+    this.cadastro.latitude =  evento[0];
+    this.cadastro.longitude = evento[1];
   }
 
   cadastrar(tipoUsuario: number) {
+    //console.log('CADASTRO =>', this.cadastro);
     this.cadastroService
       .cadastrar(this.cadastro, tipoUsuario)
       .subscribe((res) => {

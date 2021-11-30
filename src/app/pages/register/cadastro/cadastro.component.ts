@@ -28,11 +28,13 @@ export class CadastroComponent implements OnInit {
   usuarioCadastrado: boolean = false;
 
   constructor(private router: Router) {
+    //console.log('teste 12345');
   }
 
   ngOnInit(): void { }
 
   preencherLatLong(evento: any) {
+    //console.log('evento =>', evento);
     this.lat = evento[0];
     this.long = evento[1];
   }
@@ -40,7 +42,7 @@ export class CadastroComponent implements OnInit {
   cadastrarUsuario() {
     this.usuario.latitude = this.lat;
     this.usuario.longitude = this.long;
-    console.log(this.usuario);
+    //console.log('estou aqui', this.lat);
     this.usuarioCadastrado = true;
   }
 }
