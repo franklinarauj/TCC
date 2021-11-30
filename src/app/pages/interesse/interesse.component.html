@@ -1,20 +1,146 @@
-<div class="content">
+<div class="container">
   <div class="title">
-    <section>
-      <div>
-        <h1>Pacientes que possuem interesse no seu perfil</h1>
-      </div>
-    </section>
+    <h2>Pacientes que possuem interesse no seu perfil</h2>
   </div>
-<div class="grid-interesse">
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-      <!-- Name Column -->
-      <ng-container matColumnDef="nome">
-        <th mat-header-cell *matHeaderCellDef> NOME </th>
-        <td mat-cell *matCellDef="let paciente"> {{paciente.nome}} </td>
-      </ng-container>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
+
+  <div class="wrapper">
+    <div class="user-info">
+      <h3>Fulano de tal</h3>
+    </div>
+
+    <div class="card-container">
+
+      <div class="card">
+        <div class="card-title">
+          <h3>Alergias</h3>
+        </div>
+        <div class="card-content">
+          <p>Alergia: <span>Vrau</span></p>
+          <p>Grau: <span>55</span></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <h3>Comorbidades</h3>
+        </div>
+        <div class="card-content">
+          <p>Comorbidade: <span>Diabetes</span></p>
+          <p>Cuidados: <span>Não comer doces</span></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <h3>Dispositivos</h3>
+        </div>
+        <div class="card-content">
+          <p>Dispositivo: <span>Marca passo</span></p>
+          <p>Cuidados: <span>Evitar movimentos bruscos</span></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <h3>Prescrição</h3>
+        </div>
+        <div class="card-content">
+          <p>Remédio: <span>Amoxicilina</span></p>
+          <p>Horários: <span>De 8 em 8 horas</span></p>
+          <p>Via: <span>Oral</span></p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="wrapper">
+    <div class="user-info">
+      <h3>Fulano de tal</h3>
+    </div>
+
+    <div class="card-container">
+
+      <div class="card">
+        <div class="card-title">
+          <h3>Alergias</h3>
+        </div>
+        <div class="card-content">
+          <p>Alergia: <span>Vrau</span></p>
+          <p>Grau: <span>55</span></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <h3>Comorbidades</h3>
+        </div>
+        <div class="card-content">
+          <p>Comorbidade: <span>Diabetes</span></p>
+          <p>Cuidados: <span>Não comer doces</span></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <h3>Dispositivos</h3>
+        </div>
+        <div class="card-content">
+          <p>Dispositivo: <span>Marca passo</span></p>
+          <p>Cuidados: <span>Evitar movimentos bruscos</span></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <h3>Prescrição</h3>
+        </div>
+        <div class="card-content">
+          <p>Remédio: <span>Amoxicilina</span></p>
+          <p>Horários: <span>De 8 em 8 horas</span></p>
+          <p>Via: <span>Oral</span></p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 </div>
+
+
+<!-- Tela interesse:
+  Logar com cuidador:
+
+  Tabelas:
+  Alergias
+  Comorbidades
+  Dispositivos
+  Prescrição
+
+  Mostrar o nome do paciente
+
+  usar estrutura do profile-helper:
+
+  <div class="grid-profile">
+    <div class="profile-content">
+
+      <div class="main-card-content">
+        <div class="main-card-content-wrapper">
+          <div class="main-card-content-card">  -->
+
+
+
+
+
+
+<!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <ng-container matColumnDef="nome">
+              <th mat-header-cell *matHeaderCellDef> NOME </th>
+              <td mat-cell *matCellDef="let paciente"> {{paciente.nome}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table> -->
