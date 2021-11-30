@@ -46,7 +46,7 @@ const routes: Routes = [
   { path: 'perfil/additional-info', component: CurriculumInfoComponent },
   { path: 'match', component: MatchComponent },
   { path: 'helper-details', component: HelperDetailsComponent },
-  { path: 'interesse/:cpf', component: InteresseComponent }
+  { path: 'interesse', component: InteresseComponent }
 ];
 
 
