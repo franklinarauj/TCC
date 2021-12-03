@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MapaComponent } from 'src/app/components/mapa/mapa.component';
 import { Cadastro } from 'src/app/interfaces/Cadastro';
 import { Usuario } from 'src/app/interfaces/Usuario';
 
@@ -27,16 +28,18 @@ export class CadastroComponent implements OnInit {
 
   usuarioCadastrado: boolean = false;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private mapaComponent: MapaComponent) {
     //console.log('teste 12345');
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+   }
 
   preencherLatLong(evento: any) {
     //console.log('evento =>', evento);
     this.lat = evento[0];
     this.long = evento[1];
+    this.mapaComponent.marcarMatch("-15.872846316558126","-47.989654541015625");
   }
 
   cadastrarUsuario() {

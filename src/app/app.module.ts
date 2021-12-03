@@ -111,7 +111,7 @@ const maskConfig: Partial<IConfig> = {
     MatTableModule,
     // MatDatepickerModule
   ],
-  providers: [PacienteService, DatePipe],
+  providers: [PacienteService, DatePipe, MapaComponent],
   entryComponents: [MatDialogModule],
   bootstrap: [AppComponent]
 })
