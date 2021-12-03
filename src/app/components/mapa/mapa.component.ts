@@ -12,20 +12,32 @@ export class MapaComponent implements AfterViewInit {
   @Input() list: any;
   @Input() latLongArray: any;
   @Output() latlong = new EventEmitter();
+  @Output() marcarPosition = new EventEmitter();
   @Input() marcar = true;
+  @Input() inicializarMapa = false;
   @Input() dadosUser: any;
 
-  private map : any;
+  private map: any = '';
   private popup: any;
   public myMarker: any
   public myMarkerLatLng: any
   public latitude: any;
   public longitude: any;
+  public controleMapa = false;
+
+  constructor() {
+  }
+
+  async ngAfterViewInit() {
+    if (this.inicializarMapa) {
+      this.initMap();
+    }
+  }
 
 
-
-  private initMap(): void {
-   // console.log('lat, long => ', this.latLongArray);
+  private initMap() {
+    // console.log('lat, long => ', this.latLongArray);
+    this.controleMapa = true;
     this.map = L.map('map', {
       center: [-15.7801, -47.9292],
       zoom: 10
@@ -38,38 +50,31 @@ export class MapaComponent implements AfterViewInit {
 
     tiles.addTo(this.map);
     this.popup = new L.Popup()
-    if(this.marcar){
-    this.map.on("click", (e: { latlng: { lat: number; lng: number; }; }) => {// get the coordinates
-      if (this.myMarker) { // check
-        this.map.removeLayer(this.myMarker); // remove
+    if (this.marcar) {
+      this.map.on("click", (e: { latlng: { lat: number; lng: number; }; }) => {// get the coordinates
+        if (this.myMarker) { // check
+          this.map.removeLayer(this.myMarker); // remove
+        }
+        this.myMarker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(this.map).bindPopup("<b>Marcado!</b><br />Você selecionou aqui.").openPopup();
+        this.coord(e.latlng);
+        this.latlong.emit([this.latitude, this.longitude]);
+      });
     }
-    this.myMarker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(this.map).bindPopup("<b>Marcado!</b><br />Você selecionou aqui.").openPopup();
-    this.coord(e.latlng);
-    this.latlong.emit([this.latitude, this.longitude]);
-    });
-  }
   }
 
-  constructor() {}
-
-  public coord(e: any){
+  public coord(e: any) {
     this.myMarkerLatLng = e;
     this.latitude = this.myMarkerLatLng.lat
     this.longitude = this.myMarkerLatLng.lng
-    //console.log('Latitude: ', this.latitude, '\n', 'Longitude: ', this.longitude)
   }
-  async ngAfterViewInit() {
-    this.initMap();
-    this.latLongArray.Observable((values : any) => {
-        //console.log('O VALOR MUDOU');
-    });
-    //console.log('MAPA =>', this);
-    //console.log('MAPA =>', this.latLongArray.length);
-    //console.log('MAPA =>', this.latLongArray.get);
-    
-    this.latLongArray.forEach((l: any) => {
-      //console.log('MARCACOES => ', l );
-    L.marker([l.latitude, l.longitude]).addTo(this.map).bindPopup('<b>Nome: </b>'+ l.nome + '<br /> <b>CPF: </b>'+ l.cpf ).openPopup();
-    })
-   }
+
+  async marcarMatch(lat: any, long: any) {
+    console.log(this.controleMapa);
+    if (!this.controleMapa) {
+      this.marcar = false;
+      this.initMap();
+    }
+    var marker = new L.Marker([lat, long]);
+    marker.addTo(this.map);
+  }
 }

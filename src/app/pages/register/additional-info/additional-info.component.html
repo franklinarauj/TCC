@@ -50,7 +50,7 @@
         <ng-template matStepLabel>LOCALIZAÇÃO</ng-template>
 
         <div class="input-mapa">
-          <app-mapa class="mapa" (latlong)="preencherLatLong($event)"></app-mapa>
+          <app-mapa class="mapa" (latlong)="preencherLatLong($event)" [inicializarMapa]=true></app-mapa>
         </div>
 
         <div class="nav-button">

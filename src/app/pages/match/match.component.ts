@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MapaComponent } from 'src/app/components/mapa/mapa.component';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
 import { LoginServiceService } from 'src/app/services/login-service.service';
 import { PacienteService } from 'src/app/services/paciente.service';
@@ -21,7 +22,8 @@ export class MatchComponent implements OnInit {
 
   constructor(public dialog: MatDialog, 
     public pacienteService: PacienteService,
-    public loginService: LoginServiceService
+    public loginService: LoginServiceService,
+    private MapaComponent: MapaComponent
     ) {}
 
   openDialog(dadosUsuario?: any): void {
@@ -38,23 +40,18 @@ export class MatchComponent implements OnInit {
 
 
  ngOnInit() {
-    //@todo retornar dados do servico
     this.loginService.getToken().then(async (token) => {
       this.token = token;
       if (token) {
         this.latLongArray = await this.pacienteService.getAtivos(token);
         this.latLongArray.forEach((r: any) => {
-          this.teste.push({
-            'latitude': r.latitude,
-            'longitude': r.longitude
-          })
+          //console.log(r.latitude, r.longitude);
+          //console.log('obj=>', r)
+          if(r.latitude && r.longitude){
+          this.MapaComponent.marcarMatch(r.latitude, r.longitude);
+          }
         })
-        this.latLongArray = this.teste;
-        if(this.latLongArray > 0 ){
-        //return this.latLongArray;
         }
-      }
-      //console.log('lat', this.latLongArray);
     });
   }
 }
