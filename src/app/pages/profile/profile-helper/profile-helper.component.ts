@@ -88,7 +88,7 @@ export class ProfileHelperComponent implements OnInit {
   }
 
   editCurriculo(): void {
-    this.router.navigate(['perfil/curriculum-info']);
+    this.router.navigate([`profile-helper/${this.cpf}/curriculum`]);
   }
 
   readInteresse(): void {

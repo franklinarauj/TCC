@@ -13,7 +13,7 @@ export class PacienteService {
 
   constructor(private http: HttpClient) { }
 
-  get(cpf: string, token: string): Observable<Paciente> {
+  getByCpf(cpf: string, token: string): Observable<Paciente> {
     return this.http.get<Paciente>(`${BASE_URL}/paciente/${cpf}`, { headers: new HttpHeaders().append("Authorization", `Bearer ${token}`) });
   }
 

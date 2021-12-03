@@ -39,7 +39,7 @@ export class ProfilePatientComponent implements OnInit {
       this.loginService.getToken().then((token) => {
         this.token = token;
         if (token) {
-          this.pacienteService.get(this.cpf, token).subscribe((paciente) => {
+          this.pacienteService.getByCpf(this.cpf, token).subscribe((paciente) => {
             if (paciente) {
               this.paciente = paciente;
               this.isLogado = true;

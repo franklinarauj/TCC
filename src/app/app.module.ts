@@ -49,11 +49,13 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
+// import { MatDatepickerModule } from '@angular/material/datepicker'
 
 // DIRECTIVES
 import { CenterDirective } from './directives/center.directive';
 import { CadastroService } from './services/cadastro.service';
 import { PacienteService } from './services/paciente.service';
+import { DatePipe } from '@angular/common';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -106,9 +108,10 @@ const maskConfig: Partial<IConfig> = {
     NgxMaskModule.forRoot(maskConfig),
     MatRadioModule,
     MatSelectModule,
-    MatTableModule
+    MatTableModule,
+    // MatDatepickerModule
   ],
-  providers: [PacienteService],
+  providers: [PacienteService, DatePipe],
   entryComponents: [MatDialogModule],
   bootstrap: [AppComponent]
 })

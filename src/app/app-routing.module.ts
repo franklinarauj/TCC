@@ -44,11 +44,11 @@ const routes: Routes = [
   { path: 'fisioterapia', component: FisioterapiaComponent },
   { path: 'terapiaOcupacional', component: TerapiaOcupacionalComponent },
   { path: 'outrosProfissionais', component: OutrosProfissionaisComponent },
-  { path: 'perfil/additional-info', component: CurriculumInfoComponent },
-  { path: 'perfil/prontuario-info', component: ProntuarioInfoComponent },
+  // { path: 'perfil/additional-info', component: CurriculumInfoComponent },
+  // { path: 'perfil/prontuario-info', component: ProntuarioInfoComponent },
   { path: 'match', component: MatchComponent },
   { path: 'prontuario', component: ProntuarioComponent },
-  { path: 'curriculum', component: CurriculumComponent },
+  { path: 'profile-helper/:cpf/curriculum', component: CurriculumInfoComponent },
 ];
 
 
