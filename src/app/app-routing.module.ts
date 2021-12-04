@@ -48,16 +48,12 @@ const routes: Routes = [
   // { path: 'perfil/prontuario-info', component: ProntuarioInfoComponent },
   { path: 'match', component: MatchComponent },
   { path: 'prontuario', component: ProntuarioComponent },
+  { path: 'curriculo/:cpf', component: CurriculumComponent },
   { path: 'profile-helper/:cpf/curriculum', component: CurriculumInfoComponent },
 ];
 
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-
-
-export class AppRoutingModule {
-
-}
+export class AppRoutingModule {}

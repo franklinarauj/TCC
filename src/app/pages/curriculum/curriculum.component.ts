@@ -1,47 +1,83 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Cadastro } from 'src/app/interfaces/Cadastro';
 import { Cuidador } from 'src/app/interfaces/Cuidador';
 import { CuidadorService } from 'src/app/services/cuidador.service';
-import { CadastroService } from 'src/app/services/cadastro.service';
+import { CurriculumService } from 'src/app/services/curriculum.service';
 import { LoginServiceService } from 'src/app/services/login-service.service';
+
+import { Experiencia } from 'src/app/interfaces/Experiencia';
+import { Certificacao } from 'src/app/interfaces/Certificacao';
+import { Formacao } from 'src/app/interfaces/Formacao';
 
 @Component({
   selector: 'app-curriculum',
   templateUrl: './curriculum.component.html',
-  styleUrls: ['./curriculum.component.css']
+  styleUrls: ['./curriculum.component.css'],
 })
 export class CurriculumComponent implements OnInit {
+  cpf: string = '';
+  token!: string | null;
+  isLogado!: boolean;
 
   cuidador!: Cuidador;
-  nomes!: string[];
-  cpf: string = "";
-  isLogado!: boolean;
-  token!: string | null;
+  experiencia!: Experiencia;
+  certificacao!: Certificacao;
+  formacao!: Formacao;
 
-  cuidadores: Cuidador[] = [];
-  dataSource: Cuidador[] = [];
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private cuidadorService: CuidadorService,
+    private loginService: LoginServiceService,
+    private curriculoService: CurriculumService
+  ) {}
 
-  displayedColumns: string[] = ['nome'];
-
-  constructor(private router: Router, private route: ActivatedRoute,
-    private cuidadorService: CuidadorService, private loginService: LoginServiceService) { }
+  // Perfil OK
+  // Endereço OK
+  // Experiencia OK
+  // Certificação OK
+  // Formação OK
+  // Contato OK
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
+    this.route.params.subscribe((params) => {
       this.cpf = params['cpf'];
-      this.loginService.getToken().then(token => {
+      this.loginService.getToken().then((token) => {
         this.token = token;
         if (token) {
-          this.cuidadorService.get(this.cpf, token).subscribe(cuidador => {
+          this.cuidadorService.get(this.cpf, token).subscribe((cuidador) => {
             if (cuidador) {
-              this.cuidadores.push(cuidador)
-              this.isLogado = true
+              this.cuidador = cuidador;
+              this.isLogado = true;
             }
-          })
+          });
+
+          this.curriculoService
+            .getExperiencia(this.cpf)
+            .subscribe((experiencia) => {
+              console.log('EXPERIENCIA: ', experiencia);
+              if (experiencia) {
+                this.experiencia = experiencia;
+              }
+            });
+
+          this.curriculoService
+            .getCertificacao(this.cpf)
+            .subscribe((certificacao) => {
+              console.log('CERTIFICAÇÃO: ', certificacao);
+              if (certificacao) {
+                this.certificacao = certificacao;
+              }
+            });
+
+          this.curriculoService.getFormacao(this.cpf).subscribe((formacao) => {
+            console.log('FORMAÇÃO: ', formacao);
+            if (formacao) {
+              this.formacao = formacao;
+            }
+          });
         }
       });
     });
   }
-
 }

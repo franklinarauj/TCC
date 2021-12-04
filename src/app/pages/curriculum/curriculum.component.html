@@ -5,7 +5,7 @@
 
   <div class="wrapper">
     <div class="user-info">
-      <h3>Fulano de tal</h3>
+      <h3>{{cuidador?.nome}}</h3>
     </div>
 
     <div class="card-container">
@@ -18,9 +18,9 @@
           </div>
         </div>
         <div class="card-content">
-          <p>Nome: <span>João de Souza</span></p>
-          <p>Idade: <span>30</span></p>
-          <p>Sexo: <span>Masculino</span></p>
+          <p>Nome: <span>{{cuidador?.nome}}</span></p>
+          <p>Data de nascimento: <span>{{cuidador?.data_nascimento}}</span></p>
+          <p>Sexo: <span>{{cuidador?.nome == "M" ? "Feminino" : "Masculino" }}</span></p>
         </div>
       </div>
 
@@ -32,10 +32,10 @@
           </div>
         </div>
         <div class="card-content">
-          <p>CEP: <span>98.765-321</span></p>
-          <p>Logradouro e Número: <span>Rua B Casa 02</span></p>
-          <p>Cidade: <span>Brasília</span></p>
-          <p>UF: <span>DF</span></p>
+          <p>CEP: <span>{{cuidador?.cep}}</span></p>
+          <p>Logradouro e Número: <span>{{cuidador?.logradouro}}</span></p>
+          <p>Cidade: <span>{{cuidador?.cidade}}</span></p>
+          <p>UF: <span>{{cuidador?.uf}}</span></p>
         </div>
       </div>
 
@@ -47,11 +47,11 @@
           </div>
         </div>
         <div class="card-content">
-          <p>Empresa: <span>Qualquer uma</span></p>
-          <p>Cargo: <span>Enfermeiro</span></p>
-          <p>Descrição: <span>Atendia pacientes.</span></p>
-          <p>Data Início: <span>30/11/2015</span></p>
-          <p>Data Fim: <span>15/10/2019</span></p>
+          <p>Empresa: <span>{{experiencia?.empresa}}</span></p>
+          <p>Cargo: <span>{{experiencia?.cargo}}</span></p>
+          <p>Descrição: <span>{{experiencia?.descricao}}</span></p>
+          <p>Data Início: <span>{{experiencia?.data_inicio}}</span></p>
+          <p>Data Fim: <span>{{experiencia?.data_fim}}</span></p>
         </div>
       </div>
 
@@ -63,9 +63,9 @@
           </div>
         </div>
         <div class="card-content">
-          <p>Instituição: <span>UniCEUB</span></p>
-          <p>Título: <span>Curso de Primeiros Socorros</span></p>
-          <p>Carga Horária: <span>60 horas</span></p>
+          <p>Instituição: <span>{{certificacao?.instituicao}}</span></p>
+          <p>Título: <span>{{certificacao?.titulo}}</span></p>
+          <p>Carga Horária: <span>{{certificacao?.carga_horaria}}</span></p>
         </div>
       </div>
 
@@ -77,8 +77,8 @@
           </div>
         </div>
         <div class="card-content">
-          <p>Instituição: <span>UniCEUB</span></p>
-          <p>Curso: <span>Enfermagem</span></p>
+          <p>Instituição: <span>{{formacao?.instituicao}}</span></p>
+          <p>Curso: <span>{{formacao?.curso}}</span></p>
         </div>
       </div>
 
@@ -90,8 +90,8 @@
           </div>
         </div>
         <div class="card-content">
-          <p>Telefone: <span>(61) 98765-4321</span></p>
-          <p>E-mail: <span>joaods@email.com</span></p>
+          <p>Telefone: <span>{{cuidador?.celular}}</span></p>
+          <p>E-mail: <span>{{cuidador?.email}}</span></p>
         </div>
       </div>
 
