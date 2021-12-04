@@ -13,9 +13,11 @@ import { LoginServiceService } from 'src/app/services/login-service.service';
   styleUrls: ['./curriculum-info.component.css']
 })
 export class CurriculumInfoComponent implements OnInit {
+  isEdit: boolean = false;
   displayFormationForm: boolean = false;
   cpf: string = '';
   token!: string | null;
+
   certificao: Certificacao = {
     carga_horaria: undefined,
     cuidador_cpf: "",
@@ -40,7 +42,6 @@ export class CurriculumInfoComponent implements OnInit {
     instituicao: "",
     periodo: ""
   };
-  // curriculo!: Curriculo;
 
   constructor(private route: ActivatedRoute,
     private router: Router,
@@ -49,7 +50,6 @@ export class CurriculumInfoComponent implements OnInit {
     private datePipe: DatePipe) { }
 
   ngOnInit(): void {
-
     this.route.params.subscribe((params) => {
       this.cpf = params['cpf'];
       this.loginService.getToken().then((token) => {
@@ -57,28 +57,38 @@ export class CurriculumInfoComponent implements OnInit {
         if (token) {
           this.curriculumService.getExperiencia(this.cpf)
             .subscribe(experiencia => {
-              this.experiencia = experiencia;
-              this.experiencia.cuidador_cpf = this.cpf;
+              if (experiencia) {
+                this.isEdit = true;
+                this.experiencia = experiencia;
+                this.experiencia.data_inicio = this.datePipe.transform(this.experiencia.data_inicio, 'dd/MM/yyyy');
+                this.experiencia.data_fim = this.datePipe.transform(this.experiencia.data_fim, 'dd/MM/yyyy');
+                this.experiencia.cuidador_cpf = this.cpf;
+              }
             })
           this.curriculumService.getCertificacao(this.cpf)
             .subscribe(certificao => {
-              this.certificao = certificao;
-              this.certificao.cuidador_cpf = this.cpf;
+              if (certificao) {
+                this.isEdit = true;
+                this.certificao = certificao;
+                this.certificao.cuidador_cpf = this.cpf;
+              }
             })
           this.curriculumService.getFormacao(this.cpf)
             .subscribe(formacao => {
-              this.formacao = formacao;
-              this.formacao.cuidador_cpf = this.cpf;
+              if (formacao) {
+                this.isEdit = true;
+                this.formacao = formacao;
+                this.formacao.data_inicio = this.datePipe.transform(this.formacao.data_inicio, 'dd/MM/yyyy');
+                this.formacao.data_formacao = this.datePipe.transform(this.formacao.data_formacao, 'dd/MM/yyyy');
+                this.formacao.cuidador_cpf = this.cpf;
+              }
             })
-          this.formacao.cuidador_cpf = this.cpf;
-          this.experiencia.cuidador_cpf = this.cpf;
-          this.certificao.cuidador_cpf = this.cpf;
         }
       });
     });
   }
-
-  save() {
+  
+  create() {
     this.experiencia.cuidador_cpf = this.cpf;
     this.certificao.cuidador_cpf = this.cpf;
     this.formacao.cuidador_cpf = this.cpf;
@@ -87,12 +97,29 @@ export class CurriculumInfoComponent implements OnInit {
     this.formacao.data_inicio = this.datePipe.transform(this.formacao.data_inicio, 'dd/MM/yyyy');
     this.formacao.data_formacao = this.datePipe.transform(this.formacao.data_formacao, 'dd/MM/yyyy');
 
-    this.curriculumService.createExperiencia(this.experiencia, this.token).subscribe(() =>{
+    this.curriculumService.createExperiencia(this.experiencia, this.token).subscribe(() => {
       this.curriculumService.createCertificacao(this.certificao, this.token).subscribe(() => {
         this.curriculumService.createFormacao(this.formacao, this.token).subscribe(() => {
           this.router.navigateByUrl(`profile-helper/${this.cpf}`);
         });
       });
     });
+  }
+
+  edit() {
+    this.experiencia.cuidador_cpf = this.cpf;
+    this.certificao.cuidador_cpf = this.cpf;
+    this.formacao.cuidador_cpf = this.cpf;
+    // this.experiencia.data_inicio = this.datePipe.transform(this.experiencia.data_inicio, 'dd/MM/yyyy');
+    // this.experiencia.data_fim = this.datePipe.transform(this.experiencia.data_fim, 'dd/MM/yyyy');
+    // this.formacao.data_inicio = this.datePipe.transform(this.formacao.data_inicio, 'dd/MM/yyyy');
+    // this.formacao.data_formacao = this.datePipe.transform(this.formacao.data_formacao, 'dd/MM/yyyy');
+    this.curriculumService.editExperiencia(this.experiencia, this.token, this.experiencia.id).subscribe(() => {
+      this.curriculumService.editCertificacao(this.certificao, this.token, this.certificao.id).subscribe(() => {
+        this.curriculumService.editFormacao(this.formacao, this.token, this.formacao.id).subscribe(() => {
+          this.router.navigateByUrl(`profile-helper/${this.cpf}`);
+        })
+      })
+    })
   }
 }

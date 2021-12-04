@@ -114,10 +114,9 @@
             ESTOU CURSANDO
           </mat-checkbox>
         </div>
-
         <div class="nav-button">
           <button mat-button class="button-prev" matStepperPrevious>ANTERIOR</button>
-          <button mat-button class="button-next" (click)="save()" matStepperNext>SALVAR</button>
+          <button mat-button class="button-next" (click)="isEdit ? edit() : create()" matStepperNext>SALVAR</button>
         </div>
       </form>
     </mat-step>

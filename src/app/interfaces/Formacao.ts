@@ -1,4 +1,5 @@
 export interface Formacao {
+    id?: number,
     instituicao?: string,
     curso?: string,
     periodo?: string,

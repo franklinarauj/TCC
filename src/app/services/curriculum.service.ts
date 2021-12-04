@@ -31,7 +31,7 @@ export class CurriculumService {
     return this.http.post<Experiencia>(`${BASE_URL}/experiencia/${experiencia.cuidador_cpf}`, experiencia, { headers: new HttpHeaders().append("Authorization", `Bearer ${token}`) });
   }
 
-  editExperiencia(experiencia: Experiencia, token: string | null, id: string): Observable<Experiencia> {
+  editExperiencia(experiencia: Experiencia, token: string | null, id?: number): Observable<Experiencia> {
     if (experiencia.data_inicio)
       experiencia.data_inicio = this.utilsService.formatDate(experiencia.data_inicio);
     if (experiencia.data_fim)
@@ -53,16 +53,17 @@ export class CurriculumService {
     return this.http.post<Formacao>(`${BASE_URL}/formacao/${formacao.cuidador_cpf}`, formacao, { headers: new HttpHeaders().append("Authorization", `Bearer ${token}`) });
   }
 
-  editFormacao(formacao: Formacao, token: string | null, id: string): Observable<Formacao> {
+  editFormacao(formacao: Formacao, token: string | null, id?: number): Observable<Formacao> {
     if (formacao.data_inicio)
       formacao.data_inicio = this.utilsService.formatDate(formacao.data_inicio);
     if (formacao.data_formacao)
       formacao.data_formacao = this.utilsService.formatDate(formacao.data_formacao);
+    console.log(formacao)
     return this.http.put<Formacao>(`${BASE_URL}/formacao/${id}`, formacao, { headers: new HttpHeaders().append("Authorization", `Bearer ${token}`) });
   }
 
   //Certificação
-  getCertificacao(cpf: string): Observable<Certificacao> {    
+  getCertificacao(cpf: string): Observable<Certificacao> {
     return this.http.get<Certificacao>(`${BASE_URL}/certificacao/${cpf}`);
   }
 
@@ -71,7 +72,7 @@ export class CurriculumService {
     return this.http.post<Certificacao>(`${BASE_URL}/certificacao/${certificacao.cuidador_cpf}`, certificacao, { headers: new HttpHeaders().append("Authorization", `Bearer ${token}`) });
   }
 
-  editCertificacao(certificacao: Certificacao, token: string | null, id: string): Observable<Certificacao> {
+  editCertificacao(certificacao: Certificacao, token: string | null, id?: number): Observable<Certificacao> {
     return this.http.put<Certificacao>(`${BASE_URL}/certificacao/${id}`, certificacao, { headers: new HttpHeaders().append("Authorization", `Bearer ${token}`) });
   }
 }
