@@ -87,7 +87,7 @@ export class CurriculumInfoComponent implements OnInit {
       });
     });
   }
-  
+
   create() {
     this.experiencia.cuidador_cpf = this.cpf;
     this.certificao.cuidador_cpf = this.cpf;
@@ -122,4 +122,8 @@ export class CurriculumInfoComponent implements OnInit {
       })
     })
   }
+
+  cancelar(): void {
+    this.router.navigate([`profile-helper/${this.cpf}`])
+  };
 }
