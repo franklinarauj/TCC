@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="paciente" >
   <div class="title">
     <h1>Prontuário do Paciente</h1>
   </div>
@@ -18,9 +18,9 @@
           </div>
         </div>
         <div class="card-content">
-          <p>Nome: <span>Maria Socorro</span></p>
-          <p>Idade: <span>65</span></p>
-          <p>Sexo: <span>Feminino</span></p>
+          <p>Nome: <span>{{paciente?.nome}}</span></p>
+          <p>Data de nascimento: <span>{{paciente?.data_nascimento}}</span></p>
+          <p>Sexo: <span>{{paciente?.sexo == "M" ? "Masculino": "Feminino"}}</span></p>
         </div>
       </div>
 
@@ -32,10 +32,10 @@
           </div>
         </div>
         <div class="card-content">
-          <p>CEP: <span>12.345-789</span></p>
-          <p>Logradouro e Número: <span>Rua A Casa 01</span></p>
-          <p>Cidade: <span>Brasília</span></p>
-          <p>UF: <span>DF</span></p>
+          <p>CEP: <span>{{paciente?.cep}}</span></p>
+          <p>Logradouro e Número: <span>{{paciente?.logradouro}}</span></p>
+          <p>Cidade: <span>{{paciente?.cidade}}</span></p>
+          <p>UF: <span>{{paciente?.uf}}</span></p>
         </div>
       </div>
 
@@ -46,9 +46,9 @@
             <h3>Alergias</h3>
           </div>
         </div>
-        <div class="card-content">
-          <p>Alergia: <span>Vrau</span></p>
-          <p>Grau: <span>55</span></p>
+        <div class="card-content" *ngIf="alergia">
+          <p>Alergia: <span>{{alergia[0]?.alergia}}</span></p>
+          <p>Grau: <span>{{alergia[0]?.grau}}</span></p>
         </div>
       </div>
 
@@ -59,9 +59,9 @@
             <h3>Comorbidades</h3>
           </div>
         </div>
-        <div class="card-content">
-          <p>Comorbidade: <span>Diabetes</span></p>
-          <p>Cuidados: <span>Não comer doces</span></p>
+        <div class="card-content" *ngIf="comorbidade">
+          <p>Comorbidade: <span>{{comorbidade[0]?.comorbidade}}</span></p>
+          <p>Cuidados: <span>{{comorbidade[0]?.cuidados}}</span></p>
         </div>
       </div>
 
@@ -72,9 +72,9 @@
             <h3>Dispositivos</h3>
           </div>
         </div>
-        <div class="card-content">
-          <p>Dispositivo: <span>Marca passo</span></p>
-          <p>Cuidados: <span>Evitar movimentos bruscos</span></p>
+        <div class="card-content" *ngIf="dispositivo">
+          <p>Dispositivo: <span>{{dispositivo[0]?.dispositivo}}</span></p>
+          <p>Cuidados: <span>{{dispositivo[0]?.cuidados}}</span></p>
         </div>
       </div>
 
@@ -85,10 +85,10 @@
             <h3>Prescrições</h3>
           </div>
         </div>
-        <div class="card-content">
-          <p>Remédio: <span>Amoxicilina</span></p>
-          <p>Horários: <span>De 8 em 8 horas</span></p>
-          <p>Via: <span>Oral</span></p>
+        <div class="card-content" *ngIf="prescricao">
+          <p>Remédio: <span>{{prescricao[0]?.remedio}}</span></p>
+          <p>Horários: <span>{{prescricao[0]?.horarios}}</span></p>
+          <p>Via: <span>{{prescricao[0]?.via}}</span></p>
         </div>
       </div>
 

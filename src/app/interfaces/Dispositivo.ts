@@ -1,6 +1,8 @@
 export interface Dispositivo {
-  id: number;
-  dispositivo: string;
-  cuidados: string;
-  paciente_cpf: string;
+  [index: number]: {
+    id: number;
+    dispositivo: string;
+    cuidados: string;
+    paciente_cpf: string;
+  };
 }
