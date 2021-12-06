@@ -8,6 +8,7 @@ import { Alergia } from '../interfaces/Alergia';
 import { Comorbidade } from '../interfaces/Comorbidade';
 import { Dispositivo } from '../interfaces/Dispositivo';
 import { Prescricao } from '../interfaces/Prescricao';
+import { Experiencia } from '../interfaces/Experiencia';
 
 const BASE_URL = environment.BASE_URL;
 
@@ -16,7 +17,31 @@ const BASE_URL = environment.BASE_URL;
 })
 export class ProntuarioService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private utilsService: UtilsService) {}
+
+  // Alergia
+
+  getAlergia(cpf: string): Observable<Alergia> {
+    return this.http.get<Alergia>(`${BASE_URL}/alergia/paciente/${cpf}`);
+  }
+
+  // Comorbidades
+
+  getComorbidade(cpf: string): Observable<Comorbidade> {
+    return this.http.get<Comorbidade>(`${BASE_URL}/comorbidade/${cpf}`);
+  }
+
+  // Dispositivos
+
+  getDispositivos(cpf: string): Observable<Dispositivo> {
+    return this.http.get<Dispositivo>(`${BASE_URL}/dispositivo/${cpf}`);
+  }
+
+  // Prescrições
+
+  getPrescricao(cpf: string): Observable<Prescricao> {
+    return this.http.get<Prescricao>(`${BASE_URL}/prescricao/${cpf}`);
+  }
 
 }
 
