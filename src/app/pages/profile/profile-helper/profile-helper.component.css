@@ -1,11 +1,23 @@
 .grid-profile {
   width: 100%;
-  margin-top: 58px;
-  margin-bottom: 58px;
+  margin-top: 125px;
+  margin-bottom: 125px;
 }
 
 .profile-content {
   width: auto;
+}
+
+.img-logo {
+  width: 400px;
+}
+
+.input-profile {
+  font-size: medium;
+}
+
+.mat-form-field {
+  width: 350px;
 }
 
 /* MAIN CARD CONTENT */
@@ -15,8 +27,8 @@
 
 .main-card-content img {
   width: 80%;
-  max-width: 500px;
-
+  max-width: 30rem;
+  min-width: 10rem;
   padding-bottom: 0.6rem;
 }
 
@@ -32,16 +44,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   padding: 1rem;
 }
 
 .main-card-content-card p {
   text-align: center;
-}
-
-.img-logo {
-  width: 400px;
 }
 
 .title {
@@ -76,18 +83,6 @@
   width: 350px;
 }
 
-.check-infos {
-  text-align: center;
-}
-
-.check-box {
-  margin-top: 5px;
-  margin-left: 10px;
-  margin-right: 20px;
-  font-size: 12px;
-  text-align: center;
-}
-
 .disponibilidade {
   display: flex;
   text-align: center;
@@ -115,6 +110,27 @@
     width: 250px;
   }
 
+  .main-card-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input-info {
+    font-size: medium;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .button-info {
+    font-size: medium;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }
 
 @media(max-width: 768px) {
@@ -128,6 +144,27 @@
     width: 250px;
   }
 
+  .main-card-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input-info {
+    font-size: medium;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .button-info {
+    font-size: medium;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }
 
 @media(max-width: 574px) {
@@ -139,6 +176,14 @@
 
   .img-logo {
     width: 150px;
+  }
+
+
+  .button-info {
+    font-size: medium;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(1, 1fr);
   }
 
 }
