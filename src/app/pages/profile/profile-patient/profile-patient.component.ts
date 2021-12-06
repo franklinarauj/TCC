@@ -84,8 +84,8 @@ export class ProfilePatientComponent implements OnInit {
       .subscribe((paciente) => (this.paciente = paciente));
   }
 
-  prontuario(cpf: string): void {
-    // this.router.navigate([`interesse/${cpf}`]);
+  prontuario(): void {
+    this.router.navigate([`prontuario/${this.cpf}`]);
   }
 
   findHelper(): void {

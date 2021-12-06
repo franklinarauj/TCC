@@ -2,5 +2,5 @@ export interface Dispositivo {
   id: number;
   dispositivo: string;
   cuidados: string;
-  paciente: string;
+  paciente_cpf: string;
 }

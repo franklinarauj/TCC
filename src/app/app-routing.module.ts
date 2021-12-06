@@ -48,6 +48,7 @@ const routes: Routes = [
   // { path: 'perfil/prontuario-info', component: ProntuarioInfoComponent },
   { path: 'match', component: MatchComponent },
   { path: 'prontuario', component: ProntuarioComponent },
+  { path: 'prontuario/:cpf', component: ProntuarioInfoComponent },
   { path: 'curriculo/:cpf', component: CurriculumComponent },
   { path: 'profile-helper/:cpf/curriculum', component: CurriculumInfoComponent },
 ];

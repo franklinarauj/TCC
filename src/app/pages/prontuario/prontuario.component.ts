@@ -38,21 +38,21 @@ export class ProntuarioComponent implements OnInit {
     id: 0,
     alergia: "",
     grau: "",
-    paciente: ""
+    paciente_cpf: ""
   }];
 
   comorbidades: Comorbidade[] = [{
     id: 0,
     comorbidade: "",
     cuidados: "",
-    paciente: ""
+    paciente_cpf: ""
   }];
 
   dispositivos: Dispositivo[] = [{
     id: 0,
     dispositivo: "",
     cuidados: "",
-    paciente: ""
+    paciente_cpf: ""
   }];
 
   prescricoes: Prescricao[] = [{
@@ -60,7 +60,7 @@ export class ProntuarioComponent implements OnInit {
     remedio: "",
     horarios: "",
     via: "",
-    paciente: ""
+    paciente_cpf: ""
   }];
 
   displayedColumns: string[] = ['nome'];

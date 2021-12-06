@@ -3,5 +3,5 @@ export interface Prescricao {
   remedio: string;
   horarios: string;
   via: string;
-  paciente: string;
+  paciente_cpf: string;
 }
