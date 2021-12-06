@@ -56,7 +56,6 @@ export class ProntuarioComponent implements OnInit {
             });
 
           this.prontuarioService.getAlergia(this.cpf).subscribe((alergia) => {
-            console.log(alergia)
             if (alergia) {
               this.alergia = alergia;
             }
@@ -65,7 +64,6 @@ export class ProntuarioComponent implements OnInit {
           this.prontuarioService
             .getComorbidade(this.cpf)
             .subscribe((comorbidade) => {
-              console.log(comorbidade)
               if (comorbidade) {
                 this.comorbidade = comorbidade;
               }
@@ -74,7 +72,6 @@ export class ProntuarioComponent implements OnInit {
           this.prontuarioService
             .getDispositivo(this.cpf)
             .subscribe((dispositivo) => {
-              console.log(dispositivo)
               if (dispositivo) {
                 this.dispositivo = dispositivo;
               }
@@ -83,7 +80,6 @@ export class ProntuarioComponent implements OnInit {
           this.prontuarioService
             .getPrescricao(this.cpf)
             .subscribe((prescricao) => {
-              console.log(prescricao)
               if (prescricao) {
                 this.prescricao = prescricao;
               }

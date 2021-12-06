@@ -39,7 +39,7 @@
         </div>
       </div>
 
-      <!-- <div class="card">
+      <div class="card">
         <div class="card-title">
           <div class="title-info">
             <mat-icon matPrefix class="icon-input">soap</mat-icon>
@@ -47,8 +47,8 @@
           </div>
         </div>
         <div class="card-content" *ngIf="alergia">
-          <p>Alergia: <span>{{alergia[0]?.alergia}}</span></p>
-          <p>Grau: <span>{{alergia[0]?.grau}}</span></p>
+          <p>Alergia: <span>{{alergia?.alergia}}</span></p>
+          <p>Grau: <span>{{alergia?.grau}}</span></p>
         </div>
       </div>
 
@@ -60,8 +60,8 @@
           </div>
         </div>
         <div class="card-content" *ngIf="comorbidade">
-          <p>Comorbidade: <span>{{comorbidade[0]?.comorbidade}}</span></p>
-          <p>Cuidados: <span>{{comorbidade[0]?.cuidados}}</span></p>
+          <p>Comorbidade: <span>{{comorbidade?.comorbidade}}</span></p>
+          <p>Cuidados: <span>{{comorbidade?.cuidados}}</span></p>
         </div>
       </div>
 
@@ -73,8 +73,8 @@
           </div>
         </div>
         <div class="card-content" *ngIf="dispositivo">
-          <p>Dispositivo: <span>{{dispositivo[0]?.dispositivo}}</span></p>
-          <p>Cuidados: <span>{{dispositivo[0]?.cuidados}}</span></p>
+          <p>Dispositivo: <span>{{dispositivo?.dispositivo}}</span></p>
+          <p>Cuidados: <span>{{dispositivo?.cuidados}}</span></p>
         </div>
       </div>
 
@@ -86,11 +86,11 @@
           </div>
         </div>
         <div class="card-content" *ngIf="prescricao">
-          <p>Remédio: <span>{{prescricao[0]?.remedio}}</span></p>
-          <p>Horários: <span>{{prescricao[0]?.horarios}}</span></p>
-          <p>Via: <span>{{prescricao[0]?.via}}</span></p>
+          <p>Remédio: <span>{{prescricao?.remedio}}</span></p>
+          <p>Horários: <span>{{prescricao?.horarios}}</span></p>
+          <p>Via: <span>{{prescricao?.via}}</span></p>
         </div>
-      </div> -->
+      </div>
 
     </div>
   </div>
