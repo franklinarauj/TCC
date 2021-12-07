@@ -66,7 +66,6 @@ export class MatchComponent implements OnInit {
           //console.log('obj=>', r)
           if (r.latitude && r.longitude) {
             this.MapaComponent.marcarMatch(r.latitude, r.longitude, r);
-            console.log(r)
           }
         })
       }
