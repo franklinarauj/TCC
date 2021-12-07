@@ -88,4 +88,8 @@ export class ProntuarioComponent implements OnInit {
       });
     });
   }
+
+  match(): void {
+    this.router.navigate(['match']);
+  }
 }
