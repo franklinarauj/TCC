@@ -49,8 +49,8 @@ export class MapaComponent implements AfterViewInit {
       minZoom: 3
     });
 
-    var greenIcon = new L.Icon({
-      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+    var redIcon = new L.Icon({
+      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
       shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
       iconSize: [25, 41],
       iconAnchor: [12, 41],
@@ -67,7 +67,13 @@ export class MapaComponent implements AfterViewInit {
         if (this.myMarker) { // check
           this.map.removeLayer(this.myMarker); // remove
         }
-        this.myMarker = L.marker([e.latlng.lat, e.latlng.lng], {icon: greenIcon}).addTo(this.map).bindPopup("<b>Marcado!</b><br />Você selecionou aqui.").openPopup();
+        this.myMarker = L.marker([e.latlng.lat, e.latlng.lng], {icon: redIcon}).addTo(this.map).bindPopup(
+          `
+          <div style="display:flex; justify-content: center; align-items: center; flex-direction: column">
+          <b>Marcado!</b>
+          <span> Você selecionou aqui. </span>
+          </div>
+          `).openPopup();
         this.coord(e.latlng);
         this.latlong.emit([this.latitude, this.longitude]);
       });
