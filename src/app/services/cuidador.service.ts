@@ -17,4 +17,11 @@ export class CuidadorService {
       headers: new HttpHeaders().append('Authorization', `Bearer ${token}`),
     });
   }
+  async getAtivos(token?: string){
+    const dados =  this.http.get<Cuidador>(`${BASE_URL}/cuidador/ativos`, { headers: new HttpHeaders().append("Authorization", `Bearer ${token}`) }).toPromise();
+    //console.log('DADOS =>', dados);
+    return dados;
+
+    //return this.http.get(dadosMock).toPromise();
+    }
 }

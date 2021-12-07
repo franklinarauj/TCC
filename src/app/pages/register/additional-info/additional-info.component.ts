@@ -1,10 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {
-  FormBuilder,
-  FormGroup,
-  FormControl,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Cadastro } from 'src/app/interfaces/Cadastro';
 import { Sexo } from 'src/app/interfaces/Sexo';
@@ -12,6 +7,7 @@ import { Usuario } from 'src/app/interfaces/Usuario';
 import { CadastroService } from 'src/app/services/cadastro.service';
 import { TipoUsuarioConstants } from 'src/app/shared/constants/TipoUsuarioConstants';
 import { LoginServiceService } from 'src/app/services/login-service.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-additional-info',
@@ -22,6 +18,8 @@ export class AdditionalInfoComponent implements OnInit {
 
   lat: any;
   long: any;
+
+  mensagem = "ERRO NO CADASTRO, FAVOR VERIFICAR DADOS.";
 
   @Input() usuario: Usuario = {
     nome: '',
@@ -61,7 +59,8 @@ export class AdditionalInfoComponent implements OnInit {
   constructor(
     private cadastroService: CadastroService,
     private loginService: LoginServiceService,
-    private router: Router
+    private router: Router,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit() {
@@ -94,7 +93,12 @@ export class AdditionalInfoComponent implements OnInit {
             tipoUsuario == TipoUsuarioConstants.PACIENTE
             ? this.router.navigateByUrl(`/profile-patient/${this.cadastro.cpf}`)
             : this.router.navigateByUrl(`/profile-helper/${this.cadastro.cpf}`);
+            // NOTIFY TOAST
+            this.toastr.success("Usuário cadastrado com sucesso.");
+            }, (error) => {
+              this.toastr.error(error.mensagem);
           });
       });
+
   }
 }

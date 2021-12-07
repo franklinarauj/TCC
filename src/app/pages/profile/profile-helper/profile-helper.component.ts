@@ -91,7 +91,7 @@ export class ProfileHelperComponent implements OnInit {
     this.router.navigate([`profile-helper/${this.cpf}/curriculum`]);
   }
 
-  readInteresse(): void {
-    this.router.navigate(['interesse']);
+  findPatient(): void {
+    this.router.navigate(['match']);
   }
 }

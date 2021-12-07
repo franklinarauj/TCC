@@ -50,6 +50,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
 // import { MatDatepickerModule } from '@angular/material/datepicker'
+import { ToastrModule } from 'ngx-toastr';
 
 // DIRECTIVES
 import { CenterDirective } from './directives/center.directive';
@@ -109,6 +110,7 @@ const maskConfig: Partial<IConfig> = {
     MatRadioModule,
     MatSelectModule,
     MatTableModule,
+    ToastrModule.forRoot(),
     // MatDatepickerModule
   ],
   providers: [PacienteService, DatePipe, MapaComponent],
