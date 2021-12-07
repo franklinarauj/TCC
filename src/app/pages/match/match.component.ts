@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MapaComponent } from 'src/app/components/mapa/mapa.component';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
 import { LoginServiceService } from 'src/app/services/login-service.service';
@@ -26,22 +26,23 @@ export class MatchComponent implements OnInit {
     public cuidadorService: CuidadorService,
     public loginService: LoginServiceService,
     private MapaComponent: MapaComponent
-    ) {}
+  ) {}
 
-  openDialog(dadosUsuario?: any): void {
+  openDialog(dadosUsuario ? : any): void {
     const dialogRef = this.dialog.open(ModalComponent, {
       width: '400px',
-      data: { dadosUsuario }
+      data: {
+        dadosUsuario
+      }
     })
 
     dialogRef.afterClosed().subscribe(result => {
       console.log("Modal fechada!");
     })
-
   }
 
+  ngOnInit() {
 
- ngOnInit() {
     this.loginService.getToken().then(async (token) => {
       this.token = token;
       if (token) {
@@ -49,11 +50,11 @@ export class MatchComponent implements OnInit {
         this.latLongArray.forEach((r: any) => {
           //console.log(r.latitude, r.longitude);
           //console.log('obj=>', r)
-          if(r.latitude && r.longitude){
-          this.MapaComponent.marcarMatch(r.latitude, r.longitude);
+          if (r.latitude && r.longitude) {
+            this.MapaComponent.marcarMatch(r.latitude, r.longitude, r);
           }
         })
-        }
+      }
     });
 
     this.loginService.getToken().then(async (token) => {
@@ -63,11 +64,12 @@ export class MatchComponent implements OnInit {
         this.latLongArray.forEach((r: any) => {
           //console.log(r.latitude, r.longitude);
           //console.log('obj=>', r)
-          if(r.latitude && r.longitude){
-          this.MapaComponent.marcarMatch(r.latitude, r.longitude);
+          if (r.latitude && r.longitude) {
+            this.MapaComponent.marcarMatch(r.latitude, r.longitude, r);
+            console.log(r)
           }
         })
-        }
+      }
     });
   }
 }

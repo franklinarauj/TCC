@@ -39,7 +39,6 @@ export class CadastroComponent implements OnInit {
     //console.log('evento =>', evento);
     this.lat = evento[0];
     this.long = evento[1];
-    this.mapaComponent.marcarMatch("-15.872846316558126","-47.989654541015625");
   }
 
   cadastrarUsuario() {
