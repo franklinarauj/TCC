@@ -27,7 +27,6 @@ export class CurriculumService {
       experiencia.data_inicio = this.utilsService.formatDate(experiencia.data_inicio);
     if (experiencia.data_fim)
       experiencia.data_fim = this.utilsService.formatDate(experiencia.data_fim);
-    console.log(experiencia)
     return this.http.post<Experiencia>(`${BASE_URL}/experiencia/${experiencia.cuidador_cpf}`, experiencia, { headers: new HttpHeaders().append("Authorization", `Bearer ${token}`) });
   }
 
@@ -49,7 +48,6 @@ export class CurriculumService {
       formacao.data_inicio = this.utilsService.formatDate(formacao.data_inicio);
     if (formacao.data_formacao)
       formacao.data_formacao = this.utilsService.formatDate(formacao.data_formacao);
-    console.log(formacao)
     return this.http.post<Formacao>(`${BASE_URL}/formacao/${formacao.cuidador_cpf}`, formacao, { headers: new HttpHeaders().append("Authorization", `Bearer ${token}`) });
   }
 
@@ -58,7 +56,6 @@ export class CurriculumService {
       formacao.data_inicio = this.utilsService.formatDate(formacao.data_inicio);
     if (formacao.data_formacao)
       formacao.data_formacao = this.utilsService.formatDate(formacao.data_formacao);
-    console.log(formacao)
     return this.http.put<Formacao>(`${BASE_URL}/formacao/${id}`, formacao, { headers: new HttpHeaders().append("Authorization", `Bearer ${token}`) });
   }
 
@@ -68,7 +65,6 @@ export class CurriculumService {
   }
 
   createCertificacao(certificacao: Certificacao, token: string | null): Observable<Certificacao> {
-    console.log(certificacao)
     return this.http.post<Certificacao>(`${BASE_URL}/certificacao/${certificacao.cuidador_cpf}`, certificacao, { headers: new HttpHeaders().append("Authorization", `Bearer ${token}`) });
   }
 

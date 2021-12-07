@@ -36,7 +36,6 @@ export class LoginComponent implements OnInit {
     if (this.tipoUsuario == 0)
       this.tipoUsuario = 4
     this.loginService.autenticar(this.login).subscribe(res => {
-      console.log(res);
       localStorage.setItem('token', res.token);
       localStorage.setItem('cpf', this.login.cpf);
       if (this.tipoUsuario == TipoUsuarioConstants.PACIENTE)

@@ -64,7 +64,6 @@ export class AdditionalInfoComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    console.log('USUER =>', this.usuario);
     this.cadastro.nome = this.usuario.nome;
     this.cadastro.cpf = this.usuario.cpf;
     this.cadastro.senha = this.usuario.senha;

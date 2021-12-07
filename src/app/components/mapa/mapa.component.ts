@@ -105,7 +105,6 @@ export class MapaComponent implements AfterViewInit {
       shadowSize: [41, 41]
     });
 
-    console.log(this.controleMapa);
     if (!this.controleMapa) {
       this.marcar = false;
       this.initMap();

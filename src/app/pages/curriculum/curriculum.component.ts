@@ -55,7 +55,6 @@ export class CurriculumComponent implements OnInit {
           this.curriculoService
             .getExperiencia(this.cpf)
             .subscribe((experiencia) => {
-              console.log('EXPERIENCIA: ', experiencia);
               if (experiencia) {
                 this.experiencia = experiencia;
               }
@@ -64,14 +63,12 @@ export class CurriculumComponent implements OnInit {
           this.curriculoService
             .getCertificacao(this.cpf)
             .subscribe((certificacao) => {
-              console.log('CERTIFICAÇÃO: ', certificacao);
               if (certificacao) {
                 this.certificacao = certificacao;
               }
             });
 
           this.curriculoService.getFormacao(this.cpf).subscribe((formacao) => {
-            console.log('FORMAÇÃO: ', formacao);
             if (formacao) {
               this.formacao = formacao;
             }

@@ -60,8 +60,8 @@ export class CurriculumInfoComponent implements OnInit {
               if (experiencia) {
                 this.isEdit = true;
                 this.experiencia = experiencia;
-                this.experiencia.data_inicio = this.datePipe.transform(this.experiencia.data_inicio, 'dd-MM-yyyy');
-                this.experiencia.data_fim = this.datePipe.transform(this.experiencia.data_fim, 'dd-MM-yyyy');
+                this.experiencia.data_inicio = this.datePipe.transform(this.experiencia.data_inicio, 'dd/MM/yyyy');
+                this.experiencia.data_fim = this.datePipe.transform(this.experiencia.data_fim, 'dd/MM/yyyy');
                 this.experiencia.cuidador_cpf = this.cpf;
               }
             })
@@ -78,8 +78,8 @@ export class CurriculumInfoComponent implements OnInit {
               if (formacao) {
                 this.isEdit = true;
                 this.formacao = formacao;
-                this.formacao.data_inicio = this.datePipe.transform(this.formacao.data_inicio, 'dd-MM-yyyy');
-                this.formacao.data_formacao = this.datePipe.transform(this.formacao.data_formacao, 'dd-MM-yyyy');
+                this.formacao.data_inicio = this.datePipe.transform(this.formacao.data_inicio, 'dd/MM/yyyy');
+                this.formacao.data_formacao = this.datePipe.transform(this.formacao.data_formacao, 'dd/MM/yyyy');
                 this.formacao.cuidador_cpf = this.cpf;
               }
             })
@@ -92,10 +92,10 @@ export class CurriculumInfoComponent implements OnInit {
     this.experiencia.cuidador_cpf = this.cpf;
     this.certificao.cuidador_cpf = this.cpf;
     this.formacao.cuidador_cpf = this.cpf;
-    this.experiencia.data_inicio = this.datePipe.transform(this.experiencia.data_inicio, 'dd-MM-yyyy');
-    this.experiencia.data_fim = this.datePipe.transform(this.experiencia.data_fim, 'dd-MM-yyyy');
-    this.formacao.data_inicio = this.datePipe.transform(this.formacao.data_inicio, 'dd-MM-yyyy');
-    this.formacao.data_formacao = this.datePipe.transform(this.formacao.data_formacao, 'dd-MM-yyyy');
+    this.experiencia.data_inicio = this.datePipe.transform(this.experiencia.data_inicio, 'dd/MM/yyyy');
+    this.experiencia.data_fim = this.datePipe.transform(this.experiencia.data_fim, 'dd/MM/yyyy');
+    this.formacao.data_inicio = this.datePipe.transform(this.formacao.data_inicio, 'dd/MM/yyyy');
+    this.formacao.data_formacao = this.datePipe.transform(this.formacao.data_formacao, 'dd/MM/yyyy');
 
     this.curriculumService.createExperiencia(this.experiencia, this.token).subscribe(() => {
       this.curriculumService.createCertificacao(this.certificao, this.token).subscribe(() => {
@@ -110,10 +110,10 @@ export class CurriculumInfoComponent implements OnInit {
     this.experiencia.cuidador_cpf = this.cpf;
     this.certificao.cuidador_cpf = this.cpf;
     this.formacao.cuidador_cpf = this.cpf;
-    // this.experiencia.data_inicio = this.datePipe.transform(this.experiencia.data_inicio, 'dd-MM-yyyy');
-    // this.experiencia.data_fim = this.datePipe.transform(this.experiencia.data_fim, 'dd-MM-yyyy');
-    // this.formacao.data_inicio = this.datePipe.transform(this.formacao.data_inicio, 'dd-MM-yyyy');
-    // this.formacao.data_formacao = this.datePipe.transform(this.formacao.data_formacao, 'dd-MM-yyyy');
+    // this.experiencia.data_inicio = this.datePipe.transform(this.experiencia.data_inicio, 'dd/MM/yyyy');
+    // this.experiencia.data_fim = this.datePipe.transform(this.experiencia.data_fim, 'dd/MM/yyyy');
+    // this.formacao.data_inicio = this.datePipe.transform(this.formacao.data_inicio, 'dd/MM/yyyy');
+    // this.formacao.data_formacao = this.datePipe.transform(this.formacao.data_formacao, 'dd/MM/yyyy');
     this.curriculumService.editExperiencia(this.experiencia, this.token, this.experiencia.id).subscribe(() => {
       this.curriculumService.editCertificacao(this.certificao, this.token, this.certificao.id).subscribe(() => {
         this.curriculumService.editFormacao(this.formacao, this.token, this.formacao.id).subscribe(() => {

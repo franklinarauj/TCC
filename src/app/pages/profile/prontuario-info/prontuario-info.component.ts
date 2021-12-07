@@ -71,7 +71,6 @@ export class ProntuarioInfoComponent implements OnInit {
             })
           this.prontuarioService.getDispositivo(this.cpf)
             .subscribe(dispositivo => {
-              console.log(dispositivo)
               if (dispositivo) {
                 this.isEdit = true;
                 this.dispositivo = dispositivo;
@@ -103,7 +102,6 @@ export class ProntuarioInfoComponent implements OnInit {
         })
       })
     })
-    console.log(this.dispositivo)
   }
 
   edit() {
