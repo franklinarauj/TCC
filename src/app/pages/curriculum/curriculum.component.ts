@@ -80,4 +80,8 @@ export class CurriculumComponent implements OnInit {
       });
     });
   }
+
+  match(): void {
+    this.router.navigate(['match']);
+  }
 }

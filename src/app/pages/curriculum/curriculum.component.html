@@ -19,7 +19,7 @@
         </div>
         <div class="card-content">
           <p>Nome: <span>{{cuidador?.nome}}</span></p>
-          <p>Data de nascimento: <span>{{cuidador?.data_nascimento}}</span></p>
+          <p>Data de Nascimento: <span>{{cuidador?.data_nascimento}}</span></p>
           <p>Sexo: <span>{{cuidador?.nome == "M" ? "Feminino" : "Masculino" }}</span></p>
         </div>
       </div>
@@ -97,4 +97,11 @@
 
     </div>
   </div>
+
+  <div class="title">
+    <button mat-flat-button style="background-color: #FF9900; color: white; border: 2px solid #B21E1E;"
+      (click)="match()">VOLTAR
+    </button>
+  </div>
+
 </div>

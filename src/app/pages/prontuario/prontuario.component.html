@@ -1,4 +1,4 @@
-<div class="container" *ngIf="paciente" >
+<div class="container" *ngIf="paciente">
   <div class="title">
     <h1>Prontuário do Paciente</h1>
   </div>
@@ -19,7 +19,7 @@
         </div>
         <div class="card-content">
           <p>Nome: <span>{{paciente?.nome}}</span></p>
-          <p>Data de nascimento: <span>{{paciente?.data_nascimento}}</span></p>
+          <p>Data de Nascimento: <span>{{paciente?.data_nascimento}}</span></p>
           <p>Sexo: <span>{{paciente?.sexo == "M" ? "Masculino": "Feminino"}}</span></p>
         </div>
       </div>
@@ -91,7 +91,13 @@
           <p>Via: <span>{{prescricao?.via}}</span></p>
         </div>
       </div>
-
     </div>
   </div>
+
+  <div class="title">
+    <button mat-flat-button style="background-color: #FF9900; color: white; border: 2px solid #B21E1E;"
+      (click)="match()">VOLTAR
+    </button>
+  </div>
+
 </div>
