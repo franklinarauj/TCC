@@ -85,7 +85,7 @@ export class ProfilePatientComponent implements OnInit {
   }
 
   prontuario(): void {
-    this.router.navigate([`prontuario/${this.cpf}`]);
+    this.router.navigate([`/profile-patient/${this.cpf}/prontuario/`]);
   }
 
   findHelper(): void {

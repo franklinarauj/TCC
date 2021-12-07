@@ -8,7 +8,6 @@ import { Alergia } from '../interfaces/Alergia';
 import { Comorbidade } from '../interfaces/Comorbidade';
 import { Dispositivo } from '../interfaces/Dispositivo';
 import { Prescricao } from '../interfaces/Prescricao';
-import { Experiencia } from '../interfaces/Experiencia';
 
 const BASE_URL = environment.BASE_URL;
 
@@ -42,7 +41,7 @@ export class ProntuarioService {
   }
 
   editComorbidade(comorbidade: Comorbidade, token: string | null) {
-    return this.http.put<Comorbidade>(`${BASE_URL}/alergia/${comorbidade.id}`, comorbidade, { headers: new HttpHeaders().append("Authorization", `Bearer ${token}`) })
+    return this.http.put<Comorbidade>(`${BASE_URL}/comorbidade/${comorbidade.id}`, comorbidade, { headers: new HttpHeaders().append("Authorization", `Bearer ${token}`) })
   }
 
   // Dispositivo

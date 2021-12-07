@@ -8,16 +8,16 @@
           <mat-form-field appearance="outline">
             <mat-icon matPrefix type="text" class="icon-input">soap</mat-icon>
             <mat-label>ALERGIA</mat-label>
-            <input matInput required>
+            <input matInput [(ngModel)]="alergia.alergia" name="alergia" required>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-icon matPrefix type="text" class="icon-input">trending_up</mat-icon>
             <mat-label appColor>GRAU</mat-label>
-            <input matInput required>
+            <input matInput type="number" [(ngModel)]="alergia.grau" name="grau" required>            
           </mat-form-field>
         </div>
-
         <div class="nav-button">
+          <button mat-button class="button-prev" (click)="cancelar()" >CANCELAR</button>
           <button mat-button class="button-next" matStepperNext>PRÓXIMO</button>
         </div>
       </form>
@@ -30,15 +30,14 @@
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">pregnant_woman</mat-icon>
             <mat-label>COMORBIDADE</mat-label>
-            <input matInput required>
+            <input matInput [(ngModel)]="comorbidade.comorbidade" name="comorbidade" required>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">description</mat-icon>
             <mat-label>CUIDADOS</mat-label>
-            <input matInput required>
+            <input matInput [(ngModel)]="comorbidade.cuidados" name="cuidados" required>
           </mat-form-field>
         </div>
-
         <div class="nav-button">
           <button mat-button class="button-prev" matStepperPrevious>ANTERIOR</button>
           <button mat-button class="button-next" matStepperNext>PRÓXIMO</button>
@@ -53,14 +52,13 @@
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">monitor_heart</mat-icon>
             <mat-label>DISPOSITIVO</mat-label>
-            <input matInput required>
+            <input matInput [(ngModel)]="dispositivo.dispositivo" name="dispositivo" required>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">description</mat-icon>
             <mat-label>CUIDADOS</mat-label>
-            <input matInput required>
+            <input matInput [(ngModel)]="dispositivo.cuidados" name="cuidados" required>
           </mat-form-field>
-
         </div>
         <div class="nav-button">
           <button mat-button class="button-prev" matStepperPrevious>ANTERIOR</button>
@@ -76,26 +74,24 @@
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">medical_services</mat-icon>
             <mat-label>REMÉDIO</mat-label>
-            <input matInput required>
+            <input matInput [(ngModel)]="prescricao.remedio" name="remedio" required>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">schedule</mat-icon>
             <mat-label>HORÁRIOS</mat-label>
-            <input matInput required>
+            <input matInput [(ngModel)]="prescricao.horarios" name="horarios" required>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-icon matPrefix class="icon-input">colorize</mat-icon>
             <mat-label>VIA</mat-label>
-            <input matInput required>
+            <input matInput [(ngModel)]="prescricao.via" name="via" required>
           </mat-form-field>
         </div>
-
         <div class="nav-button">
           <button mat-button class="button-prev" matStepperPrevious>ANTERIOR</button>
-          <button mat-button class="button-next" matStepperNext>SALVAR</button>
+          <button mat-button class="button-next" (click)="isEdit ? edit() : create()" matStepperNext>SALVAR</button>
         </div>
       </form>
     </mat-step>
-
   </mat-stepper>
 </div>
