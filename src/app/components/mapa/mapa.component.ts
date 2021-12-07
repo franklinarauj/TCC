@@ -75,6 +75,6 @@ export class MapaComponent implements AfterViewInit {
       this.initMap();
     }
     var marker = new L.Marker([lat, long]);
-    marker.addTo(this.map);
+    marker.addTo(this.map).bindPopup("<b>Colocar URL de redirect aqui.</b>").openPopup();
   }
 }
