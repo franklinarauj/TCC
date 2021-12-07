@@ -107,10 +107,26 @@ export class MapaComponent implements AfterViewInit {
 
     if (user.authorities[0].authority == "ROLE_PACIENTE") {
       var marker = new L.Marker([lat, long], {icon: blueIcon});
-      marker.addTo(this.map).bindPopup(`${user.nome}`).openPopup();
+      marker.addTo(this.map).bindPopup(`${user.nome}`).openPopup()
+      .setPopupContent(
+        `
+        <div style="display:flex; justify-content: center; align-items: center; flex-direction: column">
+        <b>${user.nome}</b/> <br>
+        <a href="/prontuario/${user.cpf}"> IR PARA PERFIL </a>
+        </div>
+        `
+        );
     } else {
       var marker = new L.Marker([lat, long], {icon: greenIcon});
-      marker.addTo(this.map).bindPopup(`${user.nome}`).openPopup();
+      marker.addTo(this.map).bindPopup(`${user.nome}`).openPopup()
+      .setPopupContent(
+        `
+        <div style="display:flex; justify-content: center; align-items: center; flex-direction: column">
+        <b>${user.nome}</b/> <br>
+        <a href="/curriculo/${user.cpf}"> IR PARA PERFIL </a>
+        </div>
+        `
+        );
     }
   }
 }
