@@ -57,10 +57,8 @@ Caso tenham interesse, este é o [link](https://www.figma.com/file/J70VlmCGSKDzx
 
 ## 👨‍💻 Autores
 
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
-
-* **Desenvolvedor** - [Arthur](https://github.com/arthurpss)
-* **Desenvolvedor** - [Franklin](https://github.com/franklinarauj)
-* **Desenvolvedor** - [Guilherme](https://github.com/guilhermersantana)
-* **Desenvolvedor** - [Murilo](https://github.com/murilo-kronbauer)
-* **Documentador** - [Thiago](https://www.linkedin.com/in/thiago-alexandre-fernandes-silva-47536795/)
+* **Desenvolvedor** - [Arthur Passos](https://github.com/arthurpss)
+* **Desenvolvedor** - [Franklin Araújo](https://github.com/franklinarauj)
+* **Desenvolvedor** - [Guilherme Santana](https://github.com/guilhermersantana)
+* **Desenvolvedor** - [Murilo Kronbauer](https://github.com/murilo-kronbauer)
+* **Documentador** - [Thiago Alexandre](https://www.linkedin.com/in/thiago-alexandre-fernandes-silva-47536795/)
