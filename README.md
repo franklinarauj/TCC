@@ -20,7 +20,7 @@ No panorama geral, iremos dar maior visibilidade para esse assunto além da divu
 
 Nosso protótipo foi feito no Figma, no qual buscamos estudar uma paleta de cores e um design de layout que ficasse fácil e simples para os usuários usarem (aplicamos métodos de UI e UX, dentro do nosso conhecimento).
 
-Caso tenham interesse, este é o [link](https://www.figma.com/file/J70VlmCGSKDzxA2s7To3ih/Cuida%2B-(Copy)?node-id=0%3A1) para nosso protótipo.
+Caso tenham interesse, este é o [link](https://www.figma.com/file/erTpGs5qAI04C1YsZtCxai/Cuida%2B?node-id=0%3A1) para nosso protótipo.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
